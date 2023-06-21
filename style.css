@@ -1,0 +1,348 @@
+/*******************************************************
+ *
+ * Global style
+ *
+ *******************************************************/
+
+/* Body */
+body {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+/* Sticky navbar */
+.affix {
+	position: fixed;
+	top: 20px;
+	z-index: 9999 !important;
+}
+
+ /* Links */
+a {
+	color: #777;
+}
+
+a:hover,
+a:focus {
+	color: #0e4092;                 
+	text-decoration: none;
+}
+
+/* Captions */
+h2 {
+    margin-top: 25px;
+    border-top: solid 1.25px #e5e5e5;
+    border-bottom: solid 1.25px #e5e5e5;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+
+/*******************************************************
+ *
+ * Nav Sidebar
+ *
+ *******************************************************/
+
+/* sidebar */
+.bs-docs-sidebar {
+    padding-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+  
+/* all links */
+.bs-docs-sidebar .nav>li>a {
+    color: #999;
+    border-left: 2px solid transparent;
+    padding: 4px 20px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* nested links */
+.bs-docs-sidebar .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 13px;
+}
+
+/* active & hover links */
+.bs-docs-sidebar .nav>.active>a, 
+.bs-docs-sidebar .nav>li>a:hover, 
+.bs-docs-sidebar .nav>li>a:focus {
+    color: #0e4092;                 
+    text-decoration: none;          
+    background-color: transparent;  
+    border-left: 2px solid #0e4092; 
+}
+
+/* all active links */
+.bs-docs-sidebar .nav>.active>a, 
+.bs-docs-sidebar .nav>.active:hover>a,
+.bs-docs-sidebar .nav>.active:focus>a {
+    font-weight: 700;
+}
+/* nested active links */
+.bs-docs-sidebar .nav .nav>.active>a, 
+.bs-docs-sidebar .nav .nav>.active:hover>a,
+.bs-docs-sidebar .nav .nav>.active:focus>a {
+    font-weight: 500;
+}
+
+/* hide inactive nested list */
+.bs-docs-sidebar .nav ul.nav {
+    display: none;           
+}
+/* show active nested list */
+.bs-docs-sidebar .nav>.active>ul.nav {
+    display: block;           
+}
+
+
+/*******************************************************
+ *
+ * List groups
+ *
+ *******************************************************/
+
+.list-group {
+	margin-bottom: 0px;
+}
+
+.list-group-item:first-child {
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+}
+
+.list-group-item:last-child {
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
+.list-group-item {
+    border: 0px;
+    padding: 0px;
+    border: 0px solid;
+}
+
+.list-group-item .content,
+.list-group-item a.content {
+    color: black;
+    display: block;
+    border-style: solid;
+    border-right-width: 2px;
+	border-left-width: 0px;
+    border-color: #ffffff;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 10px;
+}
+
+.list-group-item h4,
+.list-group-item h4 a {
+    color: black;
+}
+
+.list-group-item h4 a:hover {
+    color: #563d7c;                 
+}
+
+.list-group-item .content:hover {
+    border-style: solid;
+    border-right-width: 2px;
+    border-right-color: #0e4092;
+    background-color: #fafafa;
+}
+
+.list-group-item a.content:hover {
+    color: #563d7c;                 
+    text-decoration: none;          
+    display: block;
+}
+
+.list-group-item h4 a:hover {
+    color: #563d7c;                 
+}
+
+.list-group-item .label a,
+.list-group-item .label a:hover {
+    color: white;
+}
+
+/* Defines the style for custom item in lists (the checkmark in this case) */
+.fa-li.icon {
+    padding-top:15px !important;
+    margin-left:0pt;
+}
+
+
+/*******************************************************
+ *
+ * Header
+ *
+ *******************************************************/
+
+ /*---------- Top navbar  ----------*/
+  
+.navbar {
+  margin-bottom: 0px;
+}
+
+.navbar-default {
+    background-color: white;
+    border: none;
+}
+
+/* Brand area (i.e., name) */ 
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover {
+    color: black;
+    font-size: 24px;
+	font-weight: 700;
+	padding-left: 10px;
+}
+
+/* Navbar button */
+
+
+/* Navbar button hover */
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+	color: red;
+	border-color: green;
+	color: red;
+} 
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #0e4092;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: white;
+}
+
+/* Navbar when functioning as banner */
+@media (max-width:767px){
+    .navbar-default {
+            background-color: #0e4092;
+			margin-bottom: 20px;
+    }
+    .navbar-default .navbar-brand,
+    .navbar-default .navbar-brand:hover {
+        font-size: 24px;
+        color: white;
+    }
+}
+
+/* Background when hovered over a link */
+.navbar .nav li a:hover {
+    background-color: #eeeeee;
+}
+
+/* Navbar when in collabsted mode */
+@media (max-width:767px){
+    .navbar .nav li a {
+        color: white;
+    }
+
+    .navbar .nav li a:hover {
+        background-color: white;
+        color: #0e4092;
+    }
+}
+
+ 
+/*---------- Banner ----------
+ 
+/* Normal banner */
+.bs-docs-header {
+    padding: 10px 10px;
+    color: white;
+    background-color: #0e4092;
+    margin-top: 0px;
+	margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* Links in banner */
+.bs-docs-header a,
+.bs-docs-header a:hover {
+    color: white;
+}
+
+
+
+/*******************************************************
+ *
+ * Collapsible button
+ *
+ *******************************************************/
+
+/* Make button change test */
+button.btn .show-ctrl{
+    display: none;
+}
+button.btn .hide-ctrl{
+    display: block;
+}
+button.btn.collapsed .show-ctrl{
+    display: block;
+}
+button.btn.collapsed .hide-ctrl{
+    display: none;
+}
+
+
+/*******************************************************
+ *
+ * Scroll button
+ *
+ *******************************************************/
+
+ /* Normal style */
+#scrollbutton {
+	z-index: 9999 !important;
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    background-color: #0e4092;
+    text-indent:-9999px;
+    display:none;
+    border-radius:50px
+}
+
+/* Hovered over */
+#scrollbutton:hover {
+    background-color:#e74c3c;
+    opacity:1;filter:"alpha(opacity=100)";
+}
+
+/* Design of triangle */
+#scrollbutton span {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-8px;
+    margin-top:-12px;
+    height:0;
+    width:0;
+    border:8px solid transparent;
+    border-bottom-color:#ffffff;
+}
+
+
+table {
+    border-collapse:separate; 
+    border-spacing: 0 0.6em;
+  }
