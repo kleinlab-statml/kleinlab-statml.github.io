@@ -10,218 +10,93 @@
   <link href="./libs/bootstrap-3.4.1/css/bootstrap.css" rel="stylesheet">
   <link href="./libs/fontawesome-6.2.0/css/all.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+  <style>
+  body {
+   font-family: 'Didact Gothic';
+  }
+  </style>
+
 </head>
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
 
 	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
 
 <div class="container">
-	<!-- Navbar in small mode-->
-	<nav class="navbar navbar-default">
-      	<div class="container-fluid">
-      	  <!-- Brand and toggle get grouped for better mobile display -->
-      	  <div class="navbar-header">
-      	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-      	    </button>
-            <span class="navbar-brand">Chair of Uncertainty Quantification and Statistical Learning</span>
-      	  </div>
+	
+  <h2 style="color:#164194;">Chair of Uncertainty Quantification and Statistical Learning</h2>
 
-      	</div>
-          
-      </nav>
-  
-
-
-      <div class="bs-docs-header hidden-xs" id="content" tabindex="-1">
-          <div class="hidden-xs banner">
-              <a href="https://rc-trust.ai" target="_blank"><img src="images/trustworthy2.png" alt="Logo" style="max-height: 40px;">&nbsp;&nbsp; Center for Trustworthy Data Science and Security</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://www.tu-dortmund.de" target="_blank">Technische Universität Dortmund</a>
-        </div>
-      </div>
-
-
-	<nav class="navbar navbar-light" style="background-color: #e3f2fd;">	  
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		  <ul class="nav navbar-nav mr-auto">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="team.html">Team</a></li>
-			<li><a href="research.html">Research</a></li>
-			<li><a href="teaching.html">Teaching</a></li>
-			<li class="nav-item dropdown">
-				<button class="dropbtn">Dropdown</button>
-				<div class="dropdown-content">
-				  <a href="#">Link 1</a>
-				  <a href="#">Link 2</a>
-				  <a href="#">Link 3</a>
-				</div>
-			</li>
-		  </ul>
-		</div>
-	  </nav>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">	  
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="nav navbar-nav mr-auto">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="news.html">News</a></li>
+		<li><a href="team.html">Team</a></li>
+		<li class="nav-item dropdown">
+			<a href="research.html">Research</a>
+			<div class="dropdown-content">
+				<a href="#">Link 1</a>
+				<a href="#">Link 2</a>
+				<a href="#">Link 3</a>
+			</div>
+		<li><a href="teaching.html">Teaching</a></li>
+		<li><a href="jobs.html">Jobs</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</div>
+	</nav>
 
 	
 
 	  <!-- https://www.w3schools.com/howto/howto_js_topnav.asp // https://getbootstrap.com/docs/4.0/components/navbar/ -->
-	  
-  <div class="row">
-  
-	<div class="col-xs-12 col-md-12">
-  
-		<div class="row">
-  
-		<!-- Left column -->
-		<div class="col-xs-12 col-sm-4 col-lg-3">
+	  	
+		
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
 
-		<!-- Repetition of Home section -->
-		<div class="row">
-			<div class="col-xs-4 col-sm-12">
-				<img class="img-thumbnail" src="images/logo_light_wo_frame.png" alt="Group logo">
+		<!-- Home -->
+		<div id="home" class="hidden-xs" style="font-size:medium;">
+			<p class="aligncenter">
+				<img src="images/logo_light_wo_frame.png" alt="Group logo" style="height: 300px;">
+				<br>
+				<img src="images/rctrust.png" alt="RC trust logo" style="height: 130px;padding-right: 10px;">
+				<img src="images/tu-dortmund.png" alt="TU Dortmund logo" style="height: 130px;padding-left: 10px;">
+			</p>
+
+			<p>
+				Welcome to the <b>Chair of Uncertainty Quantification and Statistical Learning</b> at the <a href="https://rc-trust.ai/" target="_blank">Research Center Trustworthy Data Science and Security</a> (UA Ruhr) and the <a href="https://statistik.tu-dortmund.de/" target="_blank">Department of Statistics</a> (<a href="https://www.tu-dortmund.de" target="_blank">Technische Universität Dortmund</a>). In addition to <a href="teaching.html">teaching</a> graduate courses on Bayesian statistics and machine learning, we are involved in several <a href="research.html">research projects</a>.
+			</p>
+
+			<p>Feel free to follow us on <a href="https://twitter.com/KleinSLab" target="_blank"> Twitter</a>!</p>
+
+			<br>
+
+			<div class="container" style="padding: 0cm; text-align: center;">
+				<span style = "margin-right:3em;"><a href="mailto:rctrust.kleinlab.fk05@tu-dortmund.de"><i class="fa-solid fa-envelope fa-3x"></i></a></span>
+				<span style = "margin-right:3em"><a href="https://twitter.com/KleinSLab"><i class="fab fa-twitter fa-3x"></i></a></span>
+				<span style = "margin-right:3em"><a href="https://github.com/kleinlab-statml"><i class="fa-brands fa-github fa-3x"></i></a></span>
+				<span><a href="https://scholar.google.de/citations?user=upS2UTIAAAAJ&hl=de"><i class="fa-solid fa-graduation-cap fa-3x"></i></a></span>
 			</div>
-		</div>
-		 
 
-		 <h3>Contact (Office)</h3>
-		 <table class="table table-hover">
-			<tbody>
-				<tr>
-					<td>
-						N.N.
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<font size="-1">rctrust.kleinlab.fk05@tu-dortmund.de</font>
-						<noscript>enable javascript</noscript>
-						<span class="glyphicon glyphicon-envelope" aria-hidden="true" style="float:right"></span><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						+49(0) 231 7557820 <span class="glyphicon glyphicon-phone-alt" aria-hidden="true" style="float:right"></span><br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Joseph-von-Fraunhofer-Str. 25 <br>
-						44227 Dortmund <br>
-						Germany
-						<span class="glyphicon glyphicon-home" aria-hidden="true" style="float:right"></span><br>
-					  </td>
-				</tr>
-			</tbody>
-		</table>
+		</div>		
 		
 
-		<div class="container">
-			<span style = "margin-left:1em;margin-right:1em"><a href="mailto:rctrust.kleinlab.fk05@tu-dortmund.de"><i class="fa-solid fa-envelope fa-2xl"></i></a></span>
-			<span style = "margin-right:1em"><a href="https://twitter.com/KleinSLab"><i class="fab fa-twitter fa-2xl"></i></a></span>
-			<span style = "margin-right:1em"><a href="https://github.com/kleinlab-statml"><i class="fa-brands fa-github fa-2xl"></i></a></span>
-			<span><a href="https://scholar.google.de/citations?user=upS2UTIAAAAJ&hl=de"><i class="fa-solid fa-graduation-cap fa-2xl"></i></a></span>
+
+		<!-- Imprint and data protection -->
+		<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
+			<a href="https://www.uaruhr.de/impressum/index.html.en">Imprint</a> / <a href="https://www.uaruhr.de/impressum/datenschutz.html.en">Data Protection</a>
 		</div>
-		
-
-		</div>
-		
-<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
-<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
-<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
-<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
-
-
-		<!-- Center column -->
-		<div class="col-xs-12 col-sm-8 col-lg-9" style="font-size:medium;">
-
-			<!-- Home -->
-			<div id="home" class="hidden-xs">
-				<p>
-					Welcome to the <em>Chair of Uncertainty Quantification and Statistical Learning</em> at the <a href="https://rc-trust.ai/" target="_blank">Research Center Trustworthy Data Science and Security</a> (UA Ruhr) and the <a href="https://statistik.tu-dortmund.de/" target="_blank">Department of Statistics</a> (<a href="https://www.tu-dortmund.de" target="_blank">Technische Universität Dortmund</a>). In addition to <a href="teaching.html">teaching</a> graduate courses on Bayesian statistics and machine learning, we are involved in several <a href="research.html">research projects</a>.
-				</p>
-
-				<p>Feel free to follow us on <a href="https://twitter.com/KleinSLab" target="_blank"> Twitter</a>!</p>
-
-				<h3>Information for Students</h3>
-				<ul>
-					<li>The office hours of Prof. Klein are by appointment.</li>
-					<li>For details regarding available Bachelor's and Master's Theses, please see the corresponding <a href="teaching.html">teaching section</a>.</li>				
-				</ul>
-				
-			</div>		
 			
-			<!-- News -->
-			<section id="news">
-				<h2>News <span class="fa fa-file" aria-hidden="true" style="float:right;padding-top:8px;font-size: 75%;"></span></h2>
-				<ul>
-				
-				<p>
-				<li>PhD student Paul Bach presented a poster about "Spatially adaptive Bayesian P-splines" at  <a href="https://iwsm2023.statistik.tu-dortmund.de/" target="_blank"> IWSM 2023</a> (joint work with Nadja Klein). The corresponding short paper will appear shortly in the conference proceedings. <small>(24.07.2023)</small></li>                         
-                <li>The arXiv preprint of the new review <i>"Distributional Regression for Data Analysis"</i> by Nadja Klein can be found <a href="https://arxiv.org/abs/2307.10651" target="_blank">here</a>. <small>(21.07.2023)</small></li>
-            	
-				<li>The paper <a href="https://onlinelibrary.wiley.com/doi/10.1002/jrsm.1655" target="_blank">“Accounting for time dependency in meta-analyses of concordance probability estimates”</a> by Matthias Schmid, Tim Friede, Nadja Klein and Leonie Weinhold has been published. <small>(11.07.2023)</small></li>
-				<li>The arXiv preprint of the new paper <i>"Heat increases experienced racial segregation in the United States"</i> by Till Baldenius, Nicolas Koch, Hannah Klauber and Nadja Klein can be found <a href="https://arxiv.org/abs/2306.13772" target="_blank">here</a>. <small>(27.06.2023)</small></li>
-				<li>The paper <a href="https://arxiv.org/abs/2211.00348" target="_blank">“Informed Priors for Knowledge Integration in Trajectory Prediction”</a> by Christian Schlauch, Nadja Klein and Christian Wirth has now been accepted in the research track of the  <a href="https://2023.ecmlpkdd.org/" target="_blank">European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD) 2023</a>, congratulations! <small>(07.06.2023)</small></li>					
-				<li>The arXiv preprint of the new paper <i>"Truly Multivariate Structured Additive Distributional Regression"</i> by Lucas Kock and Nadja Klein can be found <a href="https://arxiv.org/abs/2306.02711" target="_blank">here</a>. <small>(06.06.2023)</small></li>                
-				<li>The arXiv preprint of the new paper <i>"The Deep Promotion Time Cure Model"</i> by Victor Medina-Olivares, Stefan Lessmann and Nadja Klein can be found <a href="https://arxiv.org/abs/2305.11575" target="_blank">here</a>. <small>(24.05.2023)</small></li>					
-				<li>Our lead Prof. Nadja Klein reveals what she appreciates most about her field in the book "Young Scientists" by <a href="https://www.diejungeakademie.de/de"><i>Die Junge Akademie</i></a>. You can check out all featured researchers <a href="https://www.diejungeakademie.de/de/projekte/kinderbuch-young-scientists">here</a>.</li>
-				<li>The arXiv preprint of the new paper <i>"Dropout Regularization in Extended Generalized Linear Models based on Double Exponential Families"</i> by Benedikt Lütke Schwienhorst, Lucas Kock, David J. Nott and Nadja Klein can be found <a href="https://arxiv.org/abs/2305.06625" target="_blank">here</a>. <small>(13.05.2023)</small></li>
-				<li>The paper <a href="https://projecteuclid.org/journals/annals-of-applied-statistics/volume-17/issue-2/Marginally-calibrated-response-distributions-for-end-to-end-learning-in/10.1214/22-AOAS1693.short" target="_blank">“Marginally calibrated response distributions for end-to-end learning in autonomous driving”</a> by Clara Hoffmann and Nadja Klein was published in <a href="https://projecteuclid.org/journals/annals-of-statistics" target="_blank">The Annals of Applied Statistics</a>, congratulations! <small>(02.05.2023)</small></li>
-				<li>Our lead Prof. Nadja Klein has started her professorship at the <a href="https://rc-trust.ai/">Research Center Trustworthy Data Science and Security</a> and <a href="https://www.tu-dortmund.de/">TU Dortmund</a>. Our lab is bridging statistics, maths, and computer science to offer new perspectives on statistical learning. You can find the official press release with more information (in German) <a href="https://www.tu-dortmund.de/universitaet/aktuelles/detail/universitaetsallianz-ruhr-gewinnt-mathematikerin-fuer-forschungsprofessur-30984/" target="_blank">here</a>. <small>(29.04.2023)</small></li>
-				</p>
-				</ul>			
-		
-				<ul id="news_older" class="collapse" style="margin-top: -10px;">
-					<li>We are co-hosting the <a href="https://www.som.lmu.de/ai/en/update/events-overview/event/ai-keynote-series.html">AI Keynote Series at LMU Munich</a>. You can register now and join every Thursday to gain insights from renowned guest speakers about current trends in AI research. <small>(29.04.2023)</small></li>
-					<li>Our lead Prof. Nadja Klein is now an associated member of the <a href="https://www.iri-thesys.org/people-pages/nadja-klein-prof-dr/" target="_blank"><i>Integrative Research Institute on Transformations of Human-Environment Systems (IRI THESys)</i></a> which conducts inter- and transdisciplinary research on paths towards sustainable futures. <small>(29.04.2023)</small></li>
-					<li>The new children's book <a href="https://www.diejungeakademie.de/de/projekte/kinderbuch-young-scientists" target="_blank"><i>Young Scientists</i></a> by <i>Die Junge Akademie</i> showcases successful scientists' career paths - including our group lead Prof. Nadja Klein. It will be available from May 15, 2023. <small>(25.04.2023)</small></li>
-					<li>We welcome Maarten Jung as research assistant and Annalena Weissert as student assistant to our group. <small>(01.04.2023)</small></li>
-					<li>The paper "Approximate Bayesian computation for parameter identification in computational mechanics" by Matthias G. R. Faes, Nadja Klein, Markus Pauly, Marcos A. Valdebenito and Mauricio A. Misraji was accepted to the <a href="https://icasp14.com/" target="_blank">14th International Conference on Applications of Statistics and Probability in Civil Engineering (ICASP14)</a>. <small>(28.03.2023)</small></li>
-					<li>We have job openings for a <a href="txt/phd_statml_rc-trust_Klein.txt"> PhD position</a> and <a href="txt/postdoc_statml_rc-trust_Klein.txt"> PostDoc position</a> in our group! <small>(27.02.2023)</small></li>
-					<li>The paper "Boosting Multivariate Structured Additive Distributional Regression Models" by Annika Strömer, Nadja Klein, Christian Staerk, Hannah Klinkhammer and Andreas Mayr was accepted for publication in <a href="https://onlinelibrary.wiley.com/journal/10970258" target="_blank">Statistics in Medicine</a>. The arXiv preprint can be found <a href="https://arxiv.org/abs/2207.08470" target="_blank">here</a>. <small>(24.02.2023)</small></li>
-					<li>Clara Hoffmann is going to present at the PyCon DE & PyData Berlin 2023 (17. April - 19. April 2023) on debugging custom PyTorch models in a structured manner. More details regarding her talk can be found <a href="https://2023.pycon.de/program/GXAKV8/" target="_blank">here</a>. <small>(21.02.2023)</small></li>
-					<li>The paper "Bayesian Conditional Transformation Models" by Manuel Carlan, Thomas Kneib and Nadja Klein was accepted for publication in the <a href="https://www.tandfonline.com/toc/uasa20/current" target="_blank"> Journal of the American Statistical Association</a>. The arXiv preprint can be found <a href="https://arxiv.org/abs/2012.11016" target="_blank">here</a>. <small>(21.02.2023)</small></li>
-					<li>The paper "Deep Distributional Time Series Models and the Probabilistic Forecasting of Intraday Electricity Prices" by Nadja Klein, Michael Stanley Smith and David J. Nott (<a href="https://onlinelibrary.wiley.com/journal/10991255" target="_blank">Journal of Applied Econometrics</a>) can be found <a href="https://onlinelibrary.wiley.com/doi/10.1002/jae.2959" target="_blank">here</a>. <small>(21.02.2023)</small></li>
-					<li>The paper <i>"Modeling Intra-Annual Tree Stem Growth with a Distributional Regression Approach for Gaussian Process Responses"</i> by Hannes Riebl, Nadja Klein and Thomas Kneib was accepted at <em>Journal of the Royal Statistical Society, Series C (Applied Statistics)</em></a>. <small>(21.01.2023)</small></li>
-					<li>A new working paper <i>"Scalable Estimation for Structured Additive Distributional Regression"</i> by Nikolaus Umlauf, Johannes Seiler, Matthias Wetscher, Thorsten Simon, Stefan Lang and Nadja Klein can be found <a href="https://arxiv.org/abs/2301.05593" target="_blank">here</a>. <small>(13.01.2023)</small></li>
-					<li>The paper <i>"Semi-Structured Distributional Regression"</i> by David Ruegamer, Chris Kolb and Nadja Klein was accepted at <em>The American Statistician</em></a>. <small>(01.01.2023)</small></li>
-					<li>We welcome Ivan Ustyuzhaninov as postdoctoral researcher, Clara Hoffmann as PhD student and Tim-Moritz Bündert as research assistant to our group. <small>(01.01.2023)</small></li>
-					<li>We will move from Humboldt-Universität zu Berlin to TU Dortmund in April 2023! <small>(01.01.2023)</small> </li>
-					<li>New working paper <i>"Accounting for Time Dependency in Meta-Analyses of Concordance Probability Estimates"</i> by Matthias Schmid, Tim Friede, Nadja Klein and Leonie Weinhold can be found <a href="https://arxiv.org/abs/2212.01613" target="_blank">here</a>. <small>(03.12.2022)</small></li>
-					<li>New working paper <i>"Anisotropic multidimensional smoothing using Bayesian tensor product P-splines"</i> by Paul Bach and Nadja Klein can be found <a href="http://arxiv.org/abs/2211.16218" target="_blank">here</a>. <small>(29.11.2022)</small></li>
-					<li>New working paper <i>"Informed Priors for Knowledge Integration in Trajectory Prediction"</i> by Christian Schlauch, Nadja Klein and Christian Wirth can be found <a href="https://arxiv.org/abs/2211.00348" target="_blank">here</a>. <small>(01.11.2022)</small></li>
-					<li>New working paper <i>"Distributional Adaptive Soft Regression Trees"</i> by Nikolaus Umlauf and Nadja Klein can be found <a href="https://arxiv.org/abs/2210.10389" target="_blank">here</a>. <small>(19.10.2022)</small></li>
-				</ul>	
-						
-				<div style="text-align: right;">
-					<button class="btn btn-default btn-sm collapsed" data-toggle="collapse" data-target="#news_older" style="margin-top: 10px">
-						<span class="show-ctrl">
-							<span class="fa fa-chevron-down" style="margin-right: .25em;"></span> Show more news
-						</span>
-						<span class="hide-ctrl">
-							<span class="fa fa-chevron-up" style="margin-right: .25em;"></span> Show fewer news
-						</span>
-					</button>
-				</div>
-			</section>		
-
-
-			<!-- Imprint and data protection -->
-			<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
-				<a href="https://www.uaruhr.de/impressum/index.html.en">Imprint</a> / <a href="https://www.uaruhr.de/impressum/datenschutz.html.en">Data Protection</a>
-			</div>
-			
-		</div>
-
-		
-		</div>
-		
+	
 	</div>
 		
+		
 	
-	
-  </div>
-</div>
+
 
 	<!-- jquery -->
 	<script src="./libs/jquery-3.6.1.min.js"></script>
