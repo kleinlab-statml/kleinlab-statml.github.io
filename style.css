@@ -363,3 +363,48 @@ nav a {
     flex: 50%;
   }
 
+
+  figcaption {
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+  }
+
+  .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+
+  }
+
+  /* Hide all images initially */
+  .slide {
+    display: none;
+  }
+
+  /* Show the first image */
+  .slide:first-child {
+    display: block;
+  }
+
+  /* Style for dots */
+  .dot-container {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .active_dot {
+    background-color: #717171;
+  }
+

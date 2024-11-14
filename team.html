@@ -51,13 +51,29 @@
 			<!-- Team -->
 			<section id="team" style="font-size:medium;">
 				<h2>Team <span class="fa fa-users" aria-hidden="true" style="float:left;padding-right:15px;padding-top:6px;font-size: 75%;"></span></h2>
-
-				<p class="aligncenter">
-					<img class="img-thumbnail" src="images/groupphoto/groupphoto_Nov2024.jpg" alt="" style="height:250px; border: 0px; border-radius: 10px;">
-				</p>
-			
-
-			<h3>Members</h3>
+				
+				<div class="slideshow-container">
+					<div class="slide">
+						<img src="images/groupphoto/groupphoto_Nov2024_scaled.jpg" alt="Image 1" style="height: 10%;">
+						<div style="margin-top: 10px;">Trifels, November 2024</div>
+					</div>
+					<div class="slide">
+						<img src="images/groupphoto/groupphoto_Nov2023_scaled.jpeg" alt="Image 2" style="height: 10%;">
+						<div style="margin-top: 10px;">Hamburg, November 2023</div>
+					</div>
+					<div class="slide">
+						<img src="images/groupphoto/groupphoto_scaled.png" alt="Image 3" style="height: 10%;">
+						<div style="margin-top: 10px;">Online, April 2023</div>
+				  	</div>
+				</div>
+				  <div class="dot-container">
+					<span class="dot" onclick="currentSlide(0)"></span>
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+				  </div>
+				
+				
+				<h3>Members</h3>
 
 				<table style="width:100%">
 
@@ -388,6 +404,30 @@
 		}); 
 	});
 	</script>
+
+	<script>
+		let slideIndex = 0;
+		const slides = document.querySelectorAll('.slide');
+		const dots = document.querySelectorAll('.dot');
+
+		function showSlide(index) {
+			// Hide all slides and remove 'active' class from all dots
+			slides.forEach((slide, i) => {
+				slide.style.display = 'none';
+				dots[i].classList.remove('active_dot');
+			});
+
+			// Show the selected slide and add 'active' class to the corresponding dot
+			slides[index].style.display = 'block';
+			dots[index].classList.add('active_dot');
+		}
+
+		function currentSlide(index) {
+			slideIndex = index;
+			showSlide(slideIndex);
+		}
+  	</script>
+  
 	
 </body>
 
