@@ -54,7 +54,7 @@
 				
 				<div class="slideshow-container">
 					<div class="slide">
-						<img src="images/groupphoto/groupphoto_Nov2024_scaled.jpg">
+						<img src="images/groupphoto/groupphoto_Nov2024_scaled.jpeg">
 						<div style="margin-top: 10px;">Trifels, November 2024</div>
 					</div>
 					<div class="slide">
@@ -426,6 +426,15 @@
 			slideIndex = index;
 			showSlide(slideIndex);
 		}
+
+		function autoSlide() {
+			slideIndex = (slideIndex + 1) % slides.length;
+			showSlide(slideIndex);
+		}
+
+  	setInterval(autoSlide, 3000); // Change image every 3 seconds
+
+	
   	</script>
   
 	
