@@ -202,7 +202,7 @@ h3 {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /*overflow: hidden; */
 }
 
 .navbar .nav li {
@@ -407,4 +407,21 @@ nav a {
   .active_dot {
     background-color: #717171;
   }
+
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-left: 0; /* Adjust this if needed */
+}
+
+
+.dropdown-item{
+    background-color: white !important;
+    color: #717171;
+    width: 95%; /* Ensure the dropdown items take the full width of the dropdown menu */
+    text-align: center; 
+
+}
+
+
+
 
