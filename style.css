@@ -295,7 +295,7 @@ nav a {
     font-weight: bold;
     color: var(--accent1-color); 
     background-color: var(--background-color);
-    width: 7em;
+    width: 6em;
     font-size: 1.2em;
     text-align: center;
   }
