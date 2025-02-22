@@ -196,12 +196,17 @@ h3 {
     width: 100%;
     background: #e3f2fd;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar .nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
     /*overflow: hidden; */
 }
 
