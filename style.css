@@ -430,4 +430,6 @@ nav a {
 
 
 
-
+.filter-img{
+    filter: invert(15%) sepia(76%) saturate(2558%) hue-rotate(213deg) brightness(97%) contrast(91%);
+}
