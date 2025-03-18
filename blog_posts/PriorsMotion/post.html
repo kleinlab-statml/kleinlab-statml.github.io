@@ -98,7 +98,7 @@
 			🚗 <b>Deep learning models require vast amounts of expensive data to generalize robustly.</b>
 			<br> <br>
 			<figure>
-				<img src="figures/Fig1.png" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig1.png" style="width: 60%; display: block; margin-left: auto; margin-right: auto;">
 				<figcaption>Figure 1: Frequency of observed traffic scenes. Capturing high-risk interactions requires prohibitive data collection efforts.</figcaption>
 			</figure>
 			<br>
@@ -109,7 +109,7 @@
 			Our approach maps traffic rules onto <b>synthetic training labels</b>. Additionally, we employ <b>Bayesian deep learning</b> methods to enhance state-of-the-art motion prediction models. This enables us to <b>learn informative priors</b> from the synthetic labels (knowledge tasks), which, in turn, <b>regularize training on observed data</b> (conventional tasks).
 			<br> <br>
 			<figure>
-				<img src="figures/Fig2.png" style="width: 65%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig2.png" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
 				<figcaption>Figure 2: Concept of training pipeline. We aim to learn informative priors from knowledge tasks to regularize the conventional training on observations.</figcaption>
 			</figure>
 			<br>
@@ -120,7 +120,7 @@
 			✅ A compute-efficient <b>last-layer Gaussian process (GP)</b> with spectral normalized feature extractor, using a tailored regularization method leveraging a Fourier feature approximation for GPs
 			<br> <br>
 			<figure>
-				<img src="figures/Fig3.png" style="width: 85%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig3.png" style="width: 65%; display: block; margin-left: auto; margin-right: auto;">
 				<figcaption>Figure 3: Regularization of last-layer Gaussian process approximation and spectral normalized feature extractor across tasks.</figcaption>
 			</figure>
 			<br>
@@ -133,12 +133,12 @@
 			📍 <b>Better location generalization</b> — with increased robustness when applied to new, unseen environments.
 			<br> <br>
 			<figure>
-				<img src="figures/Fig4.png" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig4.png" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
 				<figcaption>Figure 4: Performance of our variational model (GVCL) versus informed transfer and multi-loss learning baselines on NuScenes with reduced training subsets. Our model requires less than 50% of the data to reach competitive performance.</figcaption>
 			</figure>
 			<br>
 			<figure>
-				<img src="figures/Fig5.png" style="width: 85%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig5.png" style="width: 60%; display: block; margin-left: auto; margin-right: auto;">
 				<figcaption>Figure 5: Qualitative inspection of 3 test samples on NuScenes, visualizing the ground truth (green) versus the three best predictions of the baseline (conventional training) and the three best predictions of our informed variational model (GVCL).</figcaption>
 			</figure>
 			<br> 
