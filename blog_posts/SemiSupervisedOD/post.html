@@ -102,7 +102,7 @@
 			</ul>
 			<br>
 			<figure>
-				<img src="figures/Fig1.png" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="Figures/Fig1.png" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
 				<figcaption>Figure 1: Our building blocks integrated into an exemplary Semi-supervised object detection (SSOD) framework. The teacher model MT, trained on labeled data, generates pseudo-labels for unlabeled data, which are then filtered by a confidence threshold $\delta_S$. To address class imbalance, <b>Rare Class Collage (RCC)</b> crops instances of rare classes and combines them into collages, increasing their representation. <b>Rare Class Focus (RCF)</b> ensures each training batch contains common and rare classes, with augmented rare class images to boost their impact. <b>Ground Truth Label Correction (GLC)</b> corrects false, missing, and noisy labels by utilizing teacher prediction consistency across augmentations. <b>Pseudo-Label Selection (PLS)</b> removes pseudo-labeled images with many missing detections, estimated using our metric $D_i(\delta_S, \beta)$, which incorporates detection confidence and class rarity. Together, our methods enhance the ability of the student model $M_S(\delta_S)$ to learn effectively from both labeled and pseudo-labeled data, minimizing the propagation of errors from the teacher model.</figcaption>
 			</figure>
 			<br>
@@ -113,17 +113,17 @@
 			Addressing these challenges is critical for making SSOD frameworks applicable in practical settings such as autonomous driving and industrial inspection.
 			<br> <br>
 			<figure>
-				<img src="figures/Fig2.png" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="Figures/Fig2.png" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
 				<figcaption>Figure 2: KITTI (left, 10% labeled), BDD (right, 1% labeled). Class frequency for each class in both datasets.</figcaption>
 			</figure>
 			<br>
 			<figure>
-				<img src="figures/Fig3.png" style="width: 55%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="Figures/Fig3.png" style="width: 55%; display: block; margin-left: auto; margin-right: auto;">
 				<figcaption>Figure 3: Examples of noisy box labels in KITTI. Human annotators often fail to accurately label occluded and truncated objects, especially in crowded scenes.</figcaption>
 			</figure>
 			<br>
 			<figure>
-				<img src="figures/Fig4.png" style="width: 80%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="Figures/Fig4.png" style="width: 80%; display: block; margin-left: auto; margin-right: auto;">
 				<figcaption>Figure 4: KITTI (left), BDD (right). For each dataset, the left image represents the highest $S_i$, while the right image represents the lowest $S_i$ (poor detection quality). Predictions (in green) are filtered at $\delta_S = 0.9$. $M_D$ stands for missing detections.</figcaption>
 			</figure>
 			<br>
