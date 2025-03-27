@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Homepage of KleinLab">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>KleinLab - Homepage</title>
+
+  <link href="../.././libs/bootstrap-3.4.1/css/bootstrap.css" rel="stylesheet">
+  <link href="../.././libs/fontawesome-6.2.0/css/all.min.css" rel="stylesheet">
+  <link href="../../style.css" rel="stylesheet">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+  <style>
+  body {
+   font-family: 'Didact Gothic';
+  }
+  </style>
+
+<link rel="icon" href="../../images/logo_light_wo_frame.png">
+
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+	src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  </head>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+
+	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
+
+<div class="container">
+	
+	<div style="margin-top: 15px; margin-bottom: 15px;">
+		<img class="filter-img" src="../../images/lettering_dark.png" alt="Group logo" style="height: 40px;">
+		<h2 style="color:#164194; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
+	</div>
+
+<nav class="navbar navbar-light">	  
+	<ul class="nav navbar-nav mr-auto">
+		<li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+		<li class="nav-item"><a class="nav-link"href="../../news.html">News</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../team.html">Team</a></li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="../../research.html">Research</a>
+			<div class="dropdown-menu" aria-labelledby="researchDropdown">
+				<a class="dropdown-item" href="../../subpages_research/projects_current.html">Current Projects</a>
+				<a class="dropdown-item" href="../../subpages_research/projects_completed.html">Completed Projects</a>
+				<a class="dropdown-item" href="../../subpages_research/events.html">Events</a>
+			</div>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="../../publications.html">Publications</a>
+			<div class="dropdown-menu" aria-labelledby="publicationsDropdown">
+				<a class="dropdown-item" href="../../subpages_pubs/methodology.html">Methodology</a>
+				<a class="dropdown-item" href="../../subpages_pubs/applications.html">Applications</a>
+				<a class="dropdown-item" href="../../subpages_pubs/conferences.html">Conferences</a>
+				<a class="dropdown-item" href="../../subpages_pubs/working_papers.html">Working Papers</a>
+				<a class="dropdown-item" href="../../subpages_pubs/books.html">Books</a>
+				<a class="dropdown-item" href="../../subpages_pubs/editorials.html">Editorials</a>
+				<a class="dropdown-item" href="../../subpages_pubs/supplementary.html">Supplementary</a>
+				<a class="dropdown-item" href="../../subpages_pubs/software.html">Software</a>
+			</div>
+		</li>
+		<li class="nav-item"><a class="nav-link active" href="../../blog.html">Blog</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../awards.html">Awards</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../teaching.html">Teaching</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../jobs.html">Jobs</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+	</ul>
+  </nav>
+		
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+
+		
+		<div id="Klein" style="font-size:medium;">
+			<h3>Building Blocks for Robust and Effective Semi-Supervised Real-World Object Detection</h3> 
+			<i> By Moussa Kassem Sbeyti and Nadja Klein, posted on March 27, 2025</i>
+			
+			<h4>What is the paper about?</h4>
+			Object detection models require vast amounts of labeled data, but acquiring such datasets is expensive and labor-intensive. Semi-supervised object detection (SSOD) addresses this issue by leveraging both labeled and unlabeled data. However, real-world applications suffer from three major challenges: 
+			<ul style="list-style: none; margin-left: -40px;">
+				<li>(1) class imbalance leading to poor generalization,</li>
+				<li>(2) noisy or incorrect ground truth labels, and</li>
+				<li>(3) missing or inaccurate pseudo-labels that propagate errors.</li>
+			</ul>
+			We investigate these challenges and propose four novel techniques (Fig.1) to enhance the robustness and effectiveness of SSOD frameworks:
+			<br>
+			<ul>
+				<li><b>Rare Class Collage (RCC)</b>: A data augmentation method that increases rare class representation by creating collages of rare objects.</li>
+				<li><b>Rare Class Focus (RCF)</b>: A batch sampling strategy that ensures rare classes are consistently represented in training.</li>
+				<li><b>Ground Truth Label Correction (GLC)</b>: A refinement method that identifies and corrects false, missing, and noisy ground truth labels using teacher model consistency.</li>
+				<li><b>Pseudo-Label Selection (PLS)</b>: A filtering approach that removes low-quality pseudo-labeled images based on missing detection rates while considering class rarity.</li>
+			</ul>
+			<br>
+			<figure>
+				<img src="figures/Fig1.png" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 1: Our building blocks integrated into an exemplary Semi-supervised object detection (SSOD) framework. The teacher model MT, trained on labeled data, generates pseudo-labels for unlabeled data, which are then filtered by a confidence threshold $\delta_S$. To address class imbalance, <b>Rare Class Collage (RCC)</b> crops instances of rare classes and combines them into collages, increasing their representation. <b>Rare Class Focus (RCF)</b> ensures each training batch contains common and rare classes, with augmented rare class images to boost their impact. <b>Ground Truth Label Correction (GLC)</b> corrects false, missing, and noisy labels by utilizing teacher prediction consistency across augmentations. <b>Pseudo-Label Selection (PLS)</b> removes pseudo-labeled images with many missing detections, estimated using our metric $D_i(\delta_S, \beta)$, which incorporates detection confidence and class rarity. Together, our methods enhance the ability of the student model $M_S(\delta_S)$ to learn effectively from both labeled and pseudo-labeled data, minimizing the propagation of errors from the teacher model.</figcaption>
+			</figure>
+			<br>
+			
+			<h4>Motivation</h4>
+			While pseudo-labeling is a powerful tool in SSOD, its effectiveness is limited by the quality of labeled and pseudo-labeled data. Many real-world datasets exhibit <b>class imbalance (Fig.2)</b>, where common objects dominate training data, leaving rare classes poorly represented. Furthermore, <b>label noise</b> (Fig.3), including incorrect or missing ground truth labels, compromises model learning. Finally, pseudo-labels generated by the teacher model are often <b>incomplete or incorrect</b> (Fig. 4), particularly for underrepresented classes, leading to error propagation.
+			<br>
+			Addressing these challenges is critical for making SSOD frameworks applicable in practical settings such as autonomous driving and industrial inspection.
+			<br> <br>
+			<figure>
+				<img src="figures/Fig2.png" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 2: KITTI (left, 10% labeled), BDD (right, 1% labeled). Class frequency for each class in both datasets.</figcaption>
+			</figure>
+			<br>
+			<figure>
+				<img src="figures/Fig3.png" style="width: 55%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 3: Examples of noisy box labels in KITTI. Human annotators often fail to accurately label occluded and truncated objects, especially in crowded scenes.</figcaption>
+			</figure>
+			<br>
+			<figure>
+				<img src="figures/Fig4.png" style="width: 80%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 4: KITTI (left), BDD (right). For each dataset, the left image represents the highest $S_i$, while the right image represents the lowest $S_i$ (poor detection quality). Predictions (in green) are filtered at $\delta_S = 0.9$. $M_D$ stands for missing detections.</figcaption>
+			</figure>
+			<br>
+
+			<h4>Theory</h4>
+			<b>Enhancing Class Representation</b> 
+			<br>
+			<ul>
+				<li><b>Rare Class Collage (RCC)</b></li>
+				<ul>
+					<li>Instead of re-sampling entire images, RCC <b>crops rare class objects</b> and composes collages, ensuring their sufficient presence during training.</li>
+					<li>This prevents overfitting to common classes and improves generalization.</li>
+				</ul>
+			</ul>
+			<ul>
+				<li><b>Rare Class Focus (RCF)</b></li>
+				<ul>
+					<li>RCF <b>modifies batch composition</b> to always include at least one rare class instance per batch.</li>
+					<li>Compared to standard batch sampling, this results in the consistent inclusion of rare objects.</li>
+				</ul>
+			</ul>
+
+			<b>Improving Label Quality</b>
+			<br>
+			<ul>
+				<li><b>Ground Truth Label Correction (GLC)</b></li>
+				<ul>
+					<li>GLC refines labels by leveraging <b>inference-time augmentation</b> and teacher model consistency.</li>
+					<li>This improves the quality of the often <b>false, missing, or noisy</b> ground truth labels.</li>
+				</ul>
+			</ul>
+			<ul>
+				<li><b>Pseudo-Label Selection (PLS)</b></li>
+				<ul>
+					<li>PLS introduces a class-aware <b>missing detection rate metric</b>, ensuring only pseudo-labels with valuable learning signals are retained.</li>
+					<li>Compared to traditional confidence-based pseudo-label filtering, this accounts for class rarity and missing objects.</li>
+				</ul>
+			</ul>
+			<br>
+
+			<h4>Experiments</h4>
+			We have conducted experiments on autonomous driving datasets (KITTI and BDD100K) using an EfficientDet-D0-based SSOD framework. Our key results are as follows.
+			<ul>
+				<li>RCC and RCF significantly <b>improve rare class detection</b> without negatively impacting common class performance.</li>
+				<li>GLC effectively <b>corrects false and missing labels</b>, boosting accuracy in challenging datasets.</li>
+				<li>PLS reduces <b>error propagation</b> by filtering out low-quality pseudo-labels, enhancing student model performance.</li>
+				<li>Combining all four building blocks yields <b>up to a 6% improvement</b> in SSOD performance compared to baseline models.</li>
+			</ul>
+			Check out our results in more depth <a href="https://openreview.net/pdf?id=vRYt8QLKqK" target="_blank">here</a>. 
+
+			<br> <br>
+
+			<h4>Final Thoughts</h4>
+			SSOD is a promising approach for reducing reliance on extensive labeled datasets. However, real-world deployments require methods to <b>address class imbalance, improve label quality, and refine pseudo-label selection</b>. Our paper investigates the effects of the latter on SSOD and proposes four modules: RCC, RCF, GLC, and PLS, that provide effective solutions with minimal computational overhead. These techniques can be seamlessly integrated into SSOD pipelines, making them <b>applicable across diverse object detection tasks</b>. <br>
+			Our work demonstrates that <b>data-centric enhancements</b> are crucial for making SSOD viable for real-world applications.
+			<br>
+			The code is available <a href="https://mos-ks.github.io/publications" target="_blank">here</a>.
+
+			<br> <br>
+			<h4>References</h4>
+			Sohn, Kihyuk, et al. A simple semi-supervised learning framework for object detection. arXiv preprint arXiv:2005.04757 (2020). <br>
+			Mingxing Tan, Ruoming Pang, and Quoc V. Le. Efficientdet: Scalable and efficient object detection. In IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp. 10778–10787, 2020. <br>
+			Fisher Yu, Haofeng Chen, Xin Wang, Wenqi Xian, Yingying Chen, Fangchen Liu, Vashisht Madhavan, and Trevor Darrell. Bdd100k: A diverse driving dataset for heterogeneous multitask learning. In IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp. 2636–2645, 2020. <br>
+			Andreas Geiger, Philip Lenz, and Raquel Urtasun. Are we ready for autonomous driving? the kitti vision benchmark suite. In IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp. 3354–3361, 2012. <br>
+
+
+			<br>
+			<i>For questions, comments or other matters related to this blog post, please contact us via <a href="mailto:kleinlab@scc.kit.edu">kleinlab@scc.kit.edu</a>.</i>
+
+			<br> <br>
+			If you find our work useful, please cite our paper:
+			<br> <br>
+
+			<tt>
+			@article{KasKleNowSivAlb2025, <br>
+			<div style="text-indent:40px;">title={Building Blocks for Robust and Effective Semi-Supervised Real-World Object Detection},</div>
+			<div style="text-indent:40px;">author={Moussa Kassem~Sbeyti and Nadja Klein and Azarm Nowzad and Fikret Sivrikaya and Sahin Albayrak},</div>
+			<div style="text-indent:40px;">journal={Transactions on Machine Learning Research},</div>
+			<div style="text-indent:40px;">issn={2835--8856},</div>
+			<div style="text-indent:40px;">year={2025},</div>
+			<div style="text-indent:40px;">url={https://openreview.net/forum?id=vRYt8QLKqK}</div>
+			}
+			</tt>		 
+			
+			</div>
+
+			
+
+
+		<!-- Imprint and data protection -->
+		<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
+			<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
+		</div>
+			
+		</div>
+
+	<!-- jquery -->
+	<script src="./libs/jquery-3.6.1.min.js"></script>
+	
+	<!-- boostrap -->
+	<script src="./libs/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+
+	<!-- Functionality for popover of buttons -->
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover(); 
+		});
+	</script>
+
+	<!-- Functionality for scroll-up button -->
+	<script>
+	$(document).ready(function(){ 
+		if ($(this).scrollTop() > 100) {
+			$('#scrollbutton').fadeIn();
+		}
+		$(window).scroll(function(){ 
+			if ($(this).scrollTop() > 100) { 
+				$('#scrollbutton').fadeIn();
+			} else { 
+				$('#scrollbutton').fadeOut(); 
+			}
+		});
+		$('#scrollbutton').click(function(){ 
+			$("html, body").animate({ scrollTop: 0 }, 300); 
+			return false; 
+		}); 
+	});
+	</script>
+	
+</body>
+
+</html>
