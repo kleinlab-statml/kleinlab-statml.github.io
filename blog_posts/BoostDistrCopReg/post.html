@@ -88,6 +88,7 @@
 			
 			<br> <br>
 			<h4>What is the paper about?</h4>
+			This blog post is about our paper “Boosting distributional regression for bivariate  binary, discrete and mixed responses” which was published in Statistical Methods in Medical Research, and which can be found <a href="https://journals.sagepub.com/doi/10.1177/09622802241313294" target="_blank">here</a>. The accompanying code and data are available on <a href="https://github.com/kleinlab-statml/BoostDistCopReg_BinDiscMix" target="_blank">GitHub</a>.
 			The article presents a statistical boosting algorithm tailored for bivariate distributional copula regression. Compared to Hans et. al (2023, [1]), our method cannot only deal with continuous outcomes but also binary, count, or mixed responses. 
 			<br> 
 			Using our framework, practitioners can specify suitable distributions for the marginal response variables. A flexible joint bivariate distribution is then constructed using a copula function, which links the two marginal responses and induces a dependence structure to be learned from the data. To handle high-dimensional covariates or feature variables, we estimate the both the marginal distributions and the dependence structure jointly using component-wise gradient boosting.
