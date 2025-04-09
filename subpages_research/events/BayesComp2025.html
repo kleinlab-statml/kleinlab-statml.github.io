@@ -137,17 +137,101 @@
 					<p>
 						<i>Abstract:</i> TBD
 					</p>
-					<li><i>Maria De Iorio, Department of Paediatrics, Yong Loo Lin School of Medicine, National University of Singapore</i></li>
-					<li><i>Robert Kohn, School of Economics, UNSW Business School, University of New South Wales</i></li>
-					<li><i>Francesca Labanca, Dipartimento di Statistica, Informatica, Applicazioni "G. Parenti" (DiSIA), University of Florence</i></li>
-					<li><i>Zhidi Lin, Department of Statistic and Data Science, National University of Singapore</i></li>
-					<li><i>Jaewoo Park, Department of Statistics and Data Science, Yonsei University</i></li>
-					<li><i>David Rossell, Department of Business and Economics, Universitat Pompeu Fabra</i></li>
-					<li><i>Scott A. Sisson, School of Mathematics and Statistics, University of New South Wales</i></li>
-					<li><i>Michael Stanley Smith, Melbourne Business School, University of Melbourne</i></li>
-					<li><i>Marina Vannucci, Department of Statistics, Rice University</i></li>
-					<li><i>Mattias Villani, Department of Statistics, Stockholm University</i></li>
-					<li><i>Bohan Wu, Department of Statistics, Columbia University</i></li>
+					<li>Maria De Iorio, Department of Paediatrics, Yong Loo Lin School of Medicine, National University of Singapore</li>
+					<p>
+						TBD
+					</p>
+					<p>
+						<i>Abstract:</i> TBD
+					</p>
+					<li>Robert Kohn, School of Economics, UNSW Business School, University of New South Wales</li>
+					<p>
+						ProDAG: Projection-Induced Variational Inference  for Directed Acyclic Graphs
+					</p>
+					<p>
+						<i>Abstract:</i> Directed acyclic graph (DAG) learning is a rapidly expanding field of research. Though the field has witnessed remarkable advances over the past few years, it remains statistically and computationally challenging to learn a single (point estimate) DAG from data, let alone provide uncertainty quantification. Our paper addresses the difficult task of quantifying graph uncertainty by developing a Bayesian variational inference framework based on novel distributions that have support directly on the space of DAGs. The distributions, which we use to form our prior and variational posterior, are induced by a projection operation, whereby an arbitrary continuous distribution is projected onto the space of sparse weighted acyclic adjacency matrices (matrix representations of DAGs) with probability mass on exact zeros. Though the projection constitutes a combinatorial optimization problem, it is solvable at scale via recently developed techniques that reformulate acyclicity as a continuous constraint. We empirically demonstrate that our proposed method, \texttt{ProDAG}, can perform higher quality Bayesian inference than possible with existing state-of-the-art alternatives.
+
+					</p>
+					<li>Francesca Labanca, Dipartimento di Statistica, Informatica, Applicazioni "G. Parenti" (DiSIA), University of Florence</li>
+					<p>
+						Copula-based models for spatially dependent cylindrical data
+					</p>
+					<p>
+						<i>Abstract:</i> TBD
+					</p>
+					<li>Zhidi Lin, Department of Statistic and Data Science, National University of Singapore</li>
+					<p>
+						Towards Flexibility and Efficiency of Gaussian Process State-Space Models
+					</p>
+					<p>
+						<i>Abstract:</i> Gaussian Process State-Space Models (GPSSMs) provide a robust framework for modeling complex dynamical systems by combining probabilistic inference with nonparametric flexibility. However, their practical adoption is often constrained by computational challenges and limited flexibility to diverse real-world scenarios. 
+This talk introduces recent advancements that significantly improve the flexibility and learning efficiency of GPSSMs. We present scalable methodologies leveraging Gaussian process approximations and ensemble Kalman filters, enabling efficient training on large-scale, high-dimensional datasets. Additionally, we discuss innovations in model design incorporating normalizing flows, which enhance GPSSMs’ ability to capture intricate temporal dependencies and adapt to evolving system dynamics.
+Empirical results on both synthetic and real-world datasets illustrate the potential of these techniques, demonstrating improved accuracy, reduced computational demands, and greater model capacity. These contributions highlight a promising pathway for deploying GPSSMs in practical, real-world applications.
+					</p>
+					<li>Jaewoo Park, Department of Statistics and Data Science, Yonsei University</li>
+					<p>
+						Bayesian Function-on-Function Regression for Spatial Functional Data
+					</p>
+					<p>
+						<i>Abstract:</i> Spatial functional data arise in many settings, such as particulate matter curves observed at monitoring stations and age population curves at each areal unit. Most existing functional regression models have limited applicability because they do not consider spatial correlations. Although functional kriging methods can predict the curves at unobserved spatial locations, they are based on variogram fittings rather than constructing hierarchical statistical models. In this manuscript, we propose a Bayesian framework for spatial function-on-function regression that can carry out parameter estimations and predictions. However, the proposed model has computational and inferential challenges because the model needs to account for within and between-curve dependencies. Furthermore, high-dimensional and spatially correlated parameters can lead to the slow mixing of Markov chain Monte Carlo algorithms. To address these issues, we first utilize a basis transformation approach to simplify the covariance and apply projection methods for dimension reduction. We also develop a simultaneous band score for the proposed model to detect the significant region in the regression function. We apply our method to both areal and point-level spatial functional data, showing the proposed method is computationally efficient and provides accurate estimations and predictions.
+					</p>
+					<li>David Rossell, Department of Business and Economics, Universitat Pompeu Fabra</li>
+					<p>
+						Semi-parametric local variable selection under misspecification
+					</p>
+					<p>
+						<i>Abstract:</i> Local variable selection aims to test for the effect of covariates on an outcome within specific regions. We outline a challenge that arises in the presence of non-linear effects and model misspecification. Specifically, for common semi-parametric methods even slight model misspecification can result in a high false positive rate, in a manner that is highly sensitive to the chosen basis functions. We propose a methodology based on orthogonal cut splines that avoids false positive inflation for any choice of knots, and achieves consistent local variable selection. Our approach offers simplicity, handles both continuous and categorical covariates, and provides theory for high-dimensional covariates and model misspecification. We discuss settings with either independent or dependent data. Our proposal allows including adjustment covariates that do not undergo selection, enhancing the model's flexibility. Our examples describe salary gaps associated with various discrimination factors at different ages, and the effects of covariates on functional data measuring brain activation at different times.
+					</p>
+					<li>Scott A. Sisson, School of Mathematics and Statistics, University of New South Wales</li>
+					<p>
+						Regression with random rectangle summaries and variational transdimensional inference
+					</p>
+					<p>
+						<i>Abstract:</i> The first concerns how to implement regression models y=f(x) when individual (x_i,y_i) are not observed, but where instead we observe random rectangles bounding a group of (x_i,y_i). This can be useful when there is a large number of observations, or when there are privacy concerns. The approach constructs an integrated likelihood and develops exact and approximate pseudo-marginal MCMC algorithms for inference. The second concerns how to implement a variational approximation to the posterior distribution of a Bayesian robust variable selection problem. Rather than construct a standard variational approximation of each model, and across the distribution of model probabilities, we instead attempt this using a single variational target that spans the entire transdimensional model space. The approach introduces a CoSMIC normalising flow, and embeds this within a variational transdimensional inference (VTI) algorithm.
+					</p>
+					<li>Michael Stanley Smith, Melbourne Business School, University of Melbourne</li>
+					<p>
+						Deep Distributional Time Series Models and the Probabilistic Forecasting of Intraday Electricity Prices
+					</p>
+					<p>
+						<i>Abstract:</i> Recurrent neural networks (RNNs) with rich feature vectors of past values can provide
+accurate point forecasts for series that exhibit complex serial dependence. We propose
+two approaches to constructing deep time series probabilistic models based on a variant
+of RNN called an echo state network (ESN). The first is where the output layer of the ESN
+has stochastic disturbances and a Bayesian prior for regularization. The second employs
+the implicit copula of an ESN with Gaussian disturbances, which is a Gaussian copula
+process on the feature space. Combining this copula process with a non-parametrically
+estimated marginal distribution produces a distributional time series model. The resulting
+probabilistic forecasts are deep functions of the feature vector and marginally calibrated. In
+both approaches, Markov chain Monte Carlo methods are used to estimate the models and
+compute forecasts. The proposed models are suitable for the complex task of forecasting
+intraday electricity prices. Using data from the Australian market, we show that our deep
+time series models provide accurate short term probabilistic price forecasts, with the copula
+model dominating. Moreover, the models provide a flexible framework for incorporating
+probabilistic forecasts of electricity demand, which increases upper tail forecast accuracy
+from the copula model significantly.
+					</p>
+					<li>Marina Vannucci, Department of Statistics, Rice University</li>
+					<p>
+						Varying-coefficients Bayesian models for inference of networks and covariate effects
+					</p>
+					<p>
+						<i>Abstract:</i> New methods for the simultaneous inference of graphical models and covariates effects in the Bayesian framework will be discussed. I will consider regression settings where the interest is in the estimation of sparse networks among a set of primary variables, and where covariates may impact the strength of edges. The proposed models utilize spike-and-slab priors to perform edge selection, and Gaussian process priors to allow for flexibility in the covariate effects. Efficient and scalable algorithms for posterior inference will be employed for the estimation of the models. Simulation studies will demonstrate how the proposed models improve on the accuracy of existing methods, in both network recovery and covariate selection. I will show applications of the proposed models to neuroimaging and genomic datasets.
+					</p>
+					<li>Mattias Villani, Department of Statistics, Stockholm University</li>
+					<p>
+						Time-varying multi-seasonal ARMA processes with semiparametric evolution over time
+					</p>
+					<p>
+						<i>Abstract:</i> We develop multi-seasonal ARMA processes where the time evolution of the parameters follow a flexible semiparametric process over the stability and invertibility regions. Computational algorithms are developed to sample from the posterior distribution. The model and computational methods are illustrated on simulated and real data.
+					</p>
+					<li>Bohan Wu, Department of Statistics, Columbia University</li>
+					<p>
+						Monte Carlo Inference for Semiparametric Bayesian Regression
+					</p>
+					<p>
+						<i>Abstract:</i> Data transformations are essential for broad applicability of parametric regression models. However, for Bayesian analysis, joint inference of the transformation and model parameters typically involves restrictive parametric transformations or nonparametric representations that are computationally inefficient and cumbersome for implementation and theoretical analysis, which limits their usability in practice. We introduce a simple, general, and efficient strategy for joint posterior inference of an unknown transformation and all regression model parameters. The proposed approach directly targets the posterior distribution of the transformation by linking it with the marginal distributions of the independent and dependent variables, and then deploys a Bayesian nonparametric model via the Bayesian bootstrap. Crucially, this approach delivers (1) joint posterior consistency under general conditions, including multiple model misspecifications, and (2) efficient Monte Carlo (not Markov chain Monte Carlo) inference for the transformation and all parameters for important special cases. These tools apply across a variety of data domains, including real-valued, positive, and compactly-supported data. Simulation studies and an empirical application demonstrate the effectiveness and efficiency of this strategy for semiparametric Bayesian analysis with linear models, quantile regression, and Gaussian processes. The R package SeBR is available on CRAN.
+					</p>
 				</ul>
 				
 			</div>
