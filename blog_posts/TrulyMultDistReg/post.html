@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Homepage of KleinLab">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>KleinLab - Homepage</title>
+
+  <link href="../.././libs/bootstrap-3.4.1/css/bootstrap.css" rel="stylesheet">
+  <link href="../.././libs/fontawesome-6.2.0/css/all.min.css" rel="stylesheet">
+  <link href="../.././style.css" rel="stylesheet">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+  <style>
+  body {
+   font-family: 'Didact Gothic';
+  }
+  </style>
+
+<link rel="icon" href="../../images/logo_light_wo_frame.png">
+
+<script type="text/javascript" async
+  src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/javascript"
+	src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  </head>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+
+	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
+
+<div class="container">
+	
+	<div style="margin-top: 15px; margin-bottom: 15px;">
+		<img class="filter-img" src="../../images/lettering_dark.png" alt="Group logo" style="height: 40px;">
+		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
+	</div>
+
+<nav class="navbar navbar-light">	  
+	<ul class="nav navbar-nav mr-auto">
+		<li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+		<li class="nav-item"><a class="nav-link"href="../../news.html">News</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../team.html">Team</a></li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="../../research.html">Research</a>
+			<div class="dropdown-menu" aria-labelledby="researchDropdown">
+				<a class="dropdown-item" href="../../subpages_research/projects_current.html">Current Projects</a>
+				<a class="dropdown-item" href="../../subpages_research/projects_completed.html">Completed Projects</a>
+				<a class="dropdown-item" href="../../subpages_research/events.html">Events</a>
+			</div>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="../../publications.html">Publications</a>
+			<div class="dropdown-menu" aria-labelledby="publicationsDropdown">
+				<a class="dropdown-item" href="../../subpages_pubs/methodology.html">Methodology</a>
+				<a class="dropdown-item" href="../../subpages_pubs/applications.html">Applications</a>
+				<a class="dropdown-item" href="../../subpages_pubs/conferences.html">Conferences</a>
+				<a class="dropdown-item" href="../../subpages_pubs/working_papers.html">Working Papers</a>
+				<a class="dropdown-item" href="../../subpages_pubs/books.html">Books</a>
+				<a class="dropdown-item" href="../../subpages_pubs/editorials.html">Editorials</a>
+				<a class="dropdown-item" href="../../subpages_pubs/supplementary.html">Supplementary</a>
+				<a class="dropdown-item" href="../../subpages_pubs/software.html">Software</a>
+			</div>
+		</li>
+		<li class="nav-item"><a class="nav-link active" href="../../blog.html">Blog</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../awards.html">Awards</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../teaching.html">Teaching</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../jobs.html">Jobs</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+	</ul>
+  </nav>
+		
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+
+		
+		<div style="font-size:medium;">
+			<h3>Truly Multivariate Structured Additive Distributional Regression</h3> 
+			<i> By Lucas Kock and Nadja Klein, posted on April 11, 2025</i>
+			
+			<h4>What is the paper about?</h4>
+			Our paper introduces a novel multivariate distributional regression model that extends generalized additive models for location, scale, and shape (GAMLSS) to truly multivariate responses [1]. This allows for the joint modeling of response vectors with dimensions greater than two or three, including the modeling of the dependence structure. The model relies on a Gaussian copula combined with arbitrary parametric distributions for the marginal responses. Traditional distributional regression models have been limited through fixed dependence structures not depending on covariate, or computational challenges when handling higher-dimensional data. By leveraging Bayesian inference and advances in distributional copula regression our approach overcomes these limitations.
+			<br> <br>
+			
+			<h4>Motivation</h4>
+			The need to analyze complex multivariate data in fields like epidemiology, environmental science, and economics, where responses are not just univariate or bivariate, is increasing. In theory, distributional regression [2] gives a flexible framework to analyse these data sets. However, existing methods often assume simplistic parametric forms for all responses or restrict the dependence structure to be independent of covariates. Our model fills this gap by enabling flexible, covariate-dependent modeling of both the marginal distributions and the dependencies between them.
+			<br> <br>
+
+			<h4>Theory</h4>
+			Our approach builds on the structured additive distributional regression framework [3] and employs Gaussian copulas [4] for modeling dependencies. Practitioners can specify different parametric forms for each marginal distribution, which allows them to consider mixed responses where some responses may be discrete and others continuous or of mixed type. In addition, the pairwise correlations between response components can vary with covariates. The model is highly parameterized, but the use of Bayesian inference and efficient sampling techniques makes estimation feasible.
+			<br> <br>
+
+			<h4>Experiments</h4>
+			We validated our model using both simulations and real-world datasets. In our simulations, we tested the model's ability to accurately estimate parameters in both Gaussian and non-Gaussian settings, demonstrating flexibility and robustness across various response dimensions even under model missspecificaion. Our real-world applications included studying childhood malnutrition in Nigeria and traffic detection in Berlin. 
+			<br>
+			For childhood malnutrition, we examined three nutritional indicators in Nigerian children, namely stunting, wasting, and underweight referring to insufficient height for age, insufficient weight for height, and insufficient weight for age, respectively, thereby reflecting the different dimensions of childhood undernutrition. Our analysis reveals significant spatial and covariate-driven patterns in nutritional deficiencies. For example, we can visually inspect the influence of the 37 districts in Nigeria jointly on all pairwise correlations as shown in the Figure below.
+			<br>
+			<figure>
+				<img src="Figures/typicall_child_spatial.png" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+			</figure>
+			<br>
+			In the Berlin traffic study, we modeled the complex interactions between traffic counts and speeds for cars and trucks over time, offering insights into urban traffic dynamics. The figure below shows univariate marginal densities (diagonal) and bivariate margins (lower left) for three different timepoints, illustrating the high flexibility of the fitted model.
+			<br>
+			<figure>
+				<img src="Figures/traffic_timepoints.png" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+			</figure>
+			<br>
+
+			<h4>Final Thoughts</h4>
+			Our multivariate distributional regression model provides a powerful tool for researchers needing to explore complex multivariate regression data. By allowing different marginal distributions and covariate-dependent dependencies, it offers a comprehensive approach to understanding intricate regression data structures. We encourage interested readers to explore our work and consider its potential applications in their fields of study.
+
+			<br> <br>
+			<h4>References</h4>
+			[1] Kock, L. and Klein, N. Truly multivariate structured additive regression (2025). Journal of Computational and Graphical Statistics; in print, doi: 10.1080/10618600.2024.2434181
+			<br>
+			[2] Klein N. (2024). Distributional regression for data analysis. Annual Review of Statistics and its Application; 11: 321–346.
+			<br>
+			[3] Rigby RA, Stasinopoulos DM (2005). Generalized additive models for location, scale and shape. Journal of the Royal Statistical Society, Series C: Applied Statistics; 54: 507–554.
+			<br>
+			[4] Song, P. X.-K., M. Li, and Y. Yuan (2009). Joint regression analysis of correlated data using Gaussian copulas. Biometrics 65 (1), 60–68.
+
+			<br> <br>
+			<i>For questions, comments or other matters related to this blog post, please contact us via <a href="mailto:kleinlab@scc.kit.edu">kleinlab@scc.kit.edu</a>.</i>
+
+			<br> <br>
+			If you find our work useful, please cite our paper:
+			<br> <br>
+
+			<tt>
+			@article{KocKle2025, <br>
+			<div style="text-indent:40px;">title={Truly Multivariate Structured Additive Distributional Regression},</div>
+			<div style="text-indent:40px;">author={Kock, Lucas and Klein, Nadja},</div>
+			<div style="text-indent:40px;">booktitle={Journal of Computational and Graphical Statistics},</div>
+			<div style="text-indent:40px;">volume={0},</div>
+			<div style="text-indent:40px;">number={0},</div>
+			<div style="text-indent:40px;">pages={1--13},</div>
+			<div style="text-indent:40px;">year={2025},</div>
+			<div style="text-indent:40px;">publisher={ASA Website},</div>
+			<div style="text-indent:40px;">doi={10.1080/10618600.2024.2434181},</div>
+			}
+			</tt>
+			
+			</div>
+
+			
+
+
+		<!-- Imprint and data protection -->
+		<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
+			<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
+		</div>
+			
+		</div>
+
+	<!-- jquery -->
+	<script src="./libs/jquery-3.6.1.min.js"></script>
+	
+	<!-- boostrap -->
+	<script src="./libs/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+
+	<!-- Functionality for popover of buttons -->
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover(); 
+		});
+	</script>
+
+	<!-- Functionality for scroll-up button -->
+	<script>
+	$(document).ready(function(){ 
+		if ($(this).scrollTop() > 100) {
+			$('#scrollbutton').fadeIn();
+		}
+		$(window).scroll(function(){ 
+			if ($(this).scrollTop() > 100) { 
+				$('#scrollbutton').fadeIn();
+			} else { 
+				$('#scrollbutton').fadeOut(); 
+			}
+		});
+		$('#scrollbutton').click(function(){ 
+			$("html, body").animate({ scrollTop: 0 }, 300); 
+			return false; 
+		}); 
+	});
+	</script>
+	
+</body>
+
+</html>
