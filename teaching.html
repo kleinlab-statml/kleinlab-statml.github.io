@@ -114,8 +114,16 @@
 							<i>For more details, see the <a href="https://formal.kastel.kit.edu/teaching/projektgruppe/">overview page</a> of this course.</i>
 						</div>
 
+						<div style="text-align: right;">
+							<button class="btn btn-default btn-sm" data-toggle="collapse" data-target="#old_courses" style="margin-top: 10px">
+								<span class="toggle-text">
+									<span class="fa fa-chevron-down" style="margin-right: .25em;"></span> Show previous semesters
+								</span>
+							</button>
+						</div>
 
 						<div id="old_courses" class="collapse" style="margin-top: 40px;">
+
 							<h3>Winter Semester 2024/2025</h3>
 					
 							<div>
@@ -148,21 +156,7 @@
 								<i>For more details, see the <a href="https://formal.kastel.kit.edu/teaching/projektgruppe/PG_WiSe2425.phtml">overview page</a> of this course.</i>
 							</div>
 						</div>
-							
-						<div style="text-align: right;">
-							<button class="btn btn-default btn-sm collapsed" data-toggle="collapse" data-target="#old_courses" style="margin-top: 10px">
-								<span class="show-ctrl">
-									<span class="fa fa-chevron-down" style="margin-right: .25em;"></span> Show previous semesters
-								</span>
-								<span class="hide-ctrl">
-									<span class="fa fa-chevron-up" style="margin-right: .25em;"></span> Collapse previous semesters
-								</span>
-							</button>
-						</div>		
-
-
-
-						
+													
 
 					</div>
 				</li>
@@ -203,7 +197,16 @@
 						<br>
 						<p>
 							A selection of completed theses at the chair can be found below.
-						</p>						
+						</p>	
+						
+						<div style="text-align: right;">
+							<button class="btn btn-default btn-sm" data-toggle="collapse" data-target="#old_theses" style="margin-top: 10px">
+								<span class="toggle-text">
+									<span class="fa fa-chevron-down" style="margin-right: .25em;"></span> Show completed theses
+								</span>
+							</button>
+						</div>		
+						
 						<div id="old_theses" class="collapse" style="margin-top: -10px;">
 							<h5>Master Theses</h5>
 							<ul>
@@ -224,18 +227,7 @@
 								<li><i>Die Modellierung der COVID-19 Fallzahlen in Abhängigkeit von Strukturdaten zu Wetter und Bevölkerung in Berlin</i></li>
 								<li><i>Vergleich von Vorhersagemodellen zu Stornierungen von Hotelbuchungen</i></li>
 							</ul>
-						</div>
-							
-						<div style="text-align: right;">
-							<button class="btn btn-default btn-sm collapsed" data-toggle="collapse" data-target="#old_theses" style="margin-top: 10px">
-								<span class="show-ctrl">
-									<span class="fa fa-chevron-down" style="margin-right: .25em;"></span> Show completed theses
-								</span>
-								<span class="hide-ctrl">
-									<span class="fa fa-chevron-up" style="margin-right: .25em;"></span> Collapse completed theses
-								</span>
-							</button>
-						</div>					
+						</div>	
 
 					</div>
 				</li>
@@ -291,6 +283,36 @@
 			return false; 
 		}); 
 	});
+	</script>
+
+	<script>
+		// JavaScript to toggle button text
+		document.addEventListener('DOMContentLoaded', function () {
+			const button = document.querySelector('[data-target="#old_courses"]');
+			const toggleText = button.querySelector('.toggle-text');
+
+			button.addEventListener('click', function () {
+				const isCollapsed = document.querySelector('#old_courses').classList.contains('in');
+				toggleText.innerHTML = isCollapsed
+					? '<span class="fa fa-chevron-down" style="margin-right: .25em;"></span> Show previous semesters'
+					: '<span class="fa fa-chevron-up" style="margin-right: .25em;"></span> Collapse previous semesters';
+			});
+		});
+	</script>
+
+	<script>
+		// JavaScript to toggle button text
+		document.addEventListener('DOMContentLoaded', function () {
+			const button = document.querySelector('[data-target="#old_theses"]');
+			const toggleText = button.querySelector('.toggle-text');
+
+			button.addEventListener('click', function () {
+				const isCollapsed = document.querySelector('#old_theses').classList.contains('in');
+				toggleText.innerHTML = isCollapsed
+					? '<span class="fa fa-chevron-down" style="margin-right: .25em;"></span> Show completed theses'
+					: '<span class="fa fa-chevron-up" style="margin-right: .25em;"></span> Collapse completed theses';
+			});
+		});
 	</script>
 	
 </body>

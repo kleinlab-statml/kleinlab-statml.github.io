@@ -192,29 +192,56 @@ h3 {
 
  /*---------- Top navbar  ----------*/
 
-.navbar {
+ .navbar {
     width: 100%;
     background: #b7d0d3;
     margin-bottom: 10px;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap into multiple rows */
+    padding: 10px;
+    justify-content: center; 
 }
 
 .navbar .nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    justify-content: space-between;
     display: flex;
+    flex-wrap: wrap; /* Allow navigation items to wrap */
     width: 100%;
-    /*overflow: hidden; */
+    justify-content: center 
 }
 
 .navbar .nav li {
-    flex:1 0 auto;
+    flex: 0 1 auto; /* Changed from flex: 1 0 auto */
+    min-width: 10%; /* This will force wrapping when items get too small */
     text-align: center;
 }
 
+/* Background when hovered over a link */
+.navbar .nav li a:hover {
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+.navbar .nav li a {
+    background-color: #b7d0d3;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+    margin: 3px;
+    border-radius: 4px;
+}
+
+
+nav a {
+    font-weight: bold;
+    color: var(--accent1-color); 
+    background-color: var(--background-color);
+    width: 6em;
+    font-size: 1.2em;
+  }
 
 .navbar-default {
     background-color: white;
@@ -230,9 +257,6 @@ h3 {
 	padding-left: 10px;
 }
 
-/* Navbar button */
-
-
 /* Navbar button hover */
 .navbar-default .navbar-toggle .icon-bar {
     background-color: white;
@@ -247,35 +271,6 @@ h3 {
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
     background-color: white;
-}
-
-/* Navbar when functioning as banner */
-
-/* Background when hovered over a link */
-.navbar .nav li a:hover {
-    background-color: #eeeeee;
-}
-
-.navbar .nav li a {
-    background-color: #b7d0d3;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    padding:10px 0;
-    margin: 3px;
-    border-radius: 4px;
-}
-
-/* Navbar when in collasted mode */
-@media (max-width:767px){
-    .navbar .nav li a {
-        background-color: #b7d0d3;
-    }
-    .navbar .nav li {
-        text-align: center;
-        padding-left: 10px;
-        
-    }
 }
 
 
@@ -295,15 +290,6 @@ table {
     color: black;
     text-decoration: none;
     margin-left:10px;
-  }
-
-nav a {
-    font-weight: bold;
-    color: var(--accent1-color); 
-    background-color: var(--background-color);
-    width: 6em;
-    font-size: 1.2em;
-    text-align: center;
   }
 
   /* Add an active class to highlight the current page */
