@@ -157,7 +157,11 @@
 						Copula-based models for spatially dependent cylindrical data
 					</p>
 					<p>
-						<i>Abstract:</i> TBD
+						<i>Abstract:</i> Cylindrical data frequently arise across various scientific disciplines, including meteorology (e.g., wind direction and speed), oceanography (e.g., marine current direction and speed or wave heights), ecology (e.g., telemetry), and medicine (e.g., seasonality and intensity in disease onset). Such data often occur as spatially correlated series of intensities and angles, thereby representing dependent bivariate response vectors of linear and circular components.
+To accommodate both the circular-linear dependence and spatial autocorrelation, while remaining flexible in their marginal specifications, copula-based models for cylindrical data have been developed in the literature. However, existing approaches typically treat the copula parameters as constants not related to covariates, and regression specifications for the marginal distributions are frequently restricted to linear predictors.
+In this work, we propose a structured additive conditional copula regression model for cylindrical data. In our approach, the circular component is modeled using a wrapped Gaussian process, and the linear component follows a distributional regression, and both components allow for the inclusion of linear and non-linear covariates effects.
+Furthermore, by leveraging the empirical equivalence between Gaussian random fields (GRFs) and Gaussian Markov random fields (GMRFs), our approach avoids the computational bur- den typically associated with GRFs, while simultaneously allowing for non-stationarity in the covariance structure.
+Posterior estimation is performed via Markov chain Monte Carlo simulation. We evaluate the performance of the proposed model in a simulation study and subsequently in an analysis on wind directions and speed in Germany. This is joint work with Anna Gottard and Nadja Klein.
 					</p>
 					<li>Zhidi Lin, Department of Statistic and Data Science, National University of Singapore</li>
 					<p>
