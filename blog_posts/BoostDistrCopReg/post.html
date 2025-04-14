@@ -87,7 +87,7 @@
 			<i> By Guillermo Briseño Sanchez and Nadja Klein, posted on April 01, 2025</i>
 			
 			<br> <br>
-			This blog post is about our paper “Boosting distributional regression for bivariate binary, discrete and mixed responses” which was published in Statistical Methods in Medical Research, and which can be found <a href="https://journals.sagepub.com/doi/10.1177/09622802241313294" target="_blank">here</a>. The accompanying code and data are available on <a href="https://github.com/kleinlab-statml/BoostDistCopReg_BinDiscMix" target="_blank">GitHub</a>.
+			This blog post is about our paper <b>“Boosting distributional regression for bivariate binary, discrete and mixed responses”</b> which was published in <i>Statistical Methods in Medical Research</i>, and which can be found <a href="https://journals.sagepub.com/doi/10.1177/09622802241313294">here</a>. The accompanying code and data are available on <a href="https://github.com/kleinlab-statml/BoostDistCopReg_BinDiscMix" target="_blank">GitHub</a>.
 			<br> <br>
 			<h4>What is the paper about?</h4>
 			The article presents a statistical boosting algorithm tailored for bivariate distributional copula regression. Compared to Hans et. al (2023, [1]), our method cannot only deal with continuous outcomes but also binary, count, or mixed responses. 
@@ -96,6 +96,7 @@
 			<br> <br>
 			<figure>
 				<img src="figures/Fig1.png" style="width: 65%; display: block; margin-left: auto; margin-right: auto;">
+                <figcaption>Figure 1: Responses in the biomedical applications analysed in Section 4 of the paper: (a) binary–binary response (numbers indicate proportions): high cholesterol and chronic ischemic heart disease; (b) count–count response (numbers indicate cases): doctor visits and medical prescriptions; and (c) binary–continuous response: fever and wasting (indicator for acute undernutrition)</figcaption>
 			</figure>
 			<br> 
 			
@@ -126,12 +127,14 @@
 			<br> <br>
 			<figure>
 				<img src="figures/Fig2.png" style="width: 55%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 2: Manhattan-type plots of the estimated coefficients (expressed in exponential absolute values of the estimated values) of the boosted bivariate binary model using a Gaussian copula. The x-axis represents the genomic location of the variants and the y-axis shows \(\exp( | \hat{ \beta_j } | ), j = 1, ..., p\). </figcaption>
 			</figure>
 			<br>
 			The second application is on childhood undernutrition in India using the data from [6]. We analysed the joint distribution of a binary variable (fever yes/no before survey interview) and a malnutrition indicator (wasting; low weight for height), which measures acute undernutrition. The figure below shows the estimated dependence between these outcomes expressed as Kendall’s tau and averaged by administrative area:
 			<br> <br>
 			<figure>
 				<img src="figures/Fig3.png" style="width: 35%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 3: Estimated Kendall’s \(\tau\) of having fever and acute undernutrition averaged by administrative areas according to the Clayton copula rotated by 270°. </figcaption>			
 			</figure>
 			<br>
 			One can see that dependence between the fever indicator and wasting changes according to the administrative areas of India, with slightly stronger negative dependence between the marginal variables in the west of the country. Our results agree with previous analyses of Klein, et. al (2019, [6]), but with the added benefit of variable selection being conducted automatically by our estimation algorithm. 
