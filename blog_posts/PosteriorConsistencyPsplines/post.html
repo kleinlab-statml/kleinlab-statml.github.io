@@ -94,49 +94,39 @@ gtag('config', 'G-E2B3ZSQM8N');
 
 		
 		<div style="font-size:medium;">
-			<h3>Truly Multivariate Structured Additive Distributional Regression</h3> 
-			<i> By Lucas Kock and Nadja Klein, posted on April 11, 2025</i>
+			<h3>Posterior Concentration Rates for Bayesian Penalized Splines</h3> 
+			<i> By Paul Bach and Nadja Klein, posted on May 05, 2025</i>
 			
 			<h4>What is the paper about?</h4>
-			Our paper introduces a novel multivariate distributional regression model that extends generalized additive models for location, scale, and shape (GAMLSS) to truly multivariate responses [1]. This allows for the joint modeling of response vectors with dimensions greater than two or three, including the modeling of the dependence structure. The model relies on a Gaussian copula combined with arbitrary parametric distributions for the marginal responses. Traditional distributional regression models have been limited through fixed dependence structures not depending on covariate, or computational challenges when handling higher-dimensional data. By leveraging Bayesian inference and advances in distributional copula regression our approach overcomes these limitations.
+			Bayesian penalized splines (BPS) are highly popular in applied regression modeling. The key idea of the approach is to expand the unknown function to be estimated in a rich spline basis with many knots and to place a smoothness prior on the coefficients to prevent overfitting. The overall amount of regularization is controlled in a data-driven way through a hyperprior on the smoothing variance. This paper investigates the asymptotic properties of BPS and provides the first theoretical guarantees in the literature ensuring optimal asymptotic performance.			
 			<br> <br>
 			
 			<h4>Motivation</h4>
-			The need to analyze complex multivariate data in fields like epidemiology, environmental science, and economics, where responses are not just univariate or bivariate, is increasing. In theory, distributional regression [2] gives a flexible framework to analyse these data sets. However, existing methods often assume simplistic parametric forms for all responses or restrict the dependence structure to be independent of covariates. Our model fills this gap by enabling flexible, covariate-dependent modeling of both the marginal distributions and the dependencies between them.
+			Since their introduction in the early 2000’s by [1] and [2], BPS have been applied in numerous settings ranging from generalized additive models over additive survival analyses to structured additive distributional regression models. However, despite their widespread use in practice, the asymptotic properties of BPS have not been investigated so far. In this paper, we make an important step to close this gap in the literature and study posterior concentration rates for BPS in a nonparametric regression model. Doing so, we contribute to a better theoretical understanding of BPS.
 			<br> <br>
 
 			<h4>Theory</h4>
-			Our approach builds on the structured additive distributional regression framework [3] and employs Gaussian copulas [4] for modeling dependencies. Practitioners can specify different parametric forms for each marginal distribution, which allows them to consider mixed responses where some responses may be discrete and others continuous or of mixed type. In addition, the pairwise correlations between response components can vary with covariates. The model is highly parameterized, but the use of Bayesian inference and efficient sampling techniques makes estimation feasible.
+			To show that the BPS posterior contracts around the unknown function at near optimal rate, we use the Kullback-Leibler (KL) and testing strategy. This is a well-established proof strategy where one needs to verify two conditions [3]. To verify the KL condition we adapt an inequality for a shifted ball under a Gaussian measure and to verify the testing condition, we introduce a completely new test. This test is based on an estimator that projects the observations onto the first basis functions of a Demmler-Reinsch basis. Our results show that BPS can achieve posterior concentration at near optimal rate. However, BPS are not rate-adaptive. This is because the order of the roughness penalty in the smoothness prior needs to match the regularity of the unknown function exactly to achieve the optimal rate of concentration. 
 			<br> <br>
 
 			<h4>Experiments</h4>
-			We validated our model using both simulations and real-world datasets. In our simulations, we tested the model's ability to accurately estimate parameters in both Gaussian and non-Gaussian settings, demonstrating flexibility and robustness across various response dimensions even under model missspecificaion. Our real-world applications included studying childhood malnutrition in Nigeria and traffic detection in Berlin. 
-			<br>
-			For childhood malnutrition, we examined three nutritional indicators in Nigerian children, namely stunting, wasting, and underweight referring to insufficient height for age, insufficient weight for height, and insufficient weight for age, respectively, thereby reflecting the different dimensions of childhood undernutrition. Our analysis reveals significant spatial and covariate-driven patterns in nutritional deficiencies. For example, we can visually inspect the influence of the 37 districts in Nigeria jointly on all pairwise correlations as shown in the Figure below.
-			<br>
+			We conduct a simulation study to judge the empirical performance of BPS in comparison with other nonparametric regression methods. To this end, we benchmark BPS against Gaussian processes with a squared exponential kernel as well as Bayesian splines with a hyperprior on the number of knots. The latter approach is a close relative of BPS and has been shown to yield rate-adaptive posterior concentration [4]. Overall, we find that that BPS provide competitive performance with a slight advantage over Gaussian processes and a slight disadvantage compared to Bayesian splines with a hyperprior on the number of knots.			<br> <br>
 			<figure>
-				<img src="Figures/typicall_child_spatial.png" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
-			</figure>
-			<br>
-			In the Berlin traffic study, we modeled the complex interactions between traffic counts and speeds for cars and trucks over time, offering insights into urban traffic dynamics. The figure below shows univariate marginal densities (diagonal) and bivariate margins (lower left) for three different timepoints, illustrating the high flexibility of the fitted model.
-			<br>
-			<figure>
-				<img src="Figures/traffic_timepoints.png" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/RMSE_Overall.png" style="width: 60%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 1: Root mean squared error (RMSE) of Bayesian penalized splines (BPS), Bayesian splines with a hyperprior on the number of knots (BMS) and Gaussian processes (GPs). Lower is better.</figcaption>
 			</figure>
 			<br>
 
 			<h4>Final Thoughts</h4>
-			Our multivariate distributional regression model provides a powerful tool for researchers needing to explore complex multivariate regression data. By allowing different marginal distributions and covariate-dependent dependencies, it offers a comprehensive approach to understanding intricate regression data structures. We encourage interested readers to explore our work and consider its potential applications in their fields of study.
+			It is an interesting finding that BPS can achieve the optimal rate but that they are not rate-adaptive. From a theoretical perspective, BPS are thus actually inferior to Bayesian splines with a hyperprior on the number of knots. However, it is much easier to set up a Markov chain Monte Carlo sampler for BPS, which has contributed to their immense popularity. In conclusion, we see several promising directions for future research, which you can find in the final section of our paper.
 
 			<br> <br>
 			<h4>References</h4>
-			[1] Kock L., Klein N. (2025). Truly multivariate structured additive regression. Journal of Computational and Graphical Statistics; in print, doi: 10.1080/10618600.2024.2434181
-            <br>
-            [2] Klein N. (2024). Distributional regression for data analysis. Annual Review of Statistics and its Application; 11: 321–346.
-            <br>
-            [3] Rigby R.A., Stasinopoulos D.M. (2005). Generalized additive models for location, scale and shape. Journal of the Royal Statistical Society, Series C: Applied Statistics; 54: 507–554.
-            <br>
-            [4] Song P. X.-K., Li M., Yuan Y. (2009). Joint regression analysis of correlated data using Gaussian copulas. Biometrics; 65 (1): 60–68.
+			[1] Berry, S. M., Carroll, R. J., Ruppert, D. (2002). Bayesian smoothing and regression splines for measurement error problems. Journal of the American Statistical Association; 97(457): 160-169. <br>
+			[2] Lang, S., Brezger, A. (2004). Bayesian P-splines. Journal of Computational and Graphical Statistics; 13(1): 183-212. <br>
+			[3] Ghosal, S., Van der Vaart, A. W. (2017). Fundamentals of Nonparametric Bayesian Inference. Cambridge University Press, Cambridge, UK. <br>
+			[4] de Jonge, R., van Zanten, J.H. (2012). Adaptive estimation of multivariate functions using conditionally Gaussian tensor-product spline priors. Electronic Journal of Statistics; 6: 1984-2001.
+			
 
 			<br> <br>
 			<i>For questions, comments or other matters related to this blog post, please contact us via <a href="mailto:kleinlab@scc.kit.edu">kleinlab@scc.kit.edu</a>.</i>
@@ -146,18 +136,18 @@ gtag('config', 'G-E2B3ZSQM8N');
 			<br> <br>
 
 			<tt>
-			@article{KocKle2025, <br>
-			<div style="text-indent:40px;">title={Truly Multivariate Structured Additive Distributional Regression},</div>
-			<div style="text-indent:40px;">author={Kock, Lucas and Klein, Nadja},</div>
-			<div style="text-indent:40px;">booktitle={Journal of Computational and Graphical Statistics},</div>
-			<div style="text-indent:40px;">volume={0},</div>
-			<div style="text-indent:40px;">number={0},</div>
-			<div style="text-indent:40px;">pages={1--13},</div>
+			@inproceedings{BacKle2025, <br>
+			<div style="text-indent:40px;">author={Paul Bach and Nadja Klein},</div>
+			<div style="text-indent:40px;">title={Posterior Concentration Rates for Bayesian Penalized Splines},</div>
+			<div style="text-indent:40px;">journal={Bayesian Analysis},</div>
+			<div style="text-indent:40px;">publisher={International Society for Bayesian Analysis},</div>
+			<div style="text-indent:40px;">pages={1--21},</div>
 			<div style="text-indent:40px;">year={2025},</div>
-			<div style="text-indent:40px;">publisher={ASA Website},</div>
-			<div style="text-indent:40px;">doi={10.1080/10618600.2024.2434181},</div>
+			<div style="text-indent:40px;">doi={10.1214/25-BA1523},</div>
+			<div style="text-indent:40px;">URL={https://doi.org/10.1214/25-BA1523},</div>
 			}
 			</tt>
+			   
 			
 			</div>
 
