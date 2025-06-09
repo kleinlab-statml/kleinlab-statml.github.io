@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Homepage of KleinLab">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>KleinLab - Homepage</title>
+
+  <link href="../.././libs/bootstrap-3.4.1/css/bootstrap.css" rel="stylesheet">
+  <link href="../.././libs/fontawesome-6.2.0/css/all.min.css" rel="stylesheet">
+  <link href="../.././style.css" rel="stylesheet">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+  <style>
+  body {
+   font-family: 'Didact Gothic';
+  }
+  </style>
+
+<link rel="icon" href="../../images/logo_light_wo_frame.png">
+
+<script type="text/javascript" async
+  src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/javascript"
+	src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  </head>
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E2B3ZSQM8N"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-E2B3ZSQM8N');
+</script>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+
+	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
+
+<div class="container">
+	
+	<div style="margin-top: 15px; margin-bottom: 15px;">
+		<img class="filter-img" src="../../images/lettering_dark.png" alt="Group logo" style="height: 40px;">
+		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
+	</div>
+
+<nav class="navbar navbar-light">	  
+	<ul class="nav navbar-nav mr-auto">
+		<li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+		<li class="nav-item"><a class="nav-link"href="../../news.html">News</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../team.html">Team</a></li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="../../research.html">Research</a>
+			<div class="dropdown-menu" aria-labelledby="researchDropdown">
+				<a class="dropdown-item" href="../../subpages_research/projects_current.html">Current Projects</a>
+				<a class="dropdown-item" href="../../subpages_research/projects_completed.html">Completed Projects</a>
+				<a class="dropdown-item" href="../../subpages_research/events.html">Events</a>
+			</div>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="../../publications.html">Publications</a>
+			<div class="dropdown-menu" aria-labelledby="publicationsDropdown">
+				<a class="dropdown-item" href="../../subpages_pubs/methodology.html">Methodology</a>
+				<a class="dropdown-item" href="../../subpages_pubs/applications.html">Applications</a>
+				<a class="dropdown-item" href="../../subpages_pubs/conferences.html">Conferences</a>
+				<a class="dropdown-item" href="../../subpages_pubs/working_papers.html">Working Papers</a>
+				<a class="dropdown-item" href="../../subpages_pubs/books.html">Books</a>
+				<a class="dropdown-item" href="../../subpages_pubs/editorials.html">Editorials</a>
+				<a class="dropdown-item" href="../../subpages_pubs/supplementary.html">Supplementary</a>
+				<a class="dropdown-item" href="../../subpages_pubs/software.html">Software</a>
+			</div>
+		</li>
+		<li class="nav-item"><a class="nav-link active" href="../../blog.html">Blog</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../awards.html">Awards</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../teaching.html">Teaching</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../jobs.html">Jobs</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+	</ul>
+  </nav>
+		
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+
+		
+		<div style="font-size:medium;">
+			<h3>Boosting distributional copula regression for bivariate binary, discrete and mixed responses</h3> 
+			<i> By Guillermo Briseño Sanchez and Nadja Klein, posted on April 01, 2025</i>
+			
+			<br> <br>
+			This blog post is about our paper <b>“Boosting distributional regression for bivariate binary, discrete and mixed responses”</b> which was published in <i>Statistical Methods in Medical Research</i>, and which can be found <a href="https://journals.sagepub.com/doi/10.1177/09622802241313294">here</a>. The accompanying code and data are available on <a href="https://github.com/kleinlab-statml/BoostDistCopReg_BinDiscMix" target="_blank">GitHub</a>.
+			<br> <br>
+			<h4>What is the paper about?</h4>
+			The article presents a statistical boosting algorithm tailored for bivariate distributional copula regression. Compared to Hans et. al (2023, [1]), our method cannot only deal with continuous outcomes but also binary, count, or mixed responses. 
+			<br> 
+			Using our framework, practitioners can specify suitable distributions for the marginal response variables. A flexible joint bivariate distribution is then constructed using a copula function, which links the two marginal responses and induces a dependence structure to be learned from the data. To handle high-dimensional covariates or feature variables, we estimate the both the marginal distributions and the dependence structure jointly using component-wise gradient boosting.
+			<br> <br>
+			<figure>
+				<img src="figures/Fig1.png" style="width: 65%; display: block; margin-left: auto; margin-right: auto;">
+                <figcaption>Figure 1: Responses in the biomedical applications analysed in Section 4 of the paper: (a) binary–binary response (numbers indicate proportions): high cholesterol and chronic ischemic heart disease; (b) count–count response (numbers indicate cases): doctor visits and medical prescriptions; and (c) binary–continuous response: fever and wasting (indicator for acute undernutrition)</figcaption>
+			</figure>
+			<br> 
+			
+			<h4>Motivation</h4>
+			Distributional regression models [2] have gained popularity in statistical research by allowing to model the entire conditional distribution of a response variable as a function of covariates, rather than just its conditional mean, as done in traditional regression. Distributional models are also useful in biomedical research, as they help explore how variables affect not just the average of the quantities of interest but also other aspects like their variances or certain quantiles. 
+			<br>
+			This paper builds on an approach known as generalized additive models for location, scale, and shape (GAMLSS [3]). In this statistical framework, potentially all parameters of the response distribution can be related to covariates. 
+			<br>
+			In biomedical applications, the outcomes of interest may have dependent components that are are not continuous but instead binary (disease yes / no), discrete (number of doctor consultations) or of mixed type. 
+			<br> <br>
+
+			<h4>Theory</h4>
+			Our paper builds on recent work by Hans, et al. (2023, [1]), who developed component-wise gradient boosting for bivariate distributional copula regression with continuous response variables. We use the same idea and model the bivariate distribution of two responses \(y_1, y_2\) as
+			$$ F(y_1, y_2) = C[F_1(y_1), F_2(y_2), \vartheta ] $$
+
+			As shown in the equation above, the copula approach requires the marginal distributions \( F_1(y_1) \) and \( F_2(y_2) \), whereas the dependence structure between the variables is determined by the copula with dependence parameter \( \vartheta\).
+			<br>
+			Every parameter of the marginal distributions as well as the dependence parameter \( \vartheta\) can be modelled as a function of the explanatory variables. 
+			<br>
+			To handle high-dimensional biomedical data, we resort to estimating the model using component-wise boosting and we provide an implementation as part of the R package gamboostLSS [4]. 
+
+			<br> <br>
+
+			<h4>Experiments</h4>
+			We demonstrate the flexibility of the proposed boosted distributional copula regression approach by analysing three biomedical research questions, related to chronic ischemic heart disease and high-cholesterol (bivariate binary), the number of doctor consultations and prescribed medications (bivariate count), and infant undernutrition in India (mixed binary-continuous).
+			<br>
+			We briefly illustrate our method along two of our applications. The first study has two bivariate binary responses, which are chronic ischemic heart disease (yes/no) and high-cholesterol (yes/no). In this application, the explanatory variables indicate gene expressions associated with the individuals in the study. The data is from the UK Biobank [5] and includes a high-dimensional feature information (<i>p</i>=1867 explanatory variables) from <i>n</i>=30,000 individuals. Our method selects several genetic variants in the parameters of the bivariate distribution. The Manhattan-type plot below shows the chromosome location of the genetic variants selected.
+			<br> <br>
+			<figure>
+				<img src="figures/Fig2.png" style="width: 55%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 2: Manhattan-type plots of the estimated coefficients (expressed in exponential absolute values of the estimated values) of the boosted bivariate binary model using a Gaussian copula. The x-axis represents the genomic location of the variants and the y-axis shows \(\exp( | \hat{ \beta_j } | ), j = 1, ..., p\). </figcaption>
+			</figure>
+			<br>
+			The second application is on childhood undernutrition in India using the data from [6]. We analysed the joint distribution of a binary variable (fever yes/no before survey interview) and a malnutrition indicator (wasting; low weight for height), which measures acute undernutrition. The figure below shows the estimated dependence between these outcomes expressed as Kendall’s tau and averaged by administrative area:
+			<br> <br>
+			<figure>
+				<img src="figures/Fig3.png" style="width: 35%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 3: Estimated Kendall’s \(\tau\) of having fever and acute undernutrition averaged by administrative areas according to the Clayton copula rotated by 270°. </figcaption>			
+			</figure>
+			<br>
+			One can see that dependence between the fever indicator and wasting changes according to the administrative areas of India, with slightly stronger negative dependence between the marginal variables in the west of the country. Our results agree with previous analyses of Klein, et. al (2019, [6]), but with the added benefit of variable selection being conducted automatically by our estimation algorithm. 
+			<br> <br>
+
+			<h4>Final Thoughts</h4>
+			Our approach can be a helpful tool to analyse biomedical data with potentially high-dimensional explanatory variables. The use of component-wise boosting allows for data-driven variable selection.
+			<br> <br>
+
+			<h4>References</h4>
+            [1] Hans N., Klein N., Faschingbauer F., et al. (2023). Boosting distributional copula regression. Biometrics; 79: 2298–2310.
+            <br>
+            [2] Klein N. (2024). Distributional regression for data analysis. Annual Review of Statistics and its Application; 11: 321–346.
+            <br>
+            [3] Rigby R.A., Stasinopoulos D.M. (2005). Generalized additive models for location, scale and shape. Journal of the Royal Statistical Society, Series C: Applied Statistics; 54: 507–554.
+            <br>
+            [4] Hofner B., Mayr A., Schmid M. (2016). gamboostLSS: An R package for model building and variable selection in the GAMLSS framework. Journal of Statistical Software; 74: 1–31.
+            <br>
+            [5] Bycroft C, Freeman C, Petkova D, et al. (2018). The UK Biobank resource with deep phenotyping and genomic data. Nature; 562: 203–209.
+            <br>
+            [6] Klein N., Kneib T., Marra G., et al. (2019). Mixed binary-continuous copula regression models with application to adverse birth outcomes. Statistics in Medicine; 38: 413–436.
+
+			<br> <br>
+			<i>For questions, comments or other matters related to this blog post, please contact us via <a href="mailto:kleinlab@scc.kit.edu">kleinlab@scc.kit.edu</a>.</i>
+
+			<br> <br>
+			If you find our work useful, please cite our paper:
+			<br> <br>
+
+			<tt>
+			@inproceedings{BriKleKliMay2025, <br>
+			<div style="text-indent:40px;">title={Boosting distributional copula regression for bivariate binary,  discrete and mixed responses},</div>
+			<div style="text-indent:40px;">ISSN={1477-0334},</div>
+			<div style="text-indent:40px;">url={http://dx.doi.org/10.1177/09622802241313294},</div>
+			<div style="text-indent:40px;">DOI={10.1177/09622802241313294},</div>
+			<div style="text-indent:40px;">journal={Statistical Methods in Medical Research},</div>
+			<div style="text-indent:40px;">publisher={SAGE Publications},</div>
+			<div style="text-indent:40px;">author={Guillermo {Brise\~no Sanchez} and Nadja Klein and Hannah Klinkhammer and Andreas Mayr},</div>
+			<div style="text-indent:40px;">year={2025},</div>
+			<div style="text-indent:40px;">month=mar</div>
+			}
+			</tt>
+			
+			</div>
+
+			
+
+
+		<!-- Imprint and data protection -->
+		<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
+			<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
+		</div>
+			
+		</div>
+
+	<!-- jquery -->
+	<script src="./libs/jquery-3.6.1.min.js"></script>
+	
+	<!-- boostrap -->
+	<script src="./libs/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+
+	<!-- Functionality for popover of buttons -->
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover(); 
+		});
+	</script>
+
+	<!-- Functionality for scroll-up button -->
+	<script>
+	$(document).ready(function(){ 
+		if ($(this).scrollTop() > 100) {
+			$('#scrollbutton').fadeIn();
+		}
+		$(window).scroll(function(){ 
+			if ($(this).scrollTop() > 100) { 
+				$('#scrollbutton').fadeIn();
+			} else { 
+				$('#scrollbutton').fadeOut(); 
+			}
+		});
+		$('#scrollbutton').click(function(){ 
+			$("html, body").animate({ scrollTop: 0 }, 300); 
+			return false; 
+		}); 
+	});
+	</script>
+	
+</body>
+
+</html>

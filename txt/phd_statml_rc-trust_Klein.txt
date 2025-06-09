@@ -1,0 +1,47 @@
+* PhD position in Statistical Learning and Uncertainty Quantification *
+
+
+Being Europe's densest university landscape, the metropolis Ruhr offers attractive career opportunities for excellent scientists and scholars from any part of the world. In 2021, the Ruhr-Universit�t Bochum, TU Dortmund University and the University of Duisburg- Essen founded the Research Alliance Ruhr to bundle their top international research on grand challenges of humankind. Four research centers and a college will be established in the next three years. This is just the latest chapter of our long-standing cooperation as University Alliance Ruhr (UA Ruhr), a community of 1,300 researchers and 120,000 students in the center of Germany.
+As part of the Research Alliance Ruhr, the Chair of Uncertainty Quantification and Statistical Learning at the Research Center Trustworthy Data Science and Security and the Department of Statistics at TU Dortmund bridges the gaps between Uncertainty Quantification, Statistical and Machine Learning, and Interdisciplinary Applications. The chair is hiring a PhD position to be filled for the period of 3 years (extension possible) as early as possible. Payment according to public service�s agreement: TV-L E13. The position is full-time, part-time is possible. 
+
+Your Expertise and Interests
+
+* Statistical Learning, Bayesian Computational Methods
+* Uncertainty Quantification in Statistics & Machine Learning
+* Regularization & Smoothing, Variable Selection & Model Choice
+* Flexible Regression/Supervised Learning & Spatial Statistics
+
+Your Qualification
+* Excellent degree (Master of Science) in statistics, mathematics, data science, computer science, or similar programs.
+* High degree of creativity, commitment, analytical competence, and interdisciplinary teamwork.
+* High proficiency in English, both written and spoken for your scientific publications and presentations.
+
+What We Offer
+We work in a multidisciplinary team on collaborative research projects jointly supervised by leading international experts from different domains. We aim at both theoretical research as well as practical applications in close collaboration with academic and industrial partners. The positions are embedded in a creative, attractive, and internationally renowned research environment. With your research and contribution to teaching you will play a primary role in the development of our new Research Center and outreach with trustworthy technology to the public. During your PhD, participation in international conferences and voluntary exchange programs are highly encouraged. Our international network of researchers and industry partners ensures a seamless transition into your next career step. A balanced and family- friendly work-life relationship is important to us, thus we offer options for flexible working times or part-time remote home-office.
+ More Information
+Further information about the Research Center can be found at:
+www.rc-trust.ai
+If you have any further questions, please contact:
+Prof. Dr. Nadja Klein
+nadja.klein@statistik.tu-dortmund.de
+https://rc-trust.ai/klein/ 
+
+
+Research Alliance Ruhr
+The Research Alliance Ruhr is a cooperation of the three major universities in the Ruhr region, which has been initiated by the Ruhr Conference. The four research centers will focus on "One Health - from Molecules to Systems," "Chemical Sciences and Sustainability," "Trustworthy Data Science and Security," and "Future Energy Materials and Systems. In addition, a "College for Social Sciences and Humanities" is being established.
+
+Your Application
+If you are interested in the position, please send your application (as a single pdf with at least 10MB) via mail to nadja.klein@statistik.tu-dortmund.de 
+  Research Center Trustworthy 
+Data Science and Security, UA Ruhr and Department of Statistics, Technische Universit�t Dortmund
+Chair of Uncertainty Quantification and Statistical Learning
+Prof. Dr. Nadja Klein
+Please provide the usual documents: motivation letter, CV, and copies of your certificates
+
+Career Opportunities
+Our Research Center will hire 12 research professors in the next few years and offer numerous positions for research assistants and research group leaders. Join us now to create trustworthy innovations for the digital world of tomorrow in Europe's largest metropolitan region.
+
+Diversity
+The TU Dortmund University aims to increase the percentage of women in the scientific faculties and therefore, applications from women are particularly welcome.
+We explicitly note that applications of severely disabled persons are welcome. 
+
