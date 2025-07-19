@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Homepage of KleinLab">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>KleinLab - Homepage</title>
+
+  <link href="../.././libs/bootstrap-3.4.1/css/bootstrap.css" rel="stylesheet">
+  <link href="../.././libs/fontawesome-6.2.0/css/all.min.css" rel="stylesheet">
+  <link href="../.././style.css" rel="stylesheet">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+  <style>
+  body {
+   font-family: 'Didact Gothic';
+  }
+  </style>
+
+<link rel="icon" href="../../images/logo_light_wo_frame.png">
+
+<script type="text/javascript" async
+  src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/javascript"
+	src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  </head>
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E2B3ZSQM8N"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-E2B3ZSQM8N');
+</script>
+
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+
+	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
+
+<div class="container">
+	
+	<div style="margin-top: 15px; margin-bottom: 15px;">
+		<img class="filter-img" src="../../images/lettering_dark.png" alt="Group logo" style="height: 40px;">
+		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
+	</div>
+
+<nav class="navbar navbar-light">	  
+	<ul class="nav navbar-nav mr-auto">
+		<li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+		<li class="nav-item"><a class="nav-link"href="../../news.html">News</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../team.html">Team</a></li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="../../research.html">Research</a>
+			<div class="dropdown-menu" aria-labelledby="researchDropdown">
+				<a class="dropdown-item" href="../../subpages_research/projects_current.html">Current Projects</a>
+				<a class="dropdown-item" href="../../subpages_research/projects_completed.html">Completed Projects</a>
+				<a class="dropdown-item" href="../../subpages_research/events.html">Events</a>
+			</div>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="../../publications.html">Publications</a>
+			<div class="dropdown-menu" aria-labelledby="publicationsDropdown">
+				<a class="dropdown-item" href="../../subpages_pubs/methodology.html">Methodology</a>
+				<a class="dropdown-item" href="../../subpages_pubs/applications.html">Applications</a>
+				<a class="dropdown-item" href="../../subpages_pubs/conferences.html">Conferences</a>
+				<a class="dropdown-item" href="../../subpages_pubs/miscellanea.html">Miscellanea</a>
+				<a class="dropdown-item" href="../../subpages_pubs/working_papers.html">Working Papers</a>
+				<a class="dropdown-item" href="../../subpages_pubs/books.html">Books</a>
+				<a class="dropdown-item" href="../../subpages_pubs/editorials.html">Editorials</a>
+				<a class="dropdown-item" href="../../subpages_pubs/supplementary.html">Supplementary</a>
+				<a class="dropdown-item" href="../../subpages_pubs/software.html">Software</a>
+			</div>
+		</li>
+		<li class="nav-item"><a class="nav-link active" href="../../blog.html">Blog</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../awards.html">Awards</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../teaching.html">Teaching</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../jobs.html">Jobs</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+	</ul>
+  </nav>
+		
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+
+		
+		<div style="font-size:medium;">
+			<h3>Uncertainty-Aware Trajectory Prediction via Rule-Regularized Heteroscedastic Deep Classification </h3> 
+			<i> By Christian Schlauch and Nadja Klein, posted on July 18, 2025</i>
+
+			<br> <br>
+
+			This blog post presents our paper, <i>“Uncertainty-Aware Trajectory Prediction via Rule-Regularized Heteroscedastic Deep Classification”</i>, which was published at <b>Robotics: Science and Systems (RSS) 2025</b>. The work is the result of a collaboration with the <b>Continental AI Lab Berlin</b>. The paper can be found here and the code is going to be published <a href="https://kumarmanas.github.io/SHIFT/" target="_blank">here</a>.
+			
+			<br> <br>
+
+			<h4>What is the paper about?</h4>
+			We propose SHIFT (Spectral Heteroscedastic Informed Forecasting for Trajectories), a novel training framework for motion prediction in autonomous driving. SHIFT combines well-calibrated uncertainty modeling through last-layer heteroscedastic Gaussian processes and informative priors derived from automated rule extraction.
+			
+			<br> <br>
+			<figure>
+				<img src="figures/arch_shift.drawio.png" style="width: 90%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 1: Our SHIFT framework employs an automatic rule extraction to generate synthetic training labels from prior knowledge rules. Our uncertainty-aware model, based on CoverNet architecture with a spectral-normalized ResNet50 backbone and heteroscedastic Gaussian process output layer, is first trained in step 1 on these synthetic training labels and in step 2 on the observations. The epistemic uncertainty estimate serves as informative prior to regularize the training in step 2.</figcaption>
+			</figure>
+			<br>
+			
+			<h4>Motivation</h4>
+			Uncertainty-aware, accurate motion prediction is an important cornerstone to enable safe and comfortable driving. In our previous blog post, we demonstrated how integrating prior knowledge in the form of rules can guide deep learning-based motion predictors, improving both uncertainty calibration and data efficiency. In this paper, we advance our approach by enhancing uncertainty modeling and introducing automatic rule extraction, which further improves scalability. 
+			<br>
+			
+			<h4>Theory</h4>
+
+			<br> <br>
+			<figure>
+				<img src="figures/rule_extraction.png" style="width: 80%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 2: High-Level LLM pipeline for synthetic training label creation: (1) rules, prompt, and nuScenes API are LLM inputs, (2) the LLM generates Python functions of rules and human experts review generated functions by running test cases using a sample traffic scene, (3) based on rules synthetic labels for training are generated.</figcaption>
+			</figure>
+			<br>
+
+			Our automatic rule extraction leverages a Large-Language Model (LLM) to create a Python function based on a prompt that includes a natural language description. This process is enhanced with <b>Retrieval-Augmented Generation (RAG)</b>, providing the LLM with access to the NuScenes dataset interface (see Fig. 2). The Python function can be reviewed and validated by domain experts before being used to label candidate trajectories within a NuScenes data sample. 
+			<br>
+			These synthetic training labels are used in the first training stage of our SHIFT framework (see Fig. 1). Our model builds upon the <b>CoverNet</b> architecture [1], which formulates motion prediction as a trajectory anchor classification task. To ensure a distance-sensitive representation, we employ a <b>spectral-normalized ResNet-50</b> as the feature extractor, projecting inputs into a compact intermediate embedding space.
+			<br>
+			In place of the standard output layer, we integrate a <b>heteroscedastic Gaussian process</b> [2] (see Fig. 3), enabling more effective estimation of both <b>aleatoric</b> and <b>epistemic</b> uncertainty. After completing the first training stage, we use the estimated epistemic uncertainty as an <b>informative prior</b> to regularize the second training stage, where the model is trained on real-world observations.
+
+			<br> <br>
+			<figure>
+				<img src="figures/SNGP.png" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 3: Components of the model architecture, including a spectral normalized feature extractor and a heteroscedastic Gaussian process as output layer.</figcaption>
+			</figure>
+			<br>
+		
+			<br>
+
+			<h4>Experiments</h4>
+			In our experiments, we integrate two types of rules:
+			<ol>
+				<li>Drivability: Vehicles should never leave the road boundaries!</li>
+				<li>Stop-Rules: Vehicles should not cross red lights and used pedestrian walkways!</li>
+			</ol>
+			We evaluate SHIFTs performance in a range of scenarios, including standard full dataset training, low data regimes, and out-of-distribution generalization across different geographical locations within the NuScenes dataset [3]. We compare the performance against baselines that lack heteroscedastic uncertainty estimation (see Fig. 4) and those without rule integration. Our empirical results demonstrate that SHIFT consistently produces more accurate predictions and better-calibrated uncertainty estimates in all scenarios, especially in low data regimes.
+			<br> <br>
+			<figure>
+				<img src="figures/appendix_het_better_visual.drawio.png" style="width: 60%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 4: Qualitative comparison of informed motion prediction with heteroscedastic uncertainty estimation (SHIFT) and without (SNGP baseline). The baseline exhibits a greater divergence to ground truths trajectories in many scenarios. </figcaption>
+			</figure>
+			<br>
+
+			<h4>Final Thoughts</h4>
+			SHIFT demonstrates that the integration of prior knowledge rules  with uncertainty modeling can offer significant advantages  in safety-critical domains like autonomous driving. We are excited to explore this framework further by applying it to other motion prediction architectures and by improving the reliability of automatic rule extraction using the latest advances in language models.  We are also looking forward to apply our approach to other domains where data is limited but domain expertise is abundant. 
+
+			<br> <br>
+			<h4>References</h4>
+			[1] Phan-Minh T. (2020). Covernet: Multimodal behavior prediction using trajectory sets. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR); 2020: 14062-14071
+			<br>
+			[2] Fortuin V. (2022) Deep classifiers with label noise modeling and distance awareness. Transactions on Machine Learning Research (TMLR); 2022 
+			<br>
+			[3] Caesar H. (2020) NuScenes: A multimodal dataset for autonomous driving. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR); 2020: 11621-11631
+			<br>
+			
+
+			<br>
+			<i>For questions, comments or other matters related to this blog post, please contact us via <a href="mailto:kleinlab@scc.kit.edu">kleinlab@scc.kit.edu</a>.</i>
+
+			<br> <br>
+			If you find our work useful, please cite our paper:
+			<br> <br>
+
+			<tt>
+			@misc{ManSchPasWirKle2025, <br>
+			<div style="text-indent:40px;">author={Kumar Manas and Christian Schlauch and Adrian Paschke and Christian Wirth and Nadja Klein},</div>
+			<div style="text-indent:40px;">title={Uncertainty-Aware Trajectory Prediction via Rule-Regularized Heteroscedastic Deep Classification},</div>
+			<div style="text-indent:40px;">archivePrefix={arXiv},</div>
+			<div style="text-indent:40px;">eprint={2504.13111},</div>
+			<div style="text-indent:40px;">url={https://arxiv.org/abs/2504.13111},</div>
+			<div style="text-indent:40px;">year={2025},</div>
+			}
+			</tt>		 
+			
+			</div>
+
+			
+
+
+		<!-- Imprint and data protection -->
+		<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
+			<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
+		</div>
+			
+		</div>
+
+	<!-- jquery -->
+	<script src="./libs/jquery-3.6.1.min.js"></script>
+	
+	<!-- boostrap -->
+	<script src="./libs/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+
+	<!-- Functionality for popover of buttons -->
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover(); 
+		});
+	</script>
+
+	<!-- Functionality for scroll-up button -->
+	<script>
+	$(document).ready(function(){ 
+		if ($(this).scrollTop() > 100) {
+			$('#scrollbutton').fadeIn();
+		}
+		$(window).scroll(function(){ 
+			if ($(this).scrollTop() > 100) { 
+				$('#scrollbutton').fadeIn();
+			} else { 
+				$('#scrollbutton').fadeOut(); 
+			}
+		});
+		$('#scrollbutton').click(function(){ 
+			$("html, body").animate({ scrollTop: 0 }, 300); 
+			return false; 
+		}); 
+	});
+	</script>
+	
+</body>
+
+</html>
