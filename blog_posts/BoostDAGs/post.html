@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Homepage of KleinLab">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>KleinLab - Homepage</title>
+
+  <link href="../.././libs/bootstrap-3.4.1/css/bootstrap.css" rel="stylesheet">
+  <link href="../.././libs/fontawesome-6.2.0/css/all.min.css" rel="stylesheet">
+  <link href="../.././style.css" rel="stylesheet">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+  <style>
+  body {
+   font-family: 'Didact Gothic';
+  }
+  </style>
+
+<link rel="icon" href="../../images/logo_light_wo_frame.png">
+
+<script type="text/javascript" async
+  src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/javascript"
+	src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  </head>
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E2B3ZSQM8N"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-E2B3ZSQM8N');
+</script>
+
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+
+	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
+
+<div class="container">
+	
+	<div style="margin-top: 15px; margin-bottom: 15px;">
+		<img class="filter-img" src="../../images/lettering_dark.png" alt="Group logo" style="height: 40px;">
+		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
+	</div>
+
+<nav class="navbar navbar-light">	  
+	<ul class="nav navbar-nav mr-auto">
+		<li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+		<li class="nav-item"><a class="nav-link"href="../../news.html">News</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../team.html">Team</a></li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="../../research.html">Research</a>
+			<div class="dropdown-menu" aria-labelledby="researchDropdown">
+				<a class="dropdown-item" href="../../subpages_research/projects_current.html">Current Projects</a>
+				<a class="dropdown-item" href="../../subpages_research/projects_completed.html">Completed Projects</a>
+				<a class="dropdown-item" href="../../subpages_research/events.html">Events</a>
+			</div>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="../../publications.html">Publications</a>
+			<div class="dropdown-menu" aria-labelledby="publicationsDropdown">
+				<a class="dropdown-item" href="../../subpages_pubs/methodology.html">Methodology</a>
+				<a class="dropdown-item" href="../../subpages_pubs/applications.html">Applications</a>
+				<a class="dropdown-item" href="../../subpages_pubs/conferences.html">Conferences</a>
+				<a class="dropdown-item" href="../../subpages_pubs/miscellanea.html">Miscellanea</a>
+				<a class="dropdown-item" href="../../subpages_pubs/working_papers.html">Working Papers</a>
+				<a class="dropdown-item" href="../../subpages_pubs/books.html">Books</a>
+				<a class="dropdown-item" href="../../subpages_pubs/editorials.html">Editorials</a>
+				<a class="dropdown-item" href="../../subpages_pubs/supplementary.html">Supplementary</a>
+				<a class="dropdown-item" href="../../subpages_pubs/software.html">Software</a>
+			</div>
+		</li>
+		<li class="nav-item"><a class="nav-link active" href="../../blog.html">Blog</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../awards.html">Awards</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../teaching.html">Teaching</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../jobs.html">Jobs</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+	</ul>
+  </nav>
+		
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+
+		
+		<div style="font-size:medium;">
+			<h3>Boosting Causal Additive Models </h3> 
+			<i> By Maximilian Kertel and Nadja Klein, posted on September 13, 2025</i>
+
+			<br> <br>
+
+			This blog posts presents our paper <i>“Boosting Causal Additive Models”</i>, which was published in the <b>Journal of Machine Learning Research (JMLR)</b>. The paper can be found <a href="https://www.jmlr.org/papers/v26/24-0052.html" target="_blank">here</a> and the code is available <a href="https://github.com/mkrtl/BoostingDAGs/" target="_blank">here</a>.  
+			
+			<br> <br>
+
+			<h4>What is the paper about?</h4>
+			This paper introduces a novel method for causal discovery from purely observational data. The research focuses on a class of models known as Causal Additive Models (CAMs), which assume that variables follow a Structural Equation Model (SEM) with additive noise. We present a boosting-based approach that can consistently identify the causal ordering of variables.			
+			
+			<br> <br>
+
+			<h4>Motivation</h4>
+			Finding the underlying causal relationships in complex datasets, such as those found in genetics or manufacturing, is crucial for improving decisions and predictions. The most reliable method, controlled experiments (like Design of Experiments), is often too resource-intensive, or even unethical to perform. The era of Big Data and the Internet of Things (IoT) provides vast amounts of observational data, but deriving causal structures from this data remains a major challenge. Many existing algorithms lack theoretical guarantees and exhibit inconsistent performance across different datasets. Our work fills this gap by proposing a reliable method with theoretical foundations.			<br>
+			
+			<br>
+
+			<h4>Theory</h4>
+			The paper simplifies the problem of finding the causal graph by identifying its topological ordering—a permutation of variables where causes always precede effects. The proposed method works by regressing each variable on its predecessors in each ordering and then evaluating the squared residuals. Proposition 1 outlines two key conditions for any regression technique to consistently find the true causal order:
+
+			<ul style="list-style: none; margin-left: -40px;">
+				<li>1. <b>Consistency in a Correct Model:</b> The regression method must be able to accurately identify the true functional relationships when they exist.</li>
+				<li>2. <b>Robustness to Misspecification:</b> The method must not overfit the data, even when the underlying relationships deviate from the assumed model.</li>
+			</ul>
+			The paper proves that nonparametric L2 boosting with early stopping satisfies both conditions, thus establishing it as a consistent and robust approach for causal discovery. For datasets of high dimensions where a full search for the optimal causal order is computationally infeasible, we propose a greedy, component-wise boosting algorithm.   
+
+			<br> <br>
+			<figure>
+				<img src="figures/fig1.png" style="width: 80%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 1: The blue dots represent 500 realizations of a distribution following a CAM with p = 2 with graph \( X_1 \to X_2 \). In the left-hand plot, \( X_2 \) is shown on the y-axis and \( X_1 \) on the x-axis, while in the right-hand plot, the axes are reversed. The red lines give the conditional mean functions, that is, the optimal L2-regressions. The unexplained noise (distance of blue dots to red line) is smaller in the left plot, which is the correct ordering.</figcaption>
+			</figure>
+			<br>
+		
+			<br> 
+
+			<h4>Experiments</h4>
+			The empirical studies support the theoretical findings in a low-dimensional setting. For a small numbers of variables (p=5), the method quickly converges to the correct causal ordering as the sample size increases. Importantly, this consistency holds even when the data generation process deviates from the model's assumptions, demonstrating its robustness to misspecification.
+			<br>
+			In high-dimensional settings (p=100), the proposed greedy algorithm, named DAGBoost, was benchmarked against two state-of-the-art methods, CAM [2] and DAGSNOTEARS [3]. DAGBoost and CAM both significantly outperformed DAGSNOTEARS. Across different simulation scenarios, DAGBoost outperformed CAM slightly. While CAM achieved a slightly higher recall (finding more true edges), DAGBoost demonstrated superior precision, meaning that a higher percentage of the edges it identified were correct. This makes DAGBoost particularly valuable in applications, where false positives can lead to significant issues. 
+			<br>
+			<figure>
+				<img src="figures/results.png" style="width: 80%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 2: Mean and standard deviation of the Structural Hamming Distances(SHDs)  between the true graph and the graphs estimated by the three presented algorithms. Erdös-Renyi (ER) graphs have edges evenly distributed among the nodes. Scale-free (SF) graphs have edges unevenly distributed among the nodes, with a small number of nodes having many in- or outgoing edges. We considered data generated by additive functional relationships (matching the CAM) and non-additive relationships (not matching the CAM).</figcaption>
+			</figure>
+			<br>
+
+			<h4>Final Thoughts</h4>
+			Our work not only provides a powerful tool for causal discovery but also offers a theoretical explanation for the well-known empirical success of boosting with early stopping. The proof of boosting's robustness to misspecification is a side-product of the paper and helps explaining its strong performance in real-world scenarios. Further, the general theoretical framework can be applied to other regression techniques, such as neural networks, paving the way for future research in this area. 
+
+			<br> <br>
+			<h4>References</h4>
+			[1] M. Kertel and Klein N. (2025). Boosting Causal Additive Models. Journal of Machine Learning Research; 26: 169.
+			<br>
+			[2] P. Bühlmann et. al. (2014). Causal Additive Models. The Annals of Statistics; 42 (6) 2526 - 2556
+			<br>
+			[3] X. Zheng et. al. (2020). Learning Sparse Nonparametric DAGs. Proceedings of Machine Learning Research; 108:3414-3425
+			<br>
+			[4] J. Peters et. al. (2014). Causal Discovery with Continuous Additive Noise Models. Journal of Machine Learning Research; 15:58
+			<br>
+			
+
+			<br>
+			<i>For questions, comments or other matters related to this blog post, please contact us via <a href="mailto:kleinlab@scc.kit.edu">kleinlab@scc.kit.edu</a>.</i>
+
+			<br> <br>
+			If you find our work useful, please cite our paper:
+			<br> <br>
+
+			<tt>
+			@misc{KerKle2025, <br>
+			<div style="text-indent:40px;">author={Maximilian Kertel and Nadja Klein},</div>
+			<div style="text-indent:40px;">title={Boosting Causal Additive Models},</div>
+			<div style="text-indent:40px;">journal={Journal of Machine Learning Research},</div>
+			<div style="text-indent:40px;">year={2025},</div>
+			<div style="text-indent:40px;">volume={26},</div>
+			<div style="text-indent:40px;">number={169},</div>
+			<div style="text-indent:40px;">pages={1--49},</div>
+			<div style="text-indent:40px;">url={http://jmlr.org/papers/v26/24-0052.html},</div>
+			}
+			</tt>		 
+			
+			</div>
+
+		<!-- Imprint and data protection -->
+		<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
+			<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
+		</div>
+			
+		</div>
+
+	<!-- jquery -->
+	<script src="./libs/jquery-3.6.1.min.js"></script>
+	
+	<!-- boostrap -->
+	<script src="./libs/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+
+	<!-- Functionality for popover of buttons -->
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover(); 
+		});
+	</script>
+
+	<!-- Functionality for scroll-up button -->
+	<script>
+	$(document).ready(function(){ 
+		if ($(this).scrollTop() > 100) {
+			$('#scrollbutton').fadeIn();
+		}
+		$(window).scroll(function(){ 
+			if ($(this).scrollTop() > 100) { 
+				$('#scrollbutton').fadeIn();
+			} else { 
+				$('#scrollbutton').fadeOut(); 
+			}
+		});
+		$('#scrollbutton').click(function(){ 
+			$("html, body").animate({ scrollTop: 0 }, 300); 
+			return false; 
+		}); 
+	});
+	</script>
+	
+</body>
+
+</html>
