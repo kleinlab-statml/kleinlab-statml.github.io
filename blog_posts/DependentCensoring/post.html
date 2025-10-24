@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Homepage of KleinLab">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>KleinLab - Homepage</title>
+
+  <link href="../.././libs/bootstrap-3.4.1/css/bootstrap.css" rel="stylesheet">
+  <link href="../.././libs/fontawesome-6.2.0/css/all.min.css" rel="stylesheet">
+  <link href="../.././style.css" rel="stylesheet">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+  <style>
+  body {
+   font-family: 'Didact Gothic';
+  }
+  </style>
+
+<link rel="icon" href="../../images/logo_light_wo_frame.png">
+
+<script type="text/javascript" async
+  src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/javascript"
+	src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  </head>
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E2B3ZSQM8N"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-E2B3ZSQM8N');
+</script>
+
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+
+	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
+
+<div class="container">
+	
+	<div style="margin-top: 15px; margin-bottom: 15px;">
+		<img class="filter-img" src="../../images/lettering_dark.png" alt="Group logo" style="height: 40px;">
+		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
+	</div>
+
+<nav class="navbar navbar-light">	  
+	<ul class="nav navbar-nav mr-auto">
+		<li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+		<li class="nav-item"><a class="nav-link"href="../../news.html">News</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../team.html">Team</a></li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="../../research.html">Research</a>
+			<div class="dropdown-menu" aria-labelledby="researchDropdown">
+				<a class="dropdown-item" href="../../subpages_research/projects_current.html">Current Projects</a>
+				<a class="dropdown-item" href="../../subpages_research/projects_completed.html">Completed Projects</a>
+				<a class="dropdown-item" href="../../subpages_research/events.html">Events</a>
+			</div>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="../../publications.html">Publications</a>
+			<div class="dropdown-menu" aria-labelledby="publicationsDropdown">
+				<a class="dropdown-item" href="../../subpages_pubs/methodology.html">Methodology</a>
+				<a class="dropdown-item" href="../../subpages_pubs/applications.html">Applications</a>
+				<a class="dropdown-item" href="../../subpages_pubs/conferences.html">Conferences</a>
+				<a class="dropdown-item" href="../../subpages_pubs/miscellanea.html">Miscellanea</a>
+				<a class="dropdown-item" href="../../subpages_pubs/working_papers.html">Working Papers</a>
+				<a class="dropdown-item" href="../../subpages_pubs/books.html">Books</a>
+				<a class="dropdown-item" href="../../subpages_pubs/editorials.html">Editorials</a>
+				<a class="dropdown-item" href="../../subpages_pubs/supplementary.html">Supplementary</a>
+				<a class="dropdown-item" href="../../subpages_pubs/software.html">Software</a>
+			</div>
+		</li>
+		<li class="nav-item"><a class="nav-link active" href="../../blog.html">Blog</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../awards.html">Awards</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../teaching.html">Teaching</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../jobs.html">Jobs</a></li>
+		<li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+	</ul>
+  </nav>
+		
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+
+		
+		<div style="font-size:medium;">
+			<h3>Modeling Dependent Censoring in Time-to-Event Data using Boosting Copula Regression</h3> 
+			<i> By Annika Strömer and Nadja Klein, posted on October 24, 2025</i>
+
+			<br> <br>
+			This blog post is about our paper <b>„Modeling dependent censoring in time-to-event data using boosting copula regression“</b> published in <i>Lifetime Data Analysis</i> and which can be found <a href="https://link.springer.com/article/10.1007/s10985-025-09674-x" target="_blank">here</a>.
+			<br> <br>
+
+			<figure>
+				<img src="figures/figure_1.png" style="width: 60%; display: block; margin-left: auto; margin-right: auto;">
+				<figcaption>Figure 1: Graphical illustration of two survival scenarios with right-censoring. In both scenarios, the event and censoring times \( F \) and \( C \) are conditional on the covariates \( X \). Furthermore, \( T \) is the observed survival time, \( \delta \) is the event indicator and \( U \) is an unobserved confounder. The left-hand graph displays independent censoring and the right-hand graph dependent censoring: a) direct dependence from \( T \) to \( C \) and b) indirect dependence through the unmeasured covariate.</figcaption>
+			</figure>
+			<br> 
+
+			<h4>What is the paper about?</h4>
+			The paper introduces a statistical boosting algorithm for modeling dependent censoring in time-to-event data using copula regression. The proposed method provides a flexible, data-driven approach to account for situations in which censoring is not independent of the event of interest, a phenomenon frequently encountered in practice.
+			<br> <br>
+			
+			<h4>Motivation</h4>
+			Censored observations are a natural feature of survival analysis: some patients do not experience the event of interest (e.g., death, relapse, or recovery) during the study period or they may be lost to follow-up. Traditional methods [1,2] typically assume independent censoring, meaning the censoring time is independent of the event time (see the left part of Figure 1). However, this assumption often does not hold in real-world studies. For example, patients in poor health may be more likely to withdraw from a study, leading to a dependence between their survival and censoring times, as illustrated in the right part of Figure 1. When such dependence exists, classical approaches that assume independence between censoring and survival times can lead to biased results. 
+			Our paper addresses this issue by explicitly modeling the dependence between event time \( T \) and censoring time \( C \) using a copula, enabling a more flexible and realistic joint distribution of survival and censoring times.
+					<br> <br>
+	
+			<h4>Theory</h4>
+			Our paper builds on recent work by Czado and Van Keilegom (2023, [3]) and Deresa et al. (2022, [4]). Our method utilizes a parametric copula combined with arbitrary parametric marginal distributions, allowing for a joint distribution function of the survival time \( T \) and censoring time \( C \). In particular, based on Sklar's theorem, we assume
+			$$ F_{(T,C)} (t,c\mid \alpha) = C\{F_T (t\mid \theta_T),F_C (c\mid \theta_C)\mid \theta\} $$
+			where \( F_T \) and \( F_C \) are the marginal distributions of the survival and censoring times, respectively. The parameter vector \( \alpha = (\theta_T, \theta_C, \theta)^T \) contains all model parameters for the marginals and copula. Each component of \( \alpha \) can be flexibly linked to covariates via additive predictors and suitable link functions.
+			<br>
+			Estimation is performed using statistical boosting, enabling the simultaneous modeling of all distribution parameters as functions of potentially different sets of covariates. This approach can handle high-dimensional cases where the number of covariates exceeds the number of observations (\( p \gt n \)), for which most classical approaches are no longer feasible. Furthermore, the boosting approach has the advantage of including a data-driven variable selection mechanism. This feature is particularly beneficial when dealing with many potential predictors, ensuring that only the most relevant variables are included without compromising predictive power.
+			<br> <br>
+
+			<h4>Experiments</h4>
+			We conducted an extensive simulation study to evaluate the performance of the proposed method under various dependence structures and censoring mechanisms. The results demonstrate that our approach performs well in both identifying and estimating informative variables across a range of challenging scenarios.
+			<br>
+			Finally, we illustrated our approach using data from a recent observational oncology study investigating the overall survival of patients with colon cancer. This application highlights the practical advantages of our method. The boosting copula regression framework provides additional insights into the dependence between survival and censoring times that are not captured by classical approaches. Among other findings, we identified a negative effect of chemotherapy on the relationship between survival and censoring, an effect that could not be detected using previous models.
+			<br> <br>
+
+			<h4>Final Thoughts</h4>
+			Dependent censoring is frequently overlooked in survival analysis but can meaningfully influence results. Our framework offers a flexible, data-driven, and interpretable strategy to model this dependence, uncovering new relationships in biomedical research. We hope these advances encourage researchers to account for dependence structures in time-to-event analyses and to explore the benefits of boosting and copula-based modeling in practice.
+
+			<br> <br>
+			<h4>References</h4>
+			[1] Cox D. R. (1972). Regression models and life-tables. Journal of the Royal Statistical Society: Series B (Methodological), 34(2):187-202.
+			<br>
+			[2] Kaplan E. L. And Meier P. (1958). Nonparametric estimation from incomplete observations. Journal of the American Statistical Association, 53(282):457-481.
+			<br>
+			[3] Czado C. and Van Keilegom I. (2023). Dependent censoring based on parametric copulas. Biometrika, 110(3):721-738.
+			<br>
+			[4] Deresa N. W., Van Keilegom I. and Antonio K. (2022). Copula-based inference for bivariate survival data with left truncation and dependent censoring. Mathematics and Economics, 107:1-21.
+
+			<br> <br>
+			<i>For questions, comments or other matters related to this blog post, please contact us via <a href="mailto:kleinlab@scc.kit.edu">kleinlab@scc.kit.edu</a>.</i>
+
+			<br> <br>
+			If you find our work useful, please cite our paper:
+			<br> <br>
+
+			<tt>
+			@inproceedings{StrKleVanMay2025, <br>
+			<div style="text-indent:40px;">title={Modelling dependent censoring in time-to-event data using boosting copula regression},</div>
+			<div style="text-indent:40px;">author={Str{\"o}mer, Annika and Klein, Nadja and {Van Keilegom}, Ingrid and Mayr, Andreas},</div>
+			<div style="text-indent:40px;">year={2025},</div>
+			<div style="text-indent:40px;">journal={Lifetime Data Analysis},</div>
+			<div style="text-indent:40px;">doi={10.1007/s10985-025-09674-x},</div>
+			<div style="text-indent:40px;">URL={https://doi.org/10.1007/s10985-025-09674-x}</div>
+			<div style="text-indent:40px;">isbn={1572-9249}</div>
+			}
+			</tt>
+			   
+			
+			</div>
+
+
+		<!-- Imprint and data protection -->
+		<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
+			<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
+		</div>
+			
+		</div>
+
+	<!-- jquery -->
+	<script src="./libs/jquery-3.6.1.min.js"></script>
+	
+	<!-- boostrap -->
+	<script src="./libs/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+
+	<!-- Functionality for popover of buttons -->
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover(); 
+		});
+	</script>
+
+	<!-- Functionality for scroll-up button -->
+	<script>
+	$(document).ready(function(){ 
+		if ($(this).scrollTop() > 100) {
+			$('#scrollbutton').fadeIn();
+		}
+		$(window).scroll(function(){ 
+			if ($(this).scrollTop() > 100) { 
+				$('#scrollbutton').fadeIn();
+			} else { 
+				$('#scrollbutton').fadeOut(); 
+			}
+		});
+		$('#scrollbutton').click(function(){ 
+			$("html, body").animate({ scrollTop: 0 }, 300); 
+			return false; 
+		}); 
+	});
+	</script>
+	
+</body>
+
+</html>
