@@ -52,40 +52,15 @@ gtag('config', 'G-E2B3ZSQM8N');
 		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
 	</div>
 
-<nav class="navbar navbar-light">	  
-	<ul class="nav navbar-nav mr-auto">
-		<li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
-		<li class="nav-item"><a class="nav-link"href="../../news.html">News</a></li>
-		<li class="nav-item"><a class="nav-link" href="../../team.html">Team</a></li>
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="../../research.html">Research</a>
-			<div class="dropdown-menu" aria-labelledby="researchDropdown">
-				<a class="dropdown-item" href="../../subpages_research/projects_current.html">Current Projects</a>
-				<a class="dropdown-item" href="../../subpages_research/projects_completed.html">Completed Projects</a>
-				<a class="dropdown-item" href="../../subpages_research/events.html">Events</a>
-			</div>
-		</li>
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="../../publications.html">Publications</a>
-			<div class="dropdown-menu" aria-labelledby="publicationsDropdown">
-				<a class="dropdown-item" href="../../subpages_pubs/methodology.html">Methodology</a>
-				<a class="dropdown-item" href="../../subpages_pubs/applications.html">Applications</a>
-				<a class="dropdown-item" href="../../subpages_pubs/conferences.html">Conferences</a>
-				<a class="dropdown-item" href="../../subpages_pubs/miscellanea.html">Miscellanea</a>
-				<a class="dropdown-item" href="../../subpages_pubs/working_papers.html">Working Papers</a>
-				<a class="dropdown-item" href="../../subpages_pubs/books.html">Books</a>
-				<a class="dropdown-item" href="../../subpages_pubs/editorials.html">Editorials</a>
-				<a class="dropdown-item" href="../../subpages_pubs/supplementary.html">Supplementary</a>
-				<a class="dropdown-item" href="../../subpages_pubs/software.html">Software</a>
-			</div>
-		</li>
-		<li class="nav-item"><a class="nav-link active" href="../../blog.html">Blog</a></li>
-		<li class="nav-item"><a class="nav-link" href="../../awards.html">Awards</a></li>
-		<li class="nav-item"><a class="nav-link" href="../../teaching.html">Teaching</a></li>
-		<li class="nav-item"><a class="nav-link" href="../../jobs.html">Jobs</a></li>
-		<li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
-	</ul>
-  </nav>
+	<div id="navbar"></div>
+
+	<script>
+	fetch('/navbar.html')
+  		.then(response => response.text())
+  		.then(data => {
+    		document.getElementById('navbar').innerHTML = data;
+  		});
+	</script>
 		
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->

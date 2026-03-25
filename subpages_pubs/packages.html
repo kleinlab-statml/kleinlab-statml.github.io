@@ -7,9 +7,9 @@
 
   <title>KleinLab - Homepage</title>
 
-  <link href="./libs/bootstrap-3.4.1/css/bootstrap.css" rel="stylesheet">
-  <link href="./libs/fontawesome-6.2.0/css/all.min.css" rel="stylesheet">
-  <link href="./style.css" rel="stylesheet">
+  <link href=".././libs/bootstrap-3.4.1/css/bootstrap.css" rel="stylesheet">
+  <link href=".././libs/fontawesome-6.2.0/css/all.min.css" rel="stylesheet">
+  <link href=".././style.css" rel="stylesheet">
 
 
   <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
@@ -40,11 +40,11 @@ gtag('config', 'G-E2B3ZSQM8N');
 <div class="container">
 	
 	<div style="margin-top: 15px; margin-bottom: 15px;">
-		<img class="filter-img" src="images/lettering_dark.png" alt="Group logo" style="height: 40px;">
+		<img class="filter-img" src="../images/lettering_dark.png" alt="Group logo" style="height: 40px;">
 		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
 	</div>
 	
-	<div id="navbar"></div>
+<div id="navbar"></div>
 
 	<script>
 	fetch('/navbar.html')
@@ -54,26 +54,56 @@ gtag('config', 'G-E2B3ZSQM8N');
   		});
 	</script>
 
-
 		
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
 
-			<!-- Jobs -->
-			<div id="Jobs" style="font-size:medium;">
-			<h2>Jobs <span class="fa fa-briefcase" aria-hidden="true" style="float:left;padding-right:15px;padding-top:6px;font-size: 75%;"></span></h2>
+			<!-- Packages -->
+			<section id="r-packages" style="font-size:medium;">
+				<h2>R packages on CRAN<span class="fa fa-book" aria-hidden="true" style="float:left;padding-right:15px;padding-top:6px;font-size: 75%;"></span></h2>
 
-				<h3> Postdoctoral Researcher (f/m/d) in Probabilistic Deep Learning </h3>
-					<p>We invite applications for a postdoctoral researcher that will work within the Helmholtz Pilot Program Core-Informatics at KIT (<a href="https://www.kikit.kit.edu/">https://www.kikit.kit.edu/</a>). 
-						If you are interested, please download the <a href="pdfs/ausschreibung_postdoc.pdf" target="_blank">job advertisement</a> for more information.</p>
+				
+	
+					<ul class="fa-ul list-group" style="margin-left:25px">
+						<li class="list-group-item">
+							<span class="fa-li fa fa-check-square icon"></span>
+							<div class="content">
+								<h4>R-package ‘tram’: Transformation models <span class="label label-info"><a href="https://cran.r-project.org/web/packages/tram" target="_blank">CRAN</a></span></h4>
+								Authors: T. Hothorn, L. Barbanti, S. Siegfried, L. Kook, S. Dandl, B. Ripley, B. Venables, D. M. Bates and N. Klein<br>
+							</div>
+						</li>
 
-				<h3>PhD / Post-Doc positions </h3>
-					<p>We are currently looking for PhDs or Post-Docs in our group. 
-						If you would like to work with us, we welcome well-prepared unsolicited applications (including a CV, transcripts, references and a motivation letter)  
-						via <a href="mailto:kleinlab@scc.kit.edu" target="_blank">email</a> kleinlab@scc.kit.edu anytime as a single pdf file with size no more than 5MB. </p>
-			</div>
+						<li class="list-group-item">
+							<span class="fa-li fa fa-check-square icon"></span>
+							<div class="content">
+								<h4>R-package ‘bamlss’: Bayesian additive models for location, scale and shape (and beyond) <span class="label label-info"><a href="https://cran.r-project.org/web/packages/bamlss" target="_blank">CRAN</a></span></h4>
+								Authors: N. Umlauf, N. Klein, A. Zeileis, M. Koehler, T. Simon, S. Stadlmann, and A. Volkmann<br>
+							</div>
+						</li>
+
+						<li class="list-group-item">
+							<span class="fa-li fa fa-check-square icon"></span>
+							<div class="content">
+								<h4>R-package ‘BayesX’: R utilities accompanying the software package BayesX <span class="label label-info"><a href="https://cran.r-project.org/web/packages/BayesX" target="_blank">CRAN</a></span></h4>
+								Authors: N. Umlauf, T. Kneib, N. Klein, F. Heinzl, A. Brezger and D. Sabanes Bove<br>
+							</div>
+						</li>
+					</ul>
+
+					<ul class="fa-ul list-group" style="margin-left:25px">
+						<li class="list-group-item">
+							<span class="fa-li fa fa-check-square icon"></span>
+							<div class="content">
+								<h4>R-package ‘sdPrior’: Scale-dependent hyperpriors in structured additive distributional regression <span class="label label-info"><a href="https://cran.r-project.org/web/packages/sdPrior" target="_blank">CRAN</a></span></h4>
+								Authors: N. Klein<br>
+							</div>
+						</li>
+					</ul>
+		</section>		
+
+		
 			
 
 
@@ -82,13 +112,11 @@ gtag('config', 'G-E2B3ZSQM8N');
 				<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
 			</div>
 			
-
-		
 		</div>
-		
+
+				
 	</div>
 		
-	
 	
   </div>
 </div>
