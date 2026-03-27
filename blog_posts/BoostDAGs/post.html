@@ -59,6 +59,22 @@ gtag('config', 'G-E2B3ZSQM8N');
   		.then(response => response.text())
   		.then(data => {
     		document.getElementById('navbar').innerHTML = data;
+    		// Highlight current page
+    		const path = window.location.pathname;
+    		const navLinks = document.querySelectorAll('.nav-link');
+    		navLinks.forEach(link => {
+        		const href = link.getAttribute('href');
+        		if (href === path || (path === '/' && href === '/index.html')) {
+            		link.classList.add('active');
+        		}
+    		});
+    		// Highlight parent for subpages
+    		if (path.startsWith('/subpages_pubs/')) {
+        		document.querySelector('a[href="/publications.html"]').classList.add('active');
+    		}
+    		if (path.startsWith('/subpages_research/')) {
+        		document.querySelector('a[href="/research.html"]').classList.add('active');
+    		}
   		});
 	</script>
 		
