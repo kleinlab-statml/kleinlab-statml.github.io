@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Homepage of KleinLab">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>KleinLab - Homepage</title>
+
+  <link href="../.././libs/bootstrap-3.4.1/css/bootstrap.css" rel="stylesheet">
+  <link href="../.././libs/fontawesome-6.2.0/css/all.min.css" rel="stylesheet">
+  <link href="../.././style.css" rel="stylesheet">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+  <style>
+  body {
+   font-family: 'Didact Gothic';
+  }
+  </style>
+
+<link rel="icon" href="images/logo_light_wo_frame.png">
+
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E2B3ZSQM8N"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-E2B3ZSQM8N');
+</script>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+
+	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
+
+<div class="container">
+	
+	<div style="margin-top: 15px; margin-bottom: 15px;">
+		<img class="filter-img" src="../../images/lettering_dark.png" alt="Group logo" style="height: 40px;">
+		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
+	</div>
+	
+<div id="navbar"></div>
+
+	<script>
+	fetch('/navbar.html')
+  		.then(response => response.text())
+  		.then(data => {
+    		document.getElementById('navbar').innerHTML = data;
+    		// Highlight current page
+    		const path = window.location.pathname;
+    		const navLinks = document.querySelectorAll('.nav-link');
+    		navLinks.forEach(link => {
+        		const href = link.getAttribute('href');
+        		if (href === path || (path === '/' && href === '/index.html')) {
+            		link.classList.add('active');
+        		}
+    		});
+    		// Highlight parent for subpages
+    		if (path.startsWith('/subpages_pubs/')) {
+        		document.querySelector('a[href="/publications.html"]').classList.add('active');
+    		}
+    		if (path.startsWith('/subpages_research/')) {
+        		document.querySelector('a[href="/research.html"]').classList.add('active');
+    		}
+  		});
+	</script>
+
+		
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+
+			<!-- Research -->
+			<section id="research" style="font-size:medium;">
+				<h2>Research <span class="fa fa-flask" aria-hidden="true" style="float:left;padding-right:15px;padding-top:6px;font-size: 75%;"></span></h2>
+
+				
+				<div id="projects">
+				<h3>Dagstuhl-Seminar: Empowering Climate Science with Spatial AI</h3>
+				<p>	
+        <h4>Scientific Committee</h4>
+				<p>
+				<ul>
+					<li><b>Nadja Klein</b>, Karlsruhe Institute of Technology
+          <li><b>Nicolas Bianco</b>, Karlsruhe Institute of Technology
+          <li><b>David Dunson</b>, Duke University
+          <li><b>Amy Herring</b>, Duke University
+          <li><b>Marina Vannucci</b>, Rice University
+          <li><b>Antonio Linero</b>, University of Texas at Austin
+				</ul>
+
+        <h4>Organizing Committee</h4>
+				<p>
+				<ul>
+					<li><b>Nadja Klein</b>, Karlsruhe Institute of Technology
+          <li><b>Nicolas Bianco</b>, Karlsruhe Institute of Technology
+          <li><b>Ariane Hanebeck</b>, Karlsruhe Institute of Technology
+          <li><b>Guillermo Briseño Sanchez</b>, Karlsruhe Institute of Technology
+          <li><b>Dongjae Son</b>, Karlsruhe Institute of Technology
+				</ul>
+    
+        <p>	
+        <h4>About BAYST</h4>
+		    <p>	
+		    The BAYST workshop aims to bridge recent advances in Bayesian structural learning with applied sciences, fostering scientific discussion and collaboration between theoretical and applied researchers. 
+        </p>
+		    <p>
+        BAYST will consist of 20 invited talks (with discussion) and 2 poster sessions (submissions are open!) over 2 and half days. Coffee breaks, a welcome reception, and lunches are provided. No registration fee is required since BAYST is sponsored by MathSEE.
+        </p>
+		    <p>
+        Moreover, BAYST will serve as the kick-off meeting for a possible new section in the International Society of Bayesian Analysis (ISBA)  that will be officialy proposed after the workshop. The section on Bayesian Structural Learning (BSL) aims to provide an inclusive home for researchers working with high-dimensional or structurally complex data, whether their focus is methodological or applied. If you are interested in supporting this initiative, contact us at kleinlab@scc.kit.edu  to sign our petition.
+		    </p>
+				<p>
+		    More information can be found in <a href="https://sites.google.com/view/bayst2027">BAYST 2027 website</a>.
+		    </p>
+				
+			</div>
+
+			</section>		
+
+	
+			<!-- Imprint and data protection -->
+			<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
+				<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
+			</div>
+			
+		</div>
+
+				
+	</div>
+		
+	
+  </div>
+</div>
+
+	<!-- jquery -->
+	<script src="./libs/jquery-3.6.1.min.js"></script>
+	
+	<!-- boostrap -->
+	<script src="./libs/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+
+	<!-- Functionality for popover of buttons -->
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover(); 
+		});
+	</script>
+
+	<!-- Functionality for scroll-up button -->
+	<script>
+	$(document).ready(function(){ 
+		if ($(this).scrollTop() > 100) {
+			$('#scrollbutton').fadeIn();
+		}
+		$(window).scroll(function(){ 
+			if ($(this).scrollTop() > 100) { 
+				$('#scrollbutton').fadeIn();
+			} else { 
+				$('#scrollbutton').fadeOut(); 
+			}
+		});
+		$('#scrollbutton').click(function(){ 
+			$("html, body").animate({ scrollTop: 0 }, 300); 
+			return false; 
+		}); 
+	});
+	</script>
+	
+</body>
+
+</html>
