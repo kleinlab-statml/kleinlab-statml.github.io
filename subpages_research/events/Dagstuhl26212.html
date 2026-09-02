@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Homepage of KleinLab">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>KleinLab - Homepage</title>
+
+  <link href="../.././libs/bootstrap-3.4.1/css/bootstrap.css" rel="stylesheet">
+  <link href="../.././libs/fontawesome-6.2.0/css/all.min.css" rel="stylesheet">
+  <link href="../.././style.css" rel="stylesheet">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+  <style>
+  body {
+   font-family: 'Didact Gothic';
+  }
+  </style>
+
+<link rel="icon" href="images/logo_light_wo_frame.png">
+
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E2B3ZSQM8N"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-E2B3ZSQM8N');
+</script>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+
+	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
+
+<div class="container">
+	
+	<div style="margin-top: 15px; margin-bottom: 15px;">
+		<img class="filter-img" src="../../images/lettering_dark.png" alt="Group logo" style="height: 40px;">
+		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
+	</div>
+	
+<div id="navbar"></div>
+
+	<script>
+	fetch('/navbar.html')
+  		.then(response => response.text())
+  		.then(data => {
+    		document.getElementById('navbar').innerHTML = data;
+    		// Highlight current page
+    		const path = window.location.pathname;
+    		const navLinks = document.querySelectorAll('.nav-link');
+    		navLinks.forEach(link => {
+        		const href = link.getAttribute('href');
+        		if (href === path || (path === '/' && href === '/index.html')) {
+            		link.classList.add('active');
+        		}
+    		});
+    		// Highlight parent for subpages
+    		if (path.startsWith('/subpages_pubs/')) {
+        		document.querySelector('a[href="/publications.html"]').classList.add('active');
+    		}
+    		if (path.startsWith('/subpages_research/')) {
+        		document.querySelector('a[href="/research.html"]').classList.add('active');
+    		}
+  		});
+	</script>
+
+		
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+
+			<!-- Research -->
+			<section id="research" style="font-size:medium;">
+				<h2>Research <span class="fa fa-flask" aria-hidden="true" style="float:left;padding-right:15px;padding-top:6px;font-size: 75%;"></span></h2>
+
+				
+				<div id="projects">
+				<h3>Dagstuhl-Seminar: Empowering Climate Science with Spatial AI</h3>
+				<p>	
+        <h4>Organizers</h4>
+				<p>
+				This seminar is organized by
+				</p>
+				<ul>
+					<li><b>Niklas Boers</b>, Potsdam-Institut für Klimafolgenforschung, DE
+          <li><b>Matthias Katzfuss</b>, University of Wisconsin - Madison, US
+          <li><b>Nadja Klein</b>, Karlsruher Institut für Technologie, DE
+          <li><b>Konstantin Klemmer</b>, LGND AI - Berkeley, US
+          <li><b>Brian Reich</b>, North Carolina State University, US
+				</ul>
+        <p>	
+        <h4>Motivation</h4>
+		<p>	
+		The climate crisis demands innovative approaches to mitigate its far-reaching impacts. Statistical methods and artificial intelligence (AI) have emerged as powerful tools for analyzing massive datasets, identifying complex patterns, and developing more accurate models of the climate system. This has led to advances in forecasting, adaptation and mitigation, and has the potential to revolutionize climate science. Spatial statistics are foundational because climate systems are often defined by spatiotemporal processes. This proposal outlines the need for a Dagstuhl Seminar focused on the critical and evolving role of spatial AI in addressing the multifaceted challenges of climate science, aiming to foster collaboration and knowledge exchange among leading researchers from these diverse fields.
+        </p>
+		<p>
+        Spatial statistics has a storied history of analyzing environmental data to make predictions at unmeasured locations, test scientific hypotheses, and monitor for changes and anomalies. Traditional methods such as kriging and generalized linear mixed models make unrealistic assumptions such as normality, linearity, and stationarity. While the shortcomings of these methods are well known, more flexible alternatives have not taken hold because of difficulties in crafting an appropriate model for a given analysis and computational challenges involving cumbersome matrix operations inherent to Gaussian spatial models.
+        </p>
+		<p>
+        Recently, machine learning (ML) techniques have been introduced to the spatial statistics community to fill these gaps. Incorporation of methods such as deep learning has been shown to improve prediction of complex processes and computation for large data. Despite this early success, the adoption of ML in spatial statistics remains limited to a few isolated groups and no consensus has been established for how to best incorporate this new technology. The objective of this seminar is to build on this early success to extend the reach of ML in spatial statistics and apply the new tools to address important issues in climate science.
+		</p>
+		<p>
+        This three-day Dagstuhl Seminar will assemble a diverse group of experts on spatial statistics, AI, and climate science to share recent work, identify bottlenecks and open problems, and forge new collaborations to solve these problems. The seminar will be organized around the three methodological themes, with climate examples used throughout to motivate the research: (i) Bayesian Deep Learning, (ii) Generative methods, and (iii) Simulation-based inference.
+		</p>
+		<p>
+        Overall, the three methodological themes both stand on their own as important research areas and complement each other, e.g., deep learning underpins generative methods, and generative methods are the basis of simulation-based inference. The three themes are further linked by common computational approaches and the general machine-learning mindset; therefore, all participants will benefit from the entire program. To maximize impact, we will invite a technically and geographically diverse collection of participants. The workshop will include introductory lectures and research presentations by leading experts on each theme, and panel and roundtable discussions (breakout sessions) to identify the most critical next steps and spark new collaborations to move the field forward.
+		</p>
+		<p>
+        Climate scientists often have ample domain expertise but lack a deep understanding of what ML methods can and cannot do. In addition, with this Dagstuhl Seminar we aim to investigate how much traditional ML methods applied to climate science can benefit from the three themes discussed above. Thus, bringing climate scientists together with statisticians and computer scientists can help develop methods jointly that integrate domain specific expertise.
+        </p>
+		<p>
+		More information can be found in <a href="https://www.dagstuhl.de/de/seminars/seminar-calendar/seminar-details/26212">Dagstuhl seminar website</a>.
+		</p>
+				
+				
+			</div>
+
+			</section>		
+
+	
+			<!-- Imprint and data protection -->
+			<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
+				<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
+			</div>
+			
+		</div>
+
+				
+	</div>
+		
+	
+  </div>
+</div>
+
+	<!-- jquery -->
+	<script src="./libs/jquery-3.6.1.min.js"></script>
+	
+	<!-- boostrap -->
+	<script src="./libs/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+
+	<!-- Functionality for popover of buttons -->
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover(); 
+		});
+	</script>
+
+	<!-- Functionality for scroll-up button -->
+	<script>
+	$(document).ready(function(){ 
+		if ($(this).scrollTop() > 100) {
+			$('#scrollbutton').fadeIn();
+		}
+		$(window).scroll(function(){ 
+			if ($(this).scrollTop() > 100) { 
+				$('#scrollbutton').fadeIn();
+			} else { 
+				$('#scrollbutton').fadeOut(); 
+			}
+		});
+		$('#scrollbutton').click(function(){ 
+			$("html, body").animate({ scrollTop: 0 }, 300); 
+			return false; 
+		}); 
+	});
+	</script>
+	
+</body>
+
+</html>
