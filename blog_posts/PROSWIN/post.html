@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Homepage of KleinLab">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>KleinLab - Homepage</title>
+
+  <link href="../.././libs/bootstrap-3.4.1/css/bootstrap.css" rel="stylesheet">
+  <link href="../.././libs/fontawesome-6.2.0/css/all.min.css" rel="stylesheet">
+  <link href="../.././style.css" rel="stylesheet">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+  <style>
+  body {
+   font-family: 'Didact Gothic';
+  }
+  </style>
+
+<link rel="icon" href="../../images/logo_light_wo_frame.png">
+
+<script type="text/javascript" async
+  src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  </head>
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E2B3ZSQM8N"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-E2B3ZSQM8N');
+</script>
+
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+
+	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
+
+<div class="container">
+	
+	<div style="margin-top: 15px; margin-bottom: 15px;">
+		<img class="filter-img" src="../../images/lettering_dark.png" alt="Group logo" style="height: 40px;">
+		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
+	</div>
+
+<div id="navbar"></div>
+
+	<script>
+	fetch('/navbar.html')
+  		.then(response => response.text())
+  		.then(data => {
+    		document.getElementById('navbar').innerHTML = data;
+    		// Highlight current page
+    		const path = window.location.pathname;
+    		const navLinks = document.querySelectorAll('.nav-link');
+    		navLinks.forEach(link => {
+        		const href = link.getAttribute('href');
+        		if (href === path || (path === '/' && href === '/index.html')) {
+            		link.classList.add('active');
+        		}
+    		});
+    		// Highlight parent for subpages
+    		if (path.startsWith('/subpages_pubs/')) {
+        		document.querySelector('a[href="/publications.html"]').classList.add('active');
+    		}
+    		if (path.startsWith('/subpages_research/')) {
+        		document.querySelector('a[href="/research.html"]').classList.add('active');
+    		}
+  		});
+	</script>
+		
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
+
+		
+		<div style="font-size:medium;">
+			<h3>Probabilistic Solar Wind Prediction From Solar Images</h3> 
+			<i>By Daniel Collin, posted on October 20, 2026</i>
+
+			<br><br>
+			This blog post is about our paper PROSWIN: Probabilistic Solar Wind Speed Forecasting Using Deep Distributional Regression From Solar Images accepted for publication in AGU Advances. A preprint can be found here. It develops PROSWIN, a probabilistic forecasting model for the solar wind by coupling a neural network, learning from solar images, with distributional regression.
+			<br> <br>
+
+			<figure>
+				<img src="figures/Fig1.jpg" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+                <figcaption>Figure 1: PROSWIN uses solar images to predict conditional solar wind speed distributions, enabling a probabilistic solar wind forecast four days ahead.</figcaption>
+			</figure>
+			<br> 
+
+			<h4>What is the paper about?</h4>
+			The paper introduces PROSWIN, a machine learning model that forecasts the solar wind speed at Earth 4 days in advance. By combining distributional regression with a neural network that processes solar images, PROSWIN predicts probability distributions rather than point estimates directly from remote solar observations (see Figure 1). This allows us to quantify forecast uncertainty and better assess the risks associated with high-speed solar wind streams.  
+			<br> <br>
+			
+			<h4>Motivation</h4>
+			<p>Hazardous weather conditions do not only exist on Earth, but also in space. Space weather can affect satellites, navigation systems, power grids and even astronauts. Additionally, it creates the beautiful phenomenon of northern (and southern) lights.</p>
+			<p>The main driver of space weather is the solar wind, a stream of charged particles continuously emitted by the Sun. Particularly important are high-speed solar wind streams (HSSs), which originate from coronal holes: regions of the solar corona where the magnetic field is open towards interplanetary space.</p>
+			<p>Although coronal holes can be identified well in solar images (see Figure 2), predicting HSSs several days in advance remains challenging. Observations of the Sun and its surroundings are limited, and existing forecasting models often underestimate the peaks of HSSs. Moreover, most operational models provide a single predicted value without quantifying its uncertainty.</p>
+			<p>To address these limitations, we propose PROSWIN, which predicts conditional probability distributions of the solar wind speed instead of a single point estimate.</p>
+			<br> <br>
+
+            <figure>
+				<img src="figures/Fig2.jpg" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+                <figcaption> Figure 2: Solar images in different wavelengths (from left: 171, 193, and 211 Å) and a magnetogram (right). In the two middle images, a large coronal hole, the source region of a high-speed solar wind stream, can be seen as a dark structure.</figcaption>
+			</figure>
+			<br>
+
+			<h4>Theory</h4>
+			<p>PROSWIN uses a distributional regression algorithm [1], following the idea of modeling the parameters of a parametric probability distribution family as functions of the inputs. Since the distribution of observed solar wind speeds is strictly positive and right-skewed, we assume the conditional distributions of future solar wind speeds be log-normally distributed with parameters μ and σ. This naturally models the mentioned properties, specifically the heavy upper tail where the most relevant high-speed events are located in.
+            <p>The prediction problem can then be formulated as predicting the distributional parameters μ(x) and σ(x) of the log-normal distribution based on the input x, allowing the location and shape of the predicted distribution to vary depending on the solar observations. </p>
+            <p>To learn the functions μ(x) and σ(x), we use a neural network. It uses a Swin Transformer as image encoder, a more sophisticated version of the Vision Transformer architecture with shifting window attention. The network processes solar images and combines the extracted image features with additional physical features. Two prediction heads then estimate μ and σ, respectively (see Figure 3). </p>
+            <p>The image inputs are provided by NASA's Solar Dynamics Observatory spacecraft. We investigate three extreme ultraviolet channels, at 171, 193, and 211 Å, which capture different temperature regimes in the solar corona, and magnetograms, which measure the Sun's magnetic field (see Figure 2). In addition to the images, the model uses physical features describing the solar wind and the state of the solar cycle.</p>
+			<br> <br>
+
+            <figure>
+				<img src="figures/Fig3.jpg" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+                <figcaption>Figure 3: Deep learning model pipeline. Information from images and physical features is combined and used in separate prediction heads to model the distributional parameters of conditional log-normal SWS distributions. Red boxes: trainable functions; blue boxes: input data; green boxes: output data.</figcaption>
+			</figure>
+			<br>
+
+			<h4>Experiments</h4>
+			<p>We train and evaluate PROSWIN on hourly data from 2010 to 2024 (approximately 123,000 samples). We use five-fold cross-validation to evaluate the model and compare different combinations of solar image channels and magnetograms.</p>
+            <p>We find that adding the 171 Å EUV channel to the commonly used 193 and 211 Å channels improves prediction performance, providing complementary information about the solar corona. Magnetograms, in contrast, do not improve the best-performing configurations.</p>
+            <p>The predicted distributions are very well calibrated. For the entire time series, the average absolute deviation between nominal and observed coverage is only 0.9%, increasing to 2.9% for HSS peak values. This means that the predicted uncertainty intervals closely match the observed frequencies with which they contain the actual solar wind speeds. Furthermore, the observed speed distribution is reproduced well by the aggregated probabilistic predictions, including its heavy upper tail of high-speed stream events, which is not captured by single-value predictions (see Figure 4). </p>
+            <p>Compared to existing physical and machine learning models, PROSWIN achieves the best balance between accuracy across the entire time series and accuracy at HSS peaks and the best calibration. An additional evaluation on two years of new data from the recent solar maximum confirms that its uncertainty estimates remain well calibrated, although accuracy decreases as expected for this strongly disturbed phase.</p>
+			<br> <br>
+
+			<figure>
+				<img src="figures/Fig4.jpg" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+                <figcaption>Figure 4: (a) Predicted probabilistic solar wind speed time series, shown as expected values with prediction intervals. (b) Calibration curve for predicted distributions of the whole dataset (timeline) and the subset of HSS peak values. For nominal levels between 0 and 1, the corresponding fraction of observations within each prediction interval is shown. (c) Histograms of observations, expected value single-value predictions, and aggregated predicted probability densities.</figcaption>
+			</figure>
+			<br>
+
+			<h4>Final Thoughts</h4>
+			<p>Probabilistic forecasts have long been standard in terrestrial meteorology. For example, when checking the weather forecast, we often see the probability of rain rather than a simple yes-or-no prediction. Such forecasts communicate prediction uncertainty and are therefore important for a realistic risk assessment. The same principle applies to space weather. Knowing the probability of different outcomes substantially improves the actionability of operational forecasts.</p>
+            <p>Our results demonstrate that solar images can be used to produce accurate, well-calibrated probabilistic solar wind forecasts. PROSWIN is a step toward wider adoption of probabilistic forecasting in space weather, where reliable uncertainty estimates are particularly important given the limited observations of the heliosphere. The approach is also transferable to other forecasting problems in which uncertainty and the risks of rare events are important.</p>
+
+
+			<br>
+			<h4>References</h4>
+			[1] Klein N. (2024). Distributional regression for data analysis. Annual Review of Statistics and Its Application; 11: 321–346. <br>
+            [2] Liu Z., Lin Y., Cao Y., Hu H., Wei Y., Zhang Z., Lin S. and Guo B. (2021). Swin Transformer: Hierarchical vision transformer using shifted windows. Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV); 2021: 10012–10022. <br>
+
+
+			<br> <br>
+			<i>For questions, comments or other matters related to this blog post, please contact us via <a href="mailto:kleinlab@scc.kit.edu">kleinlab@scc.kit.edu</a>.</i>
+
+			<br> <br>
+			If you find our work useful, please cite our paper:
+			<br> <br>
+
+			<tt>
+            @article{collin2026proswin, <br>
+			<div style="text-indent:40px;">title={PROSWIN: Probabilistic Solar Wind Speed Forecasting Using Deep Distributional Regression From Solar Images},</div>
+            <div style="text-indent:40px;">author={Daniel Collin and Yuri Shprits and Luca Chiarabini and Stefan J. Hofmeister and Nadja Klein and Guillermo Gallego},</div>
+            <div style="text-indent:40px;">year={2026},</div>
+            <div style="text-indent:40px;">notes={Preprint available at 2609.26683},</div>
+            <div style="text-indent:40px;">journal={To appear in AGU Advances}</div>
+			}
+			</tt>
+			
+			</div>
+
+			
+
+
+		<!-- Imprint and data protection -->
+		<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
+			<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
+		</div>
+			
+		</div>
+
+	<!-- jquery -->
+	<script src="./libs/jquery-3.6.1.min.js"></script>
+	
+	<!-- boostrap -->
+	<script src="./libs/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+
+	<!-- Functionality for popover of buttons -->
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover(); 
+		});
+	</script>
+
+	<!-- Functionality for scroll-up button -->
+	<script>
+	$(document).ready(function(){ 
+		if ($(this).scrollTop() > 100) {
+			$('#scrollbutton').fadeIn();
+		}
+		$(window).scroll(function(){ 
+			if ($(this).scrollTop() > 100) { 
+				$('#scrollbutton').fadeIn();
+			} else { 
+				$('#scrollbutton').fadeOut(); 
+			}
+		});
+		$('#scrollbutton').click(function(){ 
+			$("html, body").animate({ scrollTop: 0 }, 300); 
+			return false; 
+		}); 
+	});
+	</script>
+	
+</body>
+
+</html>
