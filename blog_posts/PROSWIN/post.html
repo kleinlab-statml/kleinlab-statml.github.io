@@ -87,7 +87,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 		
 		<div style="font-size:medium;">
 			<h3>Probabilistic Solar Wind Prediction From Solar Images</h3> 
-			<i>By Daniel Collin, posted on October 20, 2026</i>
+			<i>By Daniel Collin and Nadja Klein, posted on October 21, 2026</i>
 
 			<br><br>
 			This blog post is about our paper PROSWIN: Probabilistic Solar Wind Speed Forecasting Using Deep Distributional Regression From Solar Images accepted for publication in AGU Advances. A preprint can be found here. It develops PROSWIN, a probabilistic forecasting model for the solar wind by coupling a neural network, learning from solar images, with distributional regression.
@@ -100,14 +100,14 @@ gtag('config', 'G-E2B3ZSQM8N');
 			<br> 
 
 			<h4>What is the paper about?</h4>
-			The paper introduces PROSWIN, a machine learning model that forecasts the solar wind speed at Earth 4 days in advance. By combining distributional regression with a neural network that processes solar images, PROSWIN predicts probability distributions rather than point estimates directly from remote solar observations (see Figure 1). This allows us to quantify forecast uncertainty and better assess the risks associated with high-speed solar wind streams.  
+			The paper introduces PROSWIN, a machine learning model that forecasts the solar wind speed at Earth four days in advance. By combining distributional regression with a neural network that processes solar images, PROSWIN predicts probability distributions rather than point estimates directly from remote solar observations (see Figure 1). This allows us to quantify forecast uncertainty and better assess the risks associated with high-speed solar wind streams.  
 			<br> <br>
 			
 			<h4>Motivation</h4>
 			<p>Hazardous weather conditions do not only exist on Earth, but also in space. Space weather can affect satellites, navigation systems, power grids and even astronauts. Additionally, it creates the beautiful phenomenon of northern (and southern) lights.</p>
 			<p>The main driver of space weather is the solar wind, a stream of charged particles continuously emitted by the Sun. Particularly important are high-speed solar wind streams (HSSs), which originate from coronal holes: regions of the solar corona where the magnetic field is open towards interplanetary space.</p>
-			<p>Although coronal holes can be identified well in solar images (see Figure 2), predicting HSSs several days in advance remains challenging. Observations of the Sun and its surroundings are limited, and existing forecasting models often underestimate the peaks of HSSs. Moreover, most operational models provide a single predicted value without quantifying its uncertainty.</p>
-			<p>To address these limitations, we propose PROSWIN, which predicts conditional probability distributions of the solar wind speed instead of a single point estimate.</p>
+			<p>Although coronal holes can be identified well in solar images (see Figure 2), predicting HSSs several days in advance remains challenging. Observations of the Sun and its surroundings are limited, and existing forecasting models often underestimate the peaks of HSSs. Moreover, most operational models provide a single predicted value (often the conditional expectation) without quantifying its uncertainty.</p>
+			<p>To address these limitations, we propose PROSWIN, which predicts complete conditional probability distributions of the solar wind speed instead of a single point estimate.</p>
 			<br> <br>
 
             <figure>
@@ -117,8 +117,8 @@ gtag('config', 'G-E2B3ZSQM8N');
 			<br>
 
 			<h4>Theory</h4>
-			<p>PROSWIN uses a distributional regression algorithm [1], following the idea of modeling the parameters of a parametric probability distribution family as functions of the inputs. Since the distribution of observed solar wind speeds is strictly positive and right-skewed, we assume the conditional distributions of future solar wind speeds be log-normally distributed with parameters μ and σ. This naturally models the mentioned properties, specifically the heavy upper tail where the most relevant high-speed events are located in.
-            <p>The prediction problem can then be formulated as predicting the distributional parameters μ(x) and σ(x) of the log-normal distribution based on the input x, allowing the location and shape of the predicted distribution to vary depending on the solar observations. </p>
+			<p>Inspired by the general idea of distributional regression [1], PROSWIN models all parameters of a parametric probability distribution family as functions of the inputs. Since the distribution of observed solar wind speeds is strictly positive and right-skewed, we assume the conditional distributions of future solar wind speeds to be log-normally distributed with parameters μ and σ. This naturally models the mentioned properties, specifically the heavy upper tail where the most relevant high-speed events are located in. </p>
+            <p>The prediction problem can then be formulated as predicting the distributional parameters μ(x) and σ(x) of the log-normal distribution based on the inputs x, allowing the location and shape of the predicted distribution to vary depending on the solar observations. In addition, on the log-scale the parameters have a direct interpretation as conditional mean and conditional standard deviation. </p>
             <p>To learn the functions μ(x) and σ(x), we use a neural network. It uses a Swin Transformer as image encoder, a more sophisticated version of the Vision Transformer architecture with shifting window attention. The network processes solar images and combines the extracted image features with additional physical features. Two prediction heads then estimate μ and σ, respectively (see Figure 3). </p>
             <p>The image inputs are provided by NASA's Solar Dynamics Observatory spacecraft. We investigate three extreme ultraviolet channels, at 171, 193, and 211 Å, which capture different temperature regimes in the solar corona, and magnetograms, which measure the Sun's magnetic field (see Figure 2). In addition to the images, the model uses physical features describing the solar wind and the state of the solar cycle.</p>
 			<br> <br>
@@ -138,7 +138,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 
 			<figure>
 				<img src="figures/Fig4.jpg" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
-                <figcaption>Figure 4: (a) Predicted probabilistic solar wind speed time series, shown as expected values with prediction intervals. (b) Calibration curve for predicted distributions of the whole dataset (timeline) and the subset of HSS peak values. For nominal levels between 0 and 1, the corresponding fraction of observations within each prediction interval is shown. (c) Histograms of observations, expected value single-value predictions, and aggregated predicted probability densities.</figcaption>
+                <figcaption>Figure 4: (a) Predicted probabilistic solar wind speed time series, shown as expected values with prediction intervals. (b) Calibration curve for predicted distributions of the whole dataset (timeline) and the subset of HSS peak values. For nominal levels between 0 and 1, the corresponding fraction of observations within each prediction interval is shown. (c) Histograms of observations, predicted point forecasts (expectations), and aggregated predicted probability densities.</figcaption>
 			</figure>
 			<br>
 
@@ -165,7 +165,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 			<div style="text-indent:40px;">title={PROSWIN: Probabilistic Solar Wind Speed Forecasting Using Deep Distributional Regression From Solar Images},</div>
             <div style="text-indent:40px;">author={Daniel Collin and Yuri Shprits and Luca Chiarabini and Stefan J. Hofmeister and Nadja Klein and Guillermo Gallego},</div>
             <div style="text-indent:40px;">year={2026},</div>
-            <div style="text-indent:40px;">notes={Preprint available at 2609.26683},</div>
+            <div style="text-indent:40px;">notes={Preprint available at <a href="https://arxiv.org/abs/2609.26683">https://arxiv.org/abs/2609.26683</a>},</div>
             <div style="text-indent:40px;">journal={To appear in AGU Advances}</div>
 			}
 			</tt>
