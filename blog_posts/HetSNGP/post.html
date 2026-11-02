@@ -12,12 +12,7 @@
   <link href="../.././style.css" rel="stylesheet">
 
 
-  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
-  <style>
-  body {
-   font-family: 'Didact Gothic';
-  }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&display=swap" rel="stylesheet">
 
 <link rel="icon" href="../../images/logo_light_wo_frame.png">
 
@@ -45,13 +40,6 @@ gtag('config', 'G-E2B3ZSQM8N');
 
 	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
 
-<div class="container">
-	
-	<div style="margin-top: 15px; margin-bottom: 15px;">
-		<img class="filter-img" src="../../images/lettering_dark.png" alt="Group logo" style="height: 40px;">
-		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
-	</div>
-
 <div id="navbar"></div>
 
 	<script>
@@ -77,6 +65,8 @@ gtag('config', 'G-E2B3ZSQM8N');
     		}
   		});
 	</script>
+
+<div class="container">
 		
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
@@ -85,7 +75,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
 
 		
-		<div style="font-size:medium;">
+		<div class="post">
 			<h3>Uncertainty-Aware Trajectory Prediction via Rule-Regularized Heteroscedastic Deep Classification </h3> 
 			<i> By Christian Schlauch and Nadja Klein, posted on July 18, 2025</i>
 
@@ -100,7 +90,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 			
 			<br> <br>
 			<figure>
-				<img src="figures/arch_shift.drawio.png" style="width: 90%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/arch_shift.drawio.png" style="width: 90%;">
 				<figcaption>Figure 1: Our SHIFT framework employs an automatic rule extraction to generate synthetic training labels from prior knowledge rules. Our uncertainty-aware model, based on CoverNet architecture with a spectral-normalized ResNet50 backbone and heteroscedastic Gaussian process output layer, is first trained in step 1 on these synthetic training labels and in step 2 on the observations. The epistemic uncertainty estimate serves as informative prior to regularize the training in step 2.</figcaption>
 			</figure>
 			<br>
@@ -113,7 +103,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 
 			<br> <br>
 			<figure>
-				<img src="figures/rule_extraction.png" style="width: 80%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/rule_extraction.png" style="width: 80%;">
 				<figcaption>Figure 2: High-Level LLM pipeline for synthetic training label creation: (1) rules, prompt, and nuScenes API are LLM inputs, (2) the LLM generates Python functions of rules and human experts review generated functions by running test cases using a sample traffic scene, (3) based on rules synthetic labels for training are generated.</figcaption>
 			</figure>
 			<br>
@@ -126,7 +116,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 
 			<br> <br>
 			<figure>
-				<img src="figures/SNGP.png" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/SNGP.png" style="width: 50%;">
 				<figcaption>Figure 3: Components of the model architecture, including a spectral normalized feature extractor and a heteroscedastic Gaussian process as output layer.</figcaption>
 			</figure>
 			<br>
@@ -142,7 +132,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 			We evaluate SHIFTs performance in a range of scenarios, including standard full dataset training, low data regimes, and out-of-distribution generalization across different geographical locations within the NuScenes dataset [3]. We compare the performance against baselines that lack heteroscedastic uncertainty estimation (see Fig. 4) and those without rule integration. Our empirical results demonstrate that SHIFT consistently produces more accurate predictions and better-calibrated uncertainty estimates in all scenarios, especially in low data regimes.
 			<br> <br>
 			<figure>
-				<img src="figures/appendix_het_better_visual.drawio.png" style="width: 60%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/appendix_het_better_visual.drawio.png" style="width: 60%;">
 				<figcaption>Figure 4: Qualitative comparison of informed motion prediction with heteroscedastic uncertainty estimation (SHIFT) and without (SNGP baseline). The baseline exhibits a greater divergence to ground truths trajectories in many scenarios. </figcaption>
 			</figure>
 			<br>
@@ -183,14 +173,15 @@ gtag('config', 'G-E2B3ZSQM8N');
 			
 
 
-		<!-- Imprint and data protection -->
-		<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
-			<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
-		</div>
-			
 		</div>
 
-	<!-- jquery -->
+<footer class="site-footer">
+	<div class="container">
+		<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
+	</div>
+</footer>
+
+<!-- jquery -->
 	<script src="./libs/jquery-3.6.1.min.js"></script>
 	
 	<!-- boostrap -->

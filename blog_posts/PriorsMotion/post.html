@@ -12,12 +12,7 @@
   <link href="../.././style.css" rel="stylesheet">
 
 
-  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
-  <style>
-  body {
-   font-family: 'Didact Gothic';
-  }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&display=swap" rel="stylesheet">
 
 <link rel="icon" href="../../images/logo_light_wo_frame.png">
 
@@ -44,14 +39,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 
 	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
 
-<div class="container">
-	
-	<div style="margin-top: 15px; margin-bottom: 15px;">
-		<img class="filter-img" src="../../images/lettering_dark.png" alt="Group logo" style="height: 40px;">
-		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
-	</div>
-
-	<div id="navbar"></div>
+<div id="navbar"></div>
 
 	<script>
 	fetch('/navbar.html')
@@ -76,6 +64,8 @@ gtag('config', 'G-E2B3ZSQM8N');
     		}
   		});
 	</script>
+
+<div class="container">
 		
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
@@ -84,7 +74,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
 
 		
-		<div style="font-size:medium;">
+		<div class="post">
 			<h3>Leveraging Informative Priors for Robust and Data-Efficient Motion Prediction</h3> 
 			<i> By Christian Schlauch and Nadja Klein, posted on March 13, 2025</i>
 			<br> <br>
@@ -101,7 +91,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 			🚗 <b>Deep learning models require vast amounts of expensive data to generalize robustly.</b>
 			<br> <br>
 			<figure>
-				<img src="figures/Fig1.png" style="width: 60%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig1.png" style="width: 60%;">
 				<figcaption>Figure 1: Frequency of observed traffic scenes. Capturing high-risk interactions requires prohibitive data collection efforts.</figcaption>
 			</figure>
 			<br>
@@ -112,7 +102,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 			Our approach maps traffic rules onto <b>synthetic training labels</b>. Additionally, we employ <b>Bayesian deep learning</b> methods to enhance state-of-the-art motion prediction models. This enables us to <b>learn informative priors</b> from the synthetic labels (knowledge tasks), which, in turn, <b>regularize training on observed data</b> (conventional tasks).
 			<br> <br>
 			<figure>
-				<img src="figures/Fig2.png" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig2.png" style="width: 50%;">
 				<figcaption>Figure 2: Concept of training pipeline. We aim to learn informative priors from knowledge tasks to regularize the conventional training on observations.</figcaption>
 			</figure>
 			<br>
@@ -123,7 +113,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 			✅ A compute-efficient <b>last-layer Gaussian process (GP)</b> with spectral normalized feature extractor, using a tailored regularization method leveraging a Fourier feature approximation for GPs
 			<br> <br>
 			<figure>
-				<img src="figures/Fig3.png" style="width: 65%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig3.png" style="width: 65%;">
 				<figcaption>Figure 3: Regularization of last-layer Gaussian process approximation and spectral normalized feature extractor across tasks.</figcaption>
 			</figure>
 			<br>
@@ -136,12 +126,12 @@ gtag('config', 'G-E2B3ZSQM8N');
 			📍 <b>Better location generalization</b> — with increased robustness when applied to new, unseen environments.
 			<br> <br>
 			<figure>
-				<img src="figures/Fig4.png" style="width: 50%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig4.png" style="width: 50%;">
 				<figcaption>Figure 4: Performance of our variational model (GVCL) versus informed transfer and multi-loss learning baselines on NuScenes with reduced training subsets. Our model requires less than 50% of the data to reach competitive performance.</figcaption>
 			</figure>
 			<br>
 			<figure>
-				<img src="figures/Fig5.png" style="width: 60%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig5.png" style="width: 60%;">
 				<figcaption>Figure 5: Qualitative inspection of 3 test samples on NuScenes, visualizing the ground truth (green) versus the three best predictions of the baseline (conventional training) and the three best predictions of our informed variational model (GVCL).</figcaption>
 			</figure>
 			<br> 
@@ -191,14 +181,15 @@ gtag('config', 'G-E2B3ZSQM8N');
 			
 
 
-		<!-- Imprint and data protection -->
-		<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
-			<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
-		</div>
-			
 		</div>
 
-	<!-- jquery -->
+<footer class="site-footer">
+	<div class="container">
+		<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
+	</div>
+</footer>
+
+<!-- jquery -->
 	<script src="./libs/jquery-3.6.1.min.js"></script>
 	
 	<!-- boostrap -->

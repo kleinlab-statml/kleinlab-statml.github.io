@@ -12,12 +12,7 @@
   <link href="../.././style.css" rel="stylesheet">
 
 
-  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
-  <style>
-  body {
-   font-family: 'Didact Gothic';
-  }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&display=swap" rel="stylesheet">
 
 <link rel="icon" href="../../images/logo_light_wo_frame.png">
 
@@ -44,13 +39,6 @@ gtag('config', 'G-E2B3ZSQM8N');
 
 	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
 
-<div class="container">
-	
-	<div style="margin-top: 15px; margin-bottom: 15px;">
-		<img class="filter-img" src="../../images/lettering_dark.png" alt="Group logo" style="height: 40px;">
-		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
-	</div>
-
 <div id="navbar"></div>
 
 	<script>
@@ -76,6 +64,8 @@ gtag('config', 'G-E2B3ZSQM8N');
     		}
   		});
 	</script>
+
+<div class="container">
 		
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
@@ -84,7 +74,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
 
 		
-		<div style="font-size:medium;">
+		<div class="post">
 			<h3>Boosting distributional copula regression for bivariate binary, discrete and mixed responses</h3> 
 			<i> By Guillermo Briseño Sanchez and Nadja Klein, posted on April 01, 2025</i>
 			
@@ -97,7 +87,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 			Using our framework, practitioners can specify suitable distributions for the marginal response variables. A flexible joint bivariate distribution is then constructed using a copula function, which links the two marginal responses and induces a dependence structure to be learned from the data. To handle high-dimensional covariates or feature variables, we estimate the both the marginal distributions and the dependence structure jointly using component-wise gradient boosting.
 			<br> <br>
 			<figure>
-				<img src="figures/Fig1.png" style="width: 65%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig1.png" style="width: 65%;">
                 <figcaption>Figure 1: Responses in the biomedical applications analysed in Section 4 of the paper: (a) binary–binary response (numbers indicate proportions): high cholesterol and chronic ischemic heart disease; (b) count–count response (numbers indicate cases): doctor visits and medical prescriptions; and (c) binary–continuous response: fever and wasting (indicator for acute undernutrition)</figcaption>
 			</figure>
 			<br> 
@@ -128,14 +118,14 @@ gtag('config', 'G-E2B3ZSQM8N');
 			We briefly illustrate our method along two of our applications. The first study has two bivariate binary responses, which are chronic ischemic heart disease (yes/no) and high-cholesterol (yes/no). In this application, the explanatory variables indicate gene expressions associated with the individuals in the study. The data is from the UK Biobank [5] and includes a high-dimensional feature information (<i>p</i>=1867 explanatory variables) from <i>n</i>=30,000 individuals. Our method selects several genetic variants in the parameters of the bivariate distribution. The Manhattan-type plot below shows the chromosome location of the genetic variants selected.
 			<br> <br>
 			<figure>
-				<img src="figures/Fig2.png" style="width: 55%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig2.png" style="width: 55%;">
 				<figcaption>Figure 2: Manhattan-type plots of the estimated coefficients (expressed in exponential absolute values of the estimated values) of the boosted bivariate binary model using a Gaussian copula. The x-axis represents the genomic location of the variants and the y-axis shows \(\exp( | \hat{ \beta_j } | ), j = 1, ..., p\). </figcaption>
 			</figure>
 			<br>
 			The second application is on childhood undernutrition in India using the data from [6]. We analysed the joint distribution of a binary variable (fever yes/no before survey interview) and a malnutrition indicator (wasting; low weight for height), which measures acute undernutrition. The figure below shows the estimated dependence between these outcomes expressed as Kendall’s tau and averaged by administrative area:
 			<br> <br>
 			<figure>
-				<img src="figures/Fig3.png" style="width: 35%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig3.png" style="width: 35%;">
 				<figcaption>Figure 3: Estimated Kendall’s \(\tau\) of having fever and acute undernutrition averaged by administrative areas according to the Clayton copula rotated by 270°. </figcaption>			
 			</figure>
 			<br>
@@ -185,14 +175,15 @@ gtag('config', 'G-E2B3ZSQM8N');
 			
 
 
-		<!-- Imprint and data protection -->
-		<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
-			<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
-		</div>
-			
 		</div>
 
-	<!-- jquery -->
+<footer class="site-footer">
+	<div class="container">
+		<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
+	</div>
+</footer>
+
+<!-- jquery -->
 	<script src="./libs/jquery-3.6.1.min.js"></script>
 	
 	<!-- boostrap -->
