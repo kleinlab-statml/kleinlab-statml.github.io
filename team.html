@@ -528,7 +528,16 @@ gtag('config', 'G-E2B3ZSQM8N');
 			showSlide(slideIndex);
 		}
 
-  	setInterval(autoSlide, 3000); // Change image every 3 seconds
+  	let slideTimer = setInterval(autoSlide, 3000); // Change image every 3 seconds
+
+		// Clicking or tapping a photo moves to the next one and restarts the timer
+		document.querySelectorAll('.slide img').forEach(img => {
+			img.addEventListener('click', () => {
+				autoSlide();
+				clearInterval(slideTimer);
+				slideTimer = setInterval(autoSlide, 3000);
+			});
+		});
 
 	
   	</script>

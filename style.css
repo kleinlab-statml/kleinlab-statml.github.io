@@ -753,12 +753,15 @@ section > div > p,
 	display: block;
 }
 
+/* touch-action stops quick taps through the photos from zooming the page */
 .slide img {
 	display: block;
 	width: 100%;
 	margin-bottom: 10px;
 	border-radius: var(--radius);
 	box-shadow: var(--shadow);
+	cursor: pointer;
+	touch-action: manipulation;
 }
 
 .dot-container {
