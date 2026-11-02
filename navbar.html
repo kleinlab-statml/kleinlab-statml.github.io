@@ -4,9 +4,6 @@
 			<img class="filter-img" src="/images/lettering_dark.png" alt="Group logo">
 			<span class="site-tagline">Methods for Big Data</span>
 		</a>
-		<button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.closest('.site-header').classList.toggle('nav-open'))">
-			<span class="fa fa-bars" aria-hidden="true"></span>
-		</button>
 		<nav class="site-nav">
 			<ul>
 				<li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
@@ -42,5 +39,14 @@
 				<li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
 			</ul>
 		</nav>
+		<div class="header-actions">
+			<button class="theme-toggle" type="button" aria-label="Switch between day and night mode" title="Switch between day and night mode" onclick="toggleTheme()">
+				<span class="fa fa-moon" aria-hidden="true"></span>
+				<span class="fa fa-sun" aria-hidden="true"></span>
+			</button>
+			<button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.closest('.site-header').classList.toggle('nav-open'))">
+				<span class="fa fa-bars" aria-hidden="true"></span>
+			</button>
+		</div>
 	</div>
 </header>
