@@ -749,7 +749,9 @@ html:not([data-theme="dark"]) .theme-toggle .fa-sun {
 }
 
 .split-even > .split-text,
-.split-even > .split-media {
+.split-even > .split-media,
+.split-large > .split-text,
+.split-large > .split-media {
 	flex: 1 1 0;
 }
 
@@ -806,6 +808,25 @@ html:not([data-theme="dark"]) .theme-toggle .fa-sun {
 .split-media-item.logo-row img {
 	min-width: 0;
 	max-height: var(--logo-height);
+}
+
+/* Logos one above the other instead of side by side */
+.split-media-item.logo-stack {
+	flex-direction: column;
+	gap: 20px;
+}
+
+/* A very long text leaves room for larger images: two equal logos and a wider figure */
+.split-large .logo-row img {
+	flex: 1 1 0;
+	align-self: stretch;
+	max-width: 340px;
+	max-height: none;
+}
+
+.split-large .split-media-item:not(.logo-row) img {
+	max-width: 720px;
+	max-height: none;
 }
 
 /* Events: a short title next to a larger image */
@@ -1598,6 +1619,8 @@ html[data-theme="dark"] .hero-logo img {
 	.split-media,
 	.split-even > .split-text,
 	.split-even > .split-media,
+	.split-large > .split-text,
+	.split-large > .split-media,
 	.contact-info,
 	.contact-map {
 		flex: none;
