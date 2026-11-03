@@ -780,12 +780,22 @@ html:not([data-theme="dark"]) .theme-toggle .fa-sun {
 	justify-content: center;
 }
 
-.split-sticky .split-media-item img {
-	max-height: 380px;
+/* Project figures share one width, so their edges line up from row to row */
+.split-sticky .split-media-item:not(.logo-row) {
+	display: block;
 }
 
-.split-media-item.logo-row,
-.split-media-item.logo-row-wide {
+.split-sticky .split-media-item:not(.logo-row) img {
+	display: block;
+	width: 100%;
+	max-width: 540px;
+	max-height: 380px;
+	margin: 0 auto;
+}
+
+/* Logos share one height, so the same logo has the same size on every row */
+.split-media-item.logo-row {
+	--logo-height: clamp(72px, 5.8vw, 110px);
 	gap: 16px;
 }
 
@@ -794,7 +804,8 @@ html:not([data-theme="dark"]) .theme-toggle .fa-sun {
 }
 
 .split-media-item.logo-row img {
-	max-height: 110px;
+	min-width: 0;
+	max-height: var(--logo-height);
 }
 
 /* Events: a short title next to a larger image */
