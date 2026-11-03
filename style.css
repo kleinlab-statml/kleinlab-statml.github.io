@@ -492,12 +492,6 @@ html:not([data-theme="dark"]) .theme-toggle .fa-sun {
 	font-size: 17px;
 }
 
-.hero-text p:first-child {
-	font-size: 20px;
-	line-height: 1.55;
-	color: var(--ink);
-}
-
 .hero-logo {
 	flex: 2 1 0;
 	min-width: 0;
@@ -1613,10 +1607,6 @@ html[data-theme="dark"] .hero-logo img {
 	h2 {
 		margin-top: 28px;
 		font-size: 28px;
-	}
-
-	.hero-text p:first-child {
-		font-size: 18px;
 	}
 
 	.tile-grid,
