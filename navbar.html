@@ -1,35 +1,52 @@
-<nav class="navbar navbar-light">	  
-	<ul class="nav navbar-nav mr-auto">
-		<li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-		<li class="nav-item"><a class="nav-link"href="/news.html">News</a></li>
-		<li class="nav-item"><a class="nav-link" href="/team.html">Team</a></li>
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="/research.html">Research</a>
-			<div class="dropdown-menu" aria-labelledby="researchDropdown">
-				<a class="dropdown-item" href="/subpages_research/projects_current.html">Current Projects</a>
-				<a class="dropdown-item" href="/subpages_research/projects_completed.html">Completed Projects</a>
-				<a class="dropdown-item" href="/subpages_research/events.html">Events</a>
-			</div>
-		</li>
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="/publications.html">Publications</a>
-			<div class="dropdown-menu" aria-labelledby="publicationsDropdown">
-				<a class="dropdown-item" href="/subpages_pubs/methodology.html">Methodology</a>
-				<a class="dropdown-item" href="/subpages_pubs/applications.html">Applications</a>
-				<a class="dropdown-item" href="/subpages_pubs/conferences.html">Conferences</a>
-				<a class="dropdown-item" href="/subpages_pubs/miscellanea.html">Miscellanea</a>
-				<a class="dropdown-item" href="/subpages_pubs/working_papers.html">Working Papers</a>
-				<a class="dropdown-item" href="/subpages_pubs/books.html">Books</a>
-				<a class="dropdown-item" href="/subpages_pubs/editorials.html">Editorials</a>
-				<a class="dropdown-item" href="/subpages_pubs/supplementary.html">Supplementary</a>
-				<a class="dropdown-item" href="/subpages_pubs/repositories.html">Repositories</a>
-                <a class="dropdown-item" href="/subpages_pubs/packages.html">Packages</a>
-			</div>
-		</li>
-		<li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
-		<li class="nav-item"><a class="nav-link" href="/awards.html">Awards</a></li>
-		<li class="nav-item"><a class="nav-link" href="/teaching.html">Teaching</a></li>
-		<li class="nav-item"><a class="nav-link" href="/jobs.html">Jobs</a></li>
-		<li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-	</ul>
-  </nav>
+<header class="site-header">
+	<div class="container site-header-inner">
+		<a class="site-brand" href="/index.html">
+			<img class="filter-img" src="/images/lettering_dark.png" alt="Group logo">
+			<span class="site-tagline">Methods for Big Data</span>
+		</a>
+		<nav class="site-nav">
+			<ul>
+				<li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="/news.html">News</a></li>
+				<li class="nav-item"><a class="nav-link" href="/team.html">Team</a></li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="/research.html">Research</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="/subpages_research/projects_current.html">Current Projects</a>
+						<a class="dropdown-item" href="/subpages_research/projects_completed.html">Completed Projects</a>
+						<a class="dropdown-item" href="/subpages_research/events.html">Events</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="/publications.html">Publications</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="/subpages_pubs/methodology.html">Methodology</a>
+						<a class="dropdown-item" href="/subpages_pubs/applications.html">Applications</a>
+						<a class="dropdown-item" href="/subpages_pubs/conferences.html">Conferences</a>
+						<a class="dropdown-item" href="/subpages_pubs/miscellanea.html">Miscellanea</a>
+						<a class="dropdown-item" href="/subpages_pubs/working_papers.html">Working Papers</a>
+						<a class="dropdown-item" href="/subpages_pubs/books.html">Books</a>
+						<a class="dropdown-item" href="/subpages_pubs/editorials.html">Editorials</a>
+						<a class="dropdown-item" href="/subpages_pubs/supplementary.html">Supplementary</a>
+						<a class="dropdown-item" href="/subpages_pubs/repositories.html">Repositories</a>
+						<a class="dropdown-item" href="/subpages_pubs/packages.html">Packages</a>
+					</div>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+				<li class="nav-item"><a class="nav-link" href="/awards.html">Awards</a></li>
+				<li class="nav-item"><a class="nav-link" href="/teaching.html">Teaching</a></li>
+				<li class="nav-item"><a class="nav-link" href="/jobs.html">Jobs</a></li>
+				<li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="header-actions">
+			<button class="theme-toggle" type="button" aria-label="Switch between day and night mode" title="Switch between day and night mode" onclick="toggleTheme()">
+				<span class="fa fa-moon" aria-hidden="true"></span>
+				<span class="fa fa-sun" aria-hidden="true"></span>
+			</button>
+			<button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.closest('.site-header').classList.toggle('nav-open'))">
+				<span class="fa fa-bars" aria-hidden="true"></span>
+			</button>
+		</div>
+	</div>
+</header>

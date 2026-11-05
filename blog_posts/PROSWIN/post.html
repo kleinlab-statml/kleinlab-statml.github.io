@@ -12,12 +12,8 @@
   <link href="../.././style.css" rel="stylesheet">
 
 
-  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
-  <style>
-  body {
-   font-family: 'Didact Gothic';
-  }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="/theme.js"></script>
 
 <link rel="icon" href="../../images/logo_light_wo_frame.png">
 
@@ -45,13 +41,6 @@ gtag('config', 'G-E2B3ZSQM8N');
 
 	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
 
-<div class="container">
-	
-	<div style="margin-top: 15px; margin-bottom: 15px;">
-		<img class="filter-img" src="../../images/lettering_dark.png" alt="Group logo" style="height: 40px;">
-		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
-	</div>
-
 <div id="navbar"></div>
 
 	<script>
@@ -77,6 +66,8 @@ gtag('config', 'G-E2B3ZSQM8N');
     		}
   		});
 	</script>
+
+<div class="container">
 		
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
@@ -85,7 +76,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
 
 		
-		<div style="font-size:medium;">
+		<div class="post">
 			<h3>Probabilistic Solar Wind Prediction From Solar Images</h3> 
 			<i>By Daniel Collin and Nadja Klein, posted on October 21, 2026</i>
 
@@ -94,7 +85,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 			<br> <br>
 
 			<figure>
-				<img src="figures/Fig1.jpg" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig1.jpg" style="width: 70%;">
                 <figcaption>Figure 1: PROSWIN uses solar images to predict conditional solar wind speed distributions, enabling a probabilistic solar wind forecast four days ahead.</figcaption>
 			</figure>
 			<br> 
@@ -111,7 +102,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 			<br> <br>
 
             <figure>
-				<img src="figures/Fig2.jpg" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig2.jpg" style="width: 70%;">
                 <figcaption> Figure 2: Solar images in different wavelengths (from left: 171, 193, and 211 Å) and a magnetogram (right). In the two middle images, a large coronal hole, the source region of a high-speed solar wind stream, can be seen as a dark structure.</figcaption>
 			</figure>
 			<br>
@@ -124,7 +115,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 			<br> <br>
 
             <figure>
-				<img src="figures/Fig3.jpg" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig3.jpg" style="width: 70%;">
                 <figcaption>Figure 3: Deep learning model pipeline. Information from images and physical features is combined and used in separate prediction heads to model the distributional parameters of conditional log-normal SWS distributions. Red boxes: trainable functions; blue boxes: input data; green boxes: output data.</figcaption>
 			</figure>
 			<br>
@@ -137,7 +128,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 			<br> <br>
 
 			<figure>
-				<img src="figures/Fig4.jpg" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+				<img src="figures/Fig4.jpg" style="width: 70%;">
                 <figcaption>Figure 4: (a) Predicted probabilistic solar wind speed time series, shown as expected values with prediction intervals. (b) Calibration curve for predicted distributions of the whole dataset (timeline) and the subset of HSS peak values. For nominal levels between 0 and 1, the corresponding fraction of observations within each prediction interval is shown. (c) Histograms of observations, predicted point forecasts (expectations), and aggregated predicted probability densities.</figcaption>
 			</figure>
 			<br>
@@ -177,14 +168,15 @@ gtag('config', 'G-E2B3ZSQM8N');
 			
 
 
-		<!-- Imprint and data protection -->
-		<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
-			<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
-		</div>
-			
 		</div>
 
-	<!-- jquery -->
+<footer class="site-footer">
+	<div class="container">
+		<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
+	</div>
+</footer>
+
+<!-- jquery -->
 	<script src="./libs/jquery-3.6.1.min.js"></script>
 	
 	<!-- boostrap -->
@@ -217,6 +209,8 @@ gtag('config', 'G-E2B3ZSQM8N');
 	});
 	</script>
 	
+<script src="/citation.js"></script>
+
 </body>
 
 </html>

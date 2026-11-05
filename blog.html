@@ -12,12 +12,8 @@
   <link href="./style.css" rel="stylesheet">
 
 
-  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
-  <style>
-  body {
-   font-family: 'Didact Gothic';
-  }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="/theme.js"></script>
 
 <link rel="icon" href="images/logo_light_wo_frame.png">
 
@@ -36,14 +32,7 @@ gtag('config', 'G-E2B3ZSQM8N');
 
 	<a href="#" id="scrollbutton" class="hidden-md hidden-lg hidden-xl" style="display: none;"><span></span></a>
 
-<div class="container">
-	
-	<div style="margin-top: 15px; margin-bottom: 15px;">
-		<img class="filter-img" src="images/lettering_dark.png" alt="Group logo" style="height: 40px;">
-		<h2 style="color:#4c8a90; display: inline; vertical-align:middle; margin-left: 10px; "> - Methods for Big Data</h2>
-	</div>
-	
-  <div id="navbar"></div>
+<div id="navbar"></div>
 
 	<script>
 	fetch('/navbar.html')
@@ -69,6 +58,8 @@ gtag('config', 'G-E2B3ZSQM8N');
   		});
 	</script>
 
+<div class="container">
+
 		
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
@@ -76,196 +67,157 @@ gtag('config', 'G-E2B3ZSQM8N');
 <!-- ------------------------------------------------------------------------------------------------------------------------------------ -->
 
 			<!-- Blog -->
-			<section id="Blog" style="font-size:medium;">
-				<h2>Blog <span class="fa fa-bookmark" aria-hidden="true" style="float:left;padding-right:15px;padding-top:6px;font-size: 75%;"></span></h2>
+			<section id="Blog">
+				<h2>Blog <span class="fa fa-bookmark" aria-hidden="true"></span></h2>
 					
-					<ul class="fa-ul list-group" style="margin-left:15px; margin-right:15px">
+					<ul class="fa-ul list-group">
 						
 						<li class="list-group-item">
-							<div class="row" style="border: 1px solid black;">
-								<div class="column2" style="width: 30%; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center;">
-									<img src="blog_posts/PROSWIN/figures/Fig1.jpg" style="width: 90%; display: block; margin-left: auto; margin-right: auto;">
+							<div class="media-card">
+								<div class="media-card-figure">
+									<img src="blog_posts/PROSWIN/figures/Fig1.jpg">
 								</div>
 	
-								<div class="column2" style="width: 70%; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-										<a href="blog_posts/PROSWIN/post.html"><h4>Probabilistic Solar Wind Prediction From Solar Images  </h4></a> (By Daniel Collin and Nadja Klein, posted on October 21, 2026)
-									<p style="text-align: justify; margin-top: 10px;">The paper introduces PROSWIN, a machine learning model that forecasts the solar wind speed at Earth four days in advance. By combining distributional regression with a neural network that processes solar images, PROSWIN predicts probability distributions rather than point estimates directly from remote solar observations (see Figure 1). This allows us to quantify forecast uncertainty and better assess the risks associated with high-speed solar wind streams.</p>
+								<div class="media-card-body">
+										<a href="blog_posts/PROSWIN/post.html"><h4>Probabilistic Solar Wind Prediction From Solar Images  </h4></a> <span class="post-meta">(By Daniel Collin and Nadja Klein, posted on October 21, 2026)</span>
+									<p>The paper introduces PROSWIN, a machine learning model that forecasts the solar wind speed at Earth four days in advance. By combining distributional regression with a neural network that processes solar images, PROSWIN predicts probability distributions rather than point estimates directly from remote solar observations (see Figure 1). This allows us to quantify forecast uncertainty and better assess the risks associated with high-speed solar wind streams.</p>
 								</div>
 							</div>
 						</li>
-
-						<br>
-
-						<li class="list-group-item">
-							<div class="row" style="border: 1px solid black;">
-								<div class="column2" style="width: 30%; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center;">
-									<img src="blog_posts/ObjectDetectConformal/figures/Figure1.jpg" style="width: 90%; display: block; margin-left: auto; margin-right: auto;">
+<li class="list-group-item">
+							<div class="media-card">
+								<div class="media-card-figure">
+									<img src="blog_posts/ObjectDetectConformal/figures/Figure1.jpg">
 								</div>
 	
-								<div class="column2" style="width: 70%; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-										<a href="blog_posts/ObjectDetectConformal/post.html"><h4>Probabilistic Object Detection with Conformal Prediction  </h4></a> (By Christopher Ries, Moussa Kassem Sbeyti, Nicolas Bianco, and Nadja Klein, posted on August 20, 2026)
-									<p style="text-align: justify; margin-top: 10px;">This paper compares scaled and unscaled CP for multi-class object detection. The evaluation is not only based on the coverage, but also on interval sharpness metrics such as the Interval Score and Intersection over Union. Moreover, we also compare class-agnostic and class-wise CP for both, scaled and unscaled CP. Lastly, we use a two-step pipeline that jointly conformalize the classification and regression heads.</p>
+								<div class="media-card-body">
+										<a href="blog_posts/ObjectDetectConformal/post.html"><h4>Probabilistic Object Detection with Conformal Prediction  </h4></a> <span class="post-meta">(By Christopher Ries, Moussa Kassem Sbeyti, Nicolas Bianco, and Nadja Klein, posted on August 20, 2026)</span>
+									<p>This paper compares scaled and unscaled CP for multi-class object detection. The evaluation is not only based on the coverage, but also on interval sharpness metrics such as the Interval Score and Intersection over Union. Moreover, we also compare class-agnostic and class-wise CP for both, scaled and unscaled CP. Lastly, we use a two-step pipeline that jointly conformalize the classification and regression heads.</p>
 								</div>
 							</div>
 						</li>
-
-						<br>
-						
-						<li class="list-group-item">
-							<div class="row" style="border: 1px solid black;">
-								<div class="column2" style="width: 30%; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center;">
-									<img src="blog_posts/DependentCensoring/figures/figure_1.png" style="width: 90%; display: block; margin-left: auto; margin-right: auto;">
+<li class="list-group-item">
+							<div class="media-card">
+								<div class="media-card-figure">
+									<img src="blog_posts/DependentCensoring/figures/figure_1.png">
 								</div>
 	
-								<div class="column2" style="width: 70%; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-										<a href="blog_posts/DependentCensoring/post.html"><h4>Modeling Dependent Censoring in Time-to-Event Data using Boosting Copula Regression </h4></a> (By Annika Strömer and Nadja Klein, posted on October 24, 2025)
-									<p style="text-align: justify; margin-top: 10px;">This paper presents a boosting copula regression approach to model dependent censoring in survival analysis. By jointly modeling survival and censoring times together and including covariate effects, our approach can flexibly capture and adjust for dependencies between them. This allows for a more realistic understanding of complex biomedical processes, even in high-dimensional data situations.</p>
+								<div class="media-card-body">
+										<a href="blog_posts/DependentCensoring/post.html"><h4>Modeling Dependent Censoring in Time-to-Event Data using Boosting Copula Regression </h4></a> <span class="post-meta">(By Annika Strömer and Nadja Klein, posted on October 24, 2025)</span>
+									<p>This paper presents a boosting copula regression approach to model dependent censoring in survival analysis. By jointly modeling survival and censoring times together and including covariate effects, our approach can flexibly capture and adjust for dependencies between them. This allows for a more realistic understanding of complex biomedical processes, even in high-dimensional data situations.</p>
 								</div>
 							</div>
 						</li>
-
-						<br>
-
-						<li class="list-group-item">
-							<div class="row" style="border: 1px solid black;">
-								<div class="column2" style="width: 30%; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center;">
-									<img src="blog_posts/BoostDAGs/figures/two_d_sem.png" style="width: 75%; display: block; margin-left: auto; margin-right: auto;">
+<li class="list-group-item">
+							<div class="media-card">
+								<div class="media-card-figure">
+									<img src="blog_posts/BoostDAGs/figures/two_d_sem.png">
 								</div>
 	
-								<div class="column2" style="width: 70%; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-										<a href="blog_posts/BoostDAGs/post.html"><h4>Boosting Causal Additive Models </h4></a> (By Maximilian Kertel and Nadja Klein, posted on September 13, 2025)
-									<p style="text-align: justify; margin-top: 10px;">This paper introduces a novel method for causal discovery from purely observational data. The research focuses on a class of models known as Causal Additive Models (CAMs), which assume that variables follow a Structural Equation Model (SEM) with additive noise. We present a boosting-based approach that can consistently identify the causal ordering of variables.</p>
+								<div class="media-card-body">
+										<a href="blog_posts/BoostDAGs/post.html"><h4>Boosting Causal Additive Models </h4></a> <span class="post-meta">(By Maximilian Kertel and Nadja Klein, posted on September 13, 2025)</span>
+									<p>This paper introduces a novel method for causal discovery from purely observational data. The research focuses on a class of models known as Causal Additive Models (CAMs), which assume that variables follow a Structural Equation Model (SEM) with additive noise. We present a boosting-based approach that can consistently identify the causal ordering of variables.</p>
 								</div>
 							</div>
 						</li>
-
-						<br>
-
-						<li class="list-group-item">
-							<div class="row" style="border: 1px solid black;">
-								<div class="column2" style="width: 30%; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center;">
-									<img src="blog_posts/HetSNGP/figures/arch_shift.drawio.png" style="width: 90%; display: block; margin-left: auto; margin-right: auto;">
+<li class="list-group-item">
+							<div class="media-card">
+								<div class="media-card-figure">
+									<img src="blog_posts/HetSNGP/figures/arch_shift.drawio.png">
 								</div>
 	
-								<div class="column2" style="width: 70%; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-										<a href="blog_posts/HetSNGP/post.html"><h4>Uncertainty-Aware Trajectory Prediction via Rule-Regularized Heteroscedastic Deep Classification </h4></a> (By Christian Schlauch and Nadja Klein, posted on July 18, 2025)
-									<p style="text-align: justify; margin-top: 10px;">We propose SHIFT (Spectral Heteroscedastic Informed Forecasting for Trajectories), a novel training framework for motion prediction in autonomous driving. SHIFT combines well-calibrated uncertainty modeling through last-layer heteroscedastic Gaussian processes and informative priors derived from automated rule extraction.</p>
+								<div class="media-card-body">
+										<a href="blog_posts/HetSNGP/post.html"><h4>Uncertainty-Aware Trajectory Prediction via Rule-Regularized Heteroscedastic Deep Classification </h4></a> <span class="post-meta">(By Christian Schlauch and Nadja Klein, posted on July 18, 2025)</span>
+									<p>We propose SHIFT (Spectral Heteroscedastic Informed Forecasting for Trajectories), a novel training framework for motion prediction in autonomous driving. SHIFT combines well-calibrated uncertainty modeling through last-layer heteroscedastic Gaussian processes and informative priors derived from automated rule extraction.</p>
 								</div>
 							</div>
 						</li>
-
-						<br>
-
-						<li class="list-group-item">
-							<div class="row" style="border: 1px solid black;">
-								<div class="column2" style="width: 30%; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center;">
-									<img src="blog_posts/PosteriorConsistencyPsplines/figures/PriorDraws.png" style="width: 90%; display: block; margin-left: auto; margin-right: auto;">
+<li class="list-group-item">
+							<div class="media-card">
+								<div class="media-card-figure">
+									<img src="blog_posts/PosteriorConsistencyPsplines/figures/PriorDraws.png">
 								</div>
 	
-								<div class="column2" style="width: 70%; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-										<a href="blog_posts/PosteriorConsistencyPsplines/post.html"><h4>Posterior Concentration Rates for Bayesian Penalized Splines</h4></a> (By Paul Bach and Nadja Klein, posted on May 05, 2025)
-									<p style="text-align: justify; margin-top: 10px;">We close a gap in the literature and study the asymptotic properties of Bayesian penalized splines. We show that near-optimal posterior concentration can be achieved if the order of the penalty matches the regularity of the unknown function and if the hyperprior on the smoothing variance is appropriately chosen.</p>
+								<div class="media-card-body">
+										<a href="blog_posts/PosteriorConsistencyPsplines/post.html"><h4>Posterior Concentration Rates for Bayesian Penalized Splines</h4></a> <span class="post-meta">(By Paul Bach and Nadja Klein, posted on May 05, 2025)</span>
+									<p>We close a gap in the literature and study the asymptotic properties of Bayesian penalized splines. We show that near-optimal posterior concentration can be achieved if the order of the penalty matches the regularity of the unknown function and if the hyperprior on the smoothing variance is appropriately chosen.</p>
 								</div>
 							</div>
 						</li>
-
-						<br>
-
-						<li class="list-group-item">
-							<div class="row" style="border: 1px solid black;">
-								<div class="column2" style="width: 30%; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center;">
-									<img src="blog_posts/TrulyMultDistReg/Figures/traffic_timepoints.png" style="width: 90%; display: block; margin-left: auto; margin-right: auto;">
+<li class="list-group-item">
+							<div class="media-card">
+								<div class="media-card-figure">
+									<img src="blog_posts/TrulyMultDistReg/Figures/traffic_timepoints.png">
 								</div>
 	
-								<div class="column2" style="width: 70%; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-										<a href="blog_posts/TrulyMultDistReg/post.html"><h4>Truly Multivariate Structured Additive Distributional Regression</h4></a> (By Lucas Kock and Nadja Klein, posted on April 11, 2025)
-									<p style="text-align: justify; margin-top: 10px;">We propose a truly multivariate distributional regression model. Building on copula regression, we model the dependence structure of the response through a Gaussian copula, while the marginal distributions can vary across components. Each parameter of the flexible distribution is linked to covariates. Our model is highly parameterized but estimation becomes feasible with Bayesian inference employing shrinkage priors.</p>
+								<div class="media-card-body">
+										<a href="blog_posts/TrulyMultDistReg/post.html"><h4>Truly Multivariate Structured Additive Distributional Regression</h4></a> <span class="post-meta">(By Lucas Kock and Nadja Klein, posted on April 11, 2025)</span>
+									<p>We propose a truly multivariate distributional regression model. Building on copula regression, we model the dependence structure of the response through a Gaussian copula, while the marginal distributions can vary across components. Each parameter of the flexible distribution is linked to covariates. Our model is highly parameterized but estimation becomes feasible with Bayesian inference employing shrinkage priors.</p>
 								</div>
 							</div>
 						</li>
-
-						<br>
-						
-						<li class="list-group-item">
-							<div class="row" style="border: 1px solid black;">
-								<div class="column2" style="width: 30%; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center;">
-									<img src="blog_posts/BoostDistrCopReg/figures/Fig1.png" style="width: 90%; display: block; margin-left: auto; margin-right: auto;">
+<li class="list-group-item">
+							<div class="media-card">
+								<div class="media-card-figure">
+									<img src="blog_posts/BoostDistrCopReg/figures/Fig1.png">
 								</div>
 	
-								<div class="column2" style="width: 70%; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-										<a href="blog_posts/BoostDistrCopReg/post.html"><h4>Boosting distributional copula regression for bivariate binary, discrete and mixed responses</h4></a> (By Guillermo Briseño Sanchez and Nadja Klein, posted on April 01, 2025)
-									<p style="text-align: justify; margin-top: 10px;">We extend the current component-wise boosting methodology for distributional copula regression to accommodate prevalent type of variables in biomedical research: bivariate binary, bivariate discrete, as well as mixed binary-continuous. One of the benefits of our boosting approach is its ability to handle high-dimensional input variables. We illustrate our proposed method by analysing three challenging datasets as well as a number of experiments.</p>
+								<div class="media-card-body">
+										<a href="blog_posts/BoostDistrCopReg/post.html"><h4>Boosting distributional copula regression for bivariate binary, discrete and mixed responses</h4></a> <span class="post-meta">(By Guillermo Briseño Sanchez and Nadja Klein, posted on April 01, 2025)</span>
+									<p>We extend the current component-wise boosting methodology for distributional copula regression to accommodate prevalent type of variables in biomedical research: bivariate binary, bivariate discrete, as well as mixed binary-continuous. One of the benefits of our boosting approach is its ability to handle high-dimensional input variables. We illustrate our proposed method by analysing three challenging datasets as well as a number of experiments.</p>
 								</div>
 							</div>
 						</li>
-
-						<br>
-						
-						<li class="list-group-item">
-							<div class="row" style="border: 1px solid black;">
-								<div class="column2" style="width: 30%; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center;">
-									<img src="blog_posts/SemiSupervisedOD/Figures/Fig1.png" style="width: 90%; display: block; margin-left: auto; margin-right: auto;">
+<li class="list-group-item">
+							<div class="media-card">
+								<div class="media-card-figure">
+									<img src="blog_posts/SemiSupervisedOD/Figures/Fig1.png">
 								</div>
 	
-								<div class="column2" style="width: 70%; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
-										<a href="blog_posts/SemiSupervisedOD/post.html"><h4>Building Blocks for Robust and Effective Semi-Supervised Real-World Object Detection</h4></a> (By Moussa Kassem Sbeyti and Nadja Klein, posted on March 27, 2025)
-									<p style="text-align: justify; margin-top: 10px;">Semi-supervised object detection (SSOD) reduces the need for extensive labeled datasets but faces real-world challenges such as class imbalance, label noise, and unreliable pseudo-labels. We investigate the impact of these challenges on SSOD and propose four novel data-centric building blocks—Rare Class Collage (RCC), Rare Class Focus (RCF), Ground Truth Label Correction (GLC), and Pseudo-Label Selection (PLS)—that improve SSOD frameworks. Our methods achieve up to a 6% performance increase by enhancing label quality and class representation while maintaining computational efficiency.</p>
+								<div class="media-card-body">
+										<a href="blog_posts/SemiSupervisedOD/post.html"><h4>Building Blocks for Robust and Effective Semi-Supervised Real-World Object Detection</h4></a> <span class="post-meta">(By Moussa Kassem Sbeyti and Nadja Klein, posted on March 27, 2025)</span>
+									<p>Semi-supervised object detection (SSOD) reduces the need for extensive labeled datasets but faces real-world challenges such as class imbalance, label noise, and unreliable pseudo-labels. We investigate the impact of these challenges on SSOD and propose four novel data-centric building blocks—Rare Class Collage (RCC), Rare Class Focus (RCF), Ground Truth Label Correction (GLC), and Pseudo-Label Selection (PLS)—that improve SSOD frameworks. Our methods achieve up to a 6% performance increase by enhancing label quality and class representation while maintaining computational efficiency.</p>
 								</div>
 							</div>
 						</li>
-
-						<br>
-
-						<li class="list-group-item">
-							<div class="row" style="border: 1px solid black;">
-								<div class="column2" style="width: 30%; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center;">
-									<img src="blog_posts/PriorsMotion/figures/Fig3.png" style="width: 90%; display: block; margin-left: auto; margin-right: auto;">
+<li class="list-group-item">
+							<div class="media-card">
+								<div class="media-card-figure">
+									<img src="blog_posts/PriorsMotion/figures/Fig3.png">
 								</div>
 	
-								<div class="column2" style="width: 70%; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
+								<div class="media-card-body">
 										<a href="blog_posts/PriorsMotion/post.html"><h4>Leveraging Informative Priors for Robust and Data-Efficient Motion Prediction</h4></a> (by Christian Schlauch and Nadja Klein, posted on March 13, 2025)
-									<p style="text-align: justify; margin-top: 10px;">Together with the Continental Automotive GmbH, we developed an informed learning approach for deep learning motion prediction models in autonomous driving. Using probabilistic models to learn informative priors from synthetic training labels, we regularize the training on observed data, improving data-efficiency and robustness of state-of-the-art models.</p>
+									<p>Together with the Continental Automotive GmbH, we developed an informed learning approach for deep learning motion prediction models in autonomous driving. Using probabilistic models to learn informative priors from synthetic training labels, we regularize the training on observed data, improving data-efficiency and robustness of state-of-the-art models.</p>
 								</div>
 							</div>
 						</li>
-
-						<br>
-
-						<li class="list-group-item">
-							<div class="row" style="border: 1px solid black;">
-								<div class="column2" style="width: 30%; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: center;">
-									<img src="blog_posts/WeedsGalore/overview.png" style="width: 90%; display: block; margin-left: auto; margin-right: auto;">
+<li class="list-group-item">
+							<div class="media-card">
+								<div class="media-card-figure">
+									<img src="blog_posts/WeedsGalore/overview.png">
 								</div>
 	
-								<div class="column2" style="width: 70%; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
+								<div class="media-card-body">
 										<a href="blog_posts/WeedsGalore/post.html"><h4>A UAV-based dataset for plant monitoring in maize fields</h4></a> (by Ekin Celikkan and Nadja Klein, posted on February 21, 2025)
-									<p style="text-align: justify; margin-top: 10px;"> WeedsGalore is a novel agricultural dataset, focusing on crop and weed segmentation from UAV imagery in croplands. The high plant cover (in terms of both number and area) and the availability of five spectral bands are key distinguishing characters of this dataset. When used with state-of-the-art deep neural networks, it leads to models that can effectively segment weeds, even in unseen fields.</p>
+									<p> WeedsGalore is a novel agricultural dataset, focusing on crop and weed segmentation from UAV imagery in croplands. The high plant cover (in terms of both number and area) and the availability of five spectral bands are key distinguishing characters of this dataset. When used with state-of-the-art deep neural networks, it leads to models that can effectively segment weeds, even in unseen fields.</p>
 								</div>
 							</div>
 						</li>
-
-						<br>
-	
-					</ul>
+</ul>
 
 			</section>		
 
 	
-			<!-- Imprint and data protection -->
-			<div style="display: inline-block; text-align: right; width: 100%; margin-top: 15px;">
-				<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
 			</div>
-			
-		</div>
 
-				
+<footer class="site-footer">
+	<div class="container">
+		<a href="https://www.scc.kit.edu/en/legals.php">Imprint</a> / <a href="https://www.scc.kit.edu/en/datenschutz.php">Privacy Policy</a>
 	</div>
-		
-	
-  </div>
-</div>
+</footer>
 
-	<!-- jquery -->
+<!-- jquery -->
 	<script src="./libs/jquery-3.6.1.min.js"></script>
 	
 	<!-- boostrap -->
